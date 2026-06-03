@@ -1070,8 +1070,33 @@ section.content-section { padding: 140px 48px; position: relative; }
 }
 
 </style>
+<style id="i18n-style">
+/* ===== language toggle (JA default) ===== */
+html[lang="ja"] .i18n-en{display:none !important;}
+html[lang="en"] .i18n-ja{display:none !important;}
+/* hide decorative JP sub-labels in EN mode */
+html[lang="en"] .section-label .jp,
+html[lang="en"] .news-side-label .jp,
+html[lang="en"] .about-side .jp,
+html[lang="en"] .fs-label .ja,
+html[lang="en"] .stats-bar .label-jp,
+html[lang="en"] .page-hero-eyebrow .jp,
+html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
+/* language switch UI (header) */
+.lang-switch{display:inline-flex;align-items:center;gap:5px;font-size:12px;letter-spacing:.08em;}
+.lang-switch button{background:none;border:0;cursor:pointer;font:inherit;color:inherit;opacity:.5;padding:2px 3px;letter-spacing:.08em;transition:opacity .2s,color .2s;}
+.lang-switch button:hover{opacity:.85;}
+.lang-switch button.is-active{opacity:1;font-weight:700;}
+.lang-switch .sep{opacity:.35;}
+.footer-lang a{cursor:pointer;}
+.mm-lang{display:flex;align-items:center;gap:10px;margin-top:26px;padding-top:20px;border-top:1px solid rgba(0,0,0,.08);font-size:15px;letter-spacing:.08em;}
+.mm-lang a{color:inherit;text-decoration:none;opacity:.45;cursor:pointer;}
+.mm-lang a.is-active{opacity:1;font-weight:700;}
+.mm-lang span{opacity:.3;}
+</style>
 </head>
 <body>
+<script>try{var _l=localStorage.getItem('gpc-lang');if(_l==='en'||_l==='ja')document.documentElement.lang=_l;}catch(e){}</script>
 
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
@@ -1084,21 +1109,18 @@ section.content-section { padding: 140px 48px; position: relative; }
     </a>
     <nav class="nav-main">
       <a class="nav-item" href="/about.html">
-        会社情報<span class="en">About</span>
+        <span class="i18n-ja">会社情報<span class="en">About</span></span><span class="i18n-en">About</span>
       </a>
       <a class="nav-item" href="/index.html#industries">
-        業界別<span class="en">Industries</span>
-      </a>
-      <a class="nav-item" href="/ec.html">
-        ECサイト<span class="en">Shop</span>
+        <span class="i18n-ja">業界別<span class="en">Industries</span></span><span class="i18n-en">Industries</span>
       </a>
       <a class="nav-item" href="/youtube.html">
-        メディア<span class="en">Media</span>
+        <span class="i18n-ja">メディア<span class="en">Media</span></span><span class="i18n-en">Media</span>
       </a>
     </nav>
     <div class="header-utility">
-      <a class="utility-link" href="#">EN</a>
-      <button class="cta-contact" onclick="location.href='/index.html#contact'">お問い合わせ</button>
+      <span class="lang-switch" aria-label="Language"><button type="button" data-lang-btn="ja">JP</button><span class="sep">/</span><button type="button" data-lang-btn="en">EN</button></span>
+      <button class="cta-contact" onclick="location.href='/index.html#contact'"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></button>
     </div>
   </div>
 </header>
@@ -1115,23 +1137,23 @@ section.content-section { padding: 140px 48px; position: relative; }
       <span class="sep">/</span>
       <span>Features</span>
       <span class="sep">/</span>
-      <span>唯一無二の循環構造</span>
+      <span><span class="i18n-ja">唯一無二の循環構造</span><span class="i18n-en">Unique Circular Model</span></span>
     </div>
 
     <div class="industry-label">UNIQUE CIRCULAR MODEL</div>
 
-    <h1>製造から再生まで、<br><span class="h1-line2"><span class="accent">国境を越えて</span><em>循環する。</em></span></h1>
+    <h1><span class="i18n-ja">製造から再生まで、<br><span class="h1-line2"><span class="accent">国境を越えて</span><em>循環する。</em></span></span><span class="i18n-en">From making to remaking,<br><span class="h1-line2"><span class="accent">circulating</span><em> across borders.</em></span></span></h1>
 
-    <p class="lead">タイ・マレーシア・ベトナム・日本の4拠点を結ぶ、世界で類を見ないパレット循環インフラ。製造・在庫・国際輸送・回収・再販・リサイクルが、一つのループとして稼働する。</p>
+    <p class="lead"><span class="i18n-ja">タイ・マレーシア・ベトナム・日本の4拠点を結ぶ、世界で類を見ないパレット循環インフラ。製造・在庫・国際輸送・回収・再販・リサイクルが、一つのループとして稼働する。</span><span class="i18n-en">A pallet circulation infrastructure unlike any in the world, linking four hubs—Thailand, Malaysia, Vietnam, and Japan. Manufacturing, inventory, international transport, collection, resale, and recycling all run as a single loop.</span></p>
   </div>
 
   <div class="hero-stats">
     <div class="hero-stats-inner">
       
-            <div class="stat-item"><div class="val">4<em>拠点</em></div><div class="lbl">東南アジア3＋日本</div></div>
-            <div class="stat-item"><div class="val">0<em>円</em></div><div class="lbl">燻蒸コスト</div></div>
-            <div class="stat-item"><div class="val">1<em>本</em></div><div class="lbl">国際輸送一貫対応</div></div>
-            <div class="stat-item"><div class="val">∞<em></em></div><div class="lbl">循環の終わりがない</div></div>
+            <div class="stat-item"><div class="val">4<em><span class="i18n-ja">拠点</span><span class="i18n-en">hubs</span></em></div><div class="lbl"><span class="i18n-ja">東南アジア3＋日本</span><span class="i18n-en">3 SE-Asia Hubs + Japan</span></div></div>
+            <div class="stat-item"><div class="val">0<em><span class="i18n-ja">円</span><span class="i18n-en">JPY</span></em></div><div class="lbl"><span class="i18n-ja">燻蒸コスト</span><span class="i18n-en">Fumigation Cost</span></div></div>
+            <div class="stat-item"><div class="val">1<em><span class="i18n-ja">本</span><span class="i18n-en">line</span></em></div><div class="lbl"><span class="i18n-ja">国際輸送一貫対応</span><span class="i18n-en">Seamless Global Transport</span></div></div>
+            <div class="stat-item"><div class="val">∞<em></em></div><div class="lbl"><span class="i18n-ja">循環の終わりがない</span><span class="i18n-en">A Cycle That Never Ends</span></div></div>
         
     </div>
   </div>
@@ -1143,28 +1165,28 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Challenge</span>
-        <span class="jp">国際物流の分断</span>
+        <span class="jp"><span class="i18n-ja">国際物流の分断</span><span class="i18n-en">A Fragmented Global Chain</span></span>
       </div>
       <div>
         <h2 class="section-title">
-          国境ごとに分断された物流が、<br><em>見えないコスト</em>を生む。
+          <span class="i18n-ja">国境ごとに分断された物流が、<br><em>見えないコスト</em>を生む。</span><span class="i18n-en">Logistics fragmented by every border<br><em>creates invisible cost</em>.</span>
         </h2>
-        <p class="section-lead">国際輸送・国内配送・回収・再販は、これまで別々のプレイヤーが担ってきました。その分断こそが、隠れたマージン流出の温床です。</p>
+        <p class="section-lead"><span class="i18n-ja">国際輸送・国内配送・回収・再販は、これまで別々のプレイヤーが担ってきました。その分断こそが、隠れたマージン流出の温床です。</span><span class="i18n-en">International transport, domestic delivery, collection, and resale have always been handled by separate players. That very fragmentation is where hidden margin leaks away.</span></p>
       </div>
     </div>
 
     <div class="challenge-grid">
       <div class="challenge-content reveal">
         <div class="challenge-num">PAIN POINTS</div>
-        <h2><span class="accent">"片道だけの物流"</span>が、<br>利益を蝕む。</h2>
-        <p>ASEAN輸送では燻蒸対応・ワンウェイ廃棄・返却不能パレットといった見えないコストが国際物流のマージンを蝕みます。回収を諦めれば廃棄費が積み上がり、回収しようとすれば回送便コストが利益を消す。この構造を変える必要があります。</p>
+        <h2><span class="i18n-ja"><span class="accent">"片道だけの物流"</span>が、<br>利益を蝕む。</span><span class="i18n-en"><span class="accent">"One-way-only logistics"</span><br>eats into profit.</span></h2>
+        <p><span class="i18n-ja">ASEAN輸送では燻蒸対応・ワンウェイ廃棄・返却不能パレットといった見えないコストが国際物流のマージンを蝕みます。回収を諦めれば廃棄費が積み上がり、回収しようとすれば回送便コストが利益を消す。この構造を変える必要があります。</span><span class="i18n-en">On ASEAN routes, invisible costs—fumigation, one-way disposal, non-returnable pallets—erode international-logistics margins. Give up on collection and disposal fees pile up; attempt collection and return-trip costs wipe out profit. This structure has to change.</span></p>
 
         <ul class="challenge-points">
           
-            <li><span class="num-marker">01</span><span class="point-text"><strong>ASEAN輸送で燻蒸対応・廃棄・返却不能</strong>の三重苦。輸出するたびに見えないコストが加算される。</span></li>
-            <li><span class="num-marker">02</span><span class="point-text"><strong>地政学リスクで単一国生産が脆弱化</strong>。サプライチェーンの安定供給がBCPの観点で課題になっている。</span></li>
-            <li><span class="num-marker">03</span><span class="point-text"><strong>回収・再販・リサイクルの担い手不在</strong>。「使い終わったパレットの行き先」を一貫して担える事業者は世界でも稀。</span></li>
-            <li><span class="num-marker">04</span><span class="point-text"><strong>燻蒸処理の所要時間・コスト</strong>がリードタイムを圧迫し、JIT納品の妨げになっている。</span></li>
+            <li><span class="num-marker">01</span><span class="point-text"><span class="i18n-ja"><strong>ASEAN輸送で燻蒸対応・廃棄・返却不能</strong>の三重苦。輸出するたびに見えないコストが加算される。</span><span class="i18n-en"><strong>A triple burden on ASEAN routes: fumigation, disposal, and non-return.</strong> Hidden cost is added with every export.</span></span></li>
+            <li><span class="num-marker">02</span><span class="point-text"><span class="i18n-ja"><strong>地政学リスクで単一国生産が脆弱化</strong>。サプライチェーンの安定供給がBCPの観点で課題になっている。</span><span class="i18n-en"><strong>Geopolitical risk makes single-country production fragile.</strong> Stable supply has become a business-continuity (BCP) concern.</span></span></li>
+            <li><span class="num-marker">03</span><span class="point-text"><span class="i18n-ja"><strong>回収・再販・リサイクルの担い手不在</strong>。「使い終わったパレットの行き先」を一貫して担える事業者は世界でも稀。</span><span class="i18n-en"><strong>No one owns collection, resale, and recycling.</strong> Few operators anywhere can handle "where a used pallet goes next" end to end.</span></span></li>
+            <li><span class="num-marker">04</span><span class="point-text"><span class="i18n-ja"><strong>燻蒸処理の所要時間・コスト</strong>がリードタイムを圧迫し、JIT納品の妨げになっている。</span><span class="i18n-en"><strong>The time and cost of fumigation</strong> squeeze lead times and get in the way of just-in-time delivery.</span></span></li>
         
         </ul>
       </div>
@@ -1182,13 +1204,13 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Solution</span>
-        <span class="jp">4拠点循環インフラ</span>
+        <span class="jp"><span class="i18n-ja">4拠点循環インフラ</span><span class="i18n-en">Four-Hub Circular Infrastructure</span></span>
       </div>
       <div>
         <h2 class="section-title">
-          <em>世界で類を見ない</em>、4拠点循環モデル。
+          <span class="i18n-ja"><em>世界で類を見ない</em>、4拠点循環モデル。</span><span class="i18n-en"><em>Unlike anything in the world:</em> a four-hub circular model.</span>
         </h2>
-        <p class="section-lead">タイ・マレーシア・ベトナム・日本。製造から再生までを4拠点で一気通貫する、グロパレ独自のグローバル循環インフラです。</p>
+        <p class="section-lead"><span class="i18n-ja">タイ・マレーシア・ベトナム・日本。製造から再生までを4拠点で一気通貫する、グロパレ独自のグローバル循環インフラです。</span><span class="i18n-en">Thailand, Malaysia, Vietnam, Japan. The GPC global circular infrastructure runs everything from making to remaking across four hubs, end to end.</span></p>
       </div>
     </div>
 
@@ -1197,20 +1219,20 @@ section.content-section { padding: 140px 48px; position: relative; }
             <div class="solution-card reveal">
                 <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
                 <div class="feat-num">HUB 01</div>
-                <h3>東南アジア3拠点</h3>
-                <p>タイ・バンコク（FiX3RD本社・主力製造）、マレーシア・スレンバン（製造・在庫）、ベトナム・ホーチミン（製造・供給）。地政学リスクを分散する3拠点供給体制です。</p>
+                <h3><span class="i18n-ja">東南アジア3拠点</span><span class="i18n-en">Three Southeast-Asia Hubs</span></h3>
+                <p><span class="i18n-ja">タイ・バンコク（FiX3RD本社・主力製造）、マレーシア・スレンバン（製造・在庫）、ベトナム・ホーチミン（製造・供給）。地政学リスクを分散する3拠点供給体制です。</span><span class="i18n-en">Bangkok, Thailand (FiX3RD HQ and main production), Seremban, Malaysia (production and inventory), and Ho Chi Minh, Vietnam (production and supply). A three-hub supply structure that diversifies geopolitical risk.</span></p>
             </div>
             <div class="solution-card reveal reveal-delay-1">
                 <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12c0-5 4-9 9-9s9 4 9 9-4 9-9 9"/><path d="M3 12l5 5M3 12l5-5"/></svg></div>
                 <div class="feat-num">HUB 02</div>
-                <h3>日本拠点 — 回収・再販・リサイクル</h3>
-                <p>東京・八丁堀の日本拠点が、全国回収・中古再販・板材リサイクルの司令塔。ASEANから届いたパレットの「次の人生」を担います。</p>
+                <h3><span class="i18n-ja">日本拠点 — 回収・再販・リサイクル</span><span class="i18n-en">Japan Hub — Collection, Resale, Recycling</span></h3>
+                <p><span class="i18n-ja">東京・八丁堀の日本拠点が、全国回収・中古再販・板材リサイクルの司令塔。ASEANから届いたパレットの「次の人生」を担います。</span><span class="i18n-en">The Japan hub in Hatchobori, Tokyo commands nationwide collection, used resale, and board recycling—taking charge of the "next life" of pallets arriving from ASEAN.</span></p>
             </div>
             <div class="solution-card reveal reveal-delay-2">
                 <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/><path d="M3 12h18M12 3v18"/></svg></div>
                 <div class="feat-num">LOOP</div>
-                <h3>燻蒸不要の国際輸送一貫対応</h3>
-                <p>熱処理パーチクルボードでISPM No.15の適用除外を受けるため、ASEAN→日本の国際輸送がそのまま継続利用可能。輸送と循環が一本のラインに繋がります。</p>
+                <h3><span class="i18n-ja">燻蒸不要の国際輸送一貫対応</span><span class="i18n-en">Fumigation-Free Seamless Transport</span></h3>
+                <p><span class="i18n-ja">熱処理パーチクルボードでISPM No.15の適用除外を受けるため、ASEAN→日本の国際輸送がそのまま継続利用可能。輸送と循環が一本のラインに繋がります。</span><span class="i18n-en">Heat-treated particleboard qualifies for ISPM No.15 exemption, so the same pallet stays in use across ASEAN-to-Japan transport. Transport and circulation join into one line.</span></p>
             </div>
         
     </div>
@@ -1223,22 +1245,22 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Impact</span>
-        <span class="jp">循環構造がもたらす効果</span>
+        <span class="jp"><span class="i18n-ja">循環構造がもたらす効果</span><span class="i18n-en">What the Model Delivers</span></span>
       </div>
       <div>
         <h2 class="section-title">
-          製造から再生まで、<em>すべてが一つにつながる</em>。
+          <span class="i18n-ja">製造から再生まで、<em>すべてが一つにつながる</em>。</span><span class="i18n-en">From making to remaking, <em>it all connects as one</em>.</span>
         </h2>
-        <p class="section-lead">地政学リスク分散、燻蒸コスト削減、BCP強化、ESG評価向上。4拠点循環は単なる供給網ではなく、経営の安定装置です。</p>
+        <p class="section-lead"><span class="i18n-ja">地政学リスク分散、燻蒸コスト削減、BCP強化、ESG評価向上。4拠点循環は単なる供給網ではなく、経営の安定装置です。</span><span class="i18n-en">Diversified geopolitical risk, lower fumigation cost, stronger BCP, higher ESG ratings. The four-hub cycle is not just a supply network—it is a stabilizer for the business.</span></p>
       </div>
     </div>
 
     <div class="impact-grid reveal">
       
-            <div class="impact-item"><div class="num">4<span class="u">拠点</span></div><div class="label-en">GLOBAL HUBS</div><div class="label-jp">国際循環拠点</div></div>
-            <div class="impact-item"><div class="num">0<span class="u">円</span></div><div class="label-en">FUMIGATION COST</div><div class="label-jp">燻蒸コスト</div></div>
-            <div class="impact-item"><div class="num">3<span class="u">国</span></div><div class="label-en">RISK DIVERSIFIED</div><div class="label-jp">ASEAN生産分散</div></div>
-            <div class="impact-item"><div class="num">∞<span class="u"></span></div><div class="label-en">ENDLESS LOOP</div><div class="label-jp">循環の終わりがない</div></div>
+            <div class="impact-item"><div class="num">4<span class="u"><span class="i18n-ja">拠点</span><span class="i18n-en">hubs</span></span></div><div class="label-en">GLOBAL HUBS</div><div class="label-jp"><span class="i18n-ja">国際循環拠点</span><span class="i18n-en">Global Hubs</span></div></div>
+            <div class="impact-item"><div class="num">0<span class="u"><span class="i18n-ja">円</span><span class="i18n-en">JPY</span></span></div><div class="label-en">FUMIGATION COST</div><div class="label-jp"><span class="i18n-ja">燻蒸コスト</span><span class="i18n-en">Fumigation Cost</span></div></div>
+            <div class="impact-item"><div class="num">3<span class="u"><span class="i18n-ja">国</span><span class="i18n-en">countries</span></span></div><div class="label-en">RISK DIVERSIFIED</div><div class="label-jp"><span class="i18n-ja">ASEAN生産分散</span><span class="i18n-en">ASEAN Spread</span></div></div>
+            <div class="impact-item"><div class="num">∞<span class="u"></span></div><div class="label-en">ENDLESS LOOP</div><div class="label-jp"><span class="i18n-ja">循環の終わりがない</span><span class="i18n-en">Endless Loop</span></div></div>
         
     </div>
   </div>
@@ -1250,41 +1272,41 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Process</span>
-        <span class="jp">構造の変化</span>
+        <span class="jp"><span class="i18n-ja">構造の変化</span><span class="i18n-en">A Structural Shift</span></span>
       </div>
       <div>
         <h2 class="section-title">
-          一方通行の物流から、<em>"ループする物流"へ</em>。
+          <span class="i18n-ja">一方通行の物流から、<em>"ループする物流"へ</em>。</span><span class="i18n-en">From one-way logistics, <em>to logistics that loops</em>.</span>
         </h2>
-        <p class="section-lead">これまでパレットは出荷の瞬間にサプライヤーの管轄を離れていました。グロパレはその後の人生も含めて、4拠点で見守ります。</p>
+        <p class="section-lead"><span class="i18n-ja">これまでパレットは出荷の瞬間にサプライヤーの管轄を離れていました。グロパレはその後の人生も含めて、4拠点で見守ります。</span><span class="i18n-en">Until now, a pallet left the hands of the supplier the moment it shipped. GPC watches over its whole later life, too—across four hubs.</span></p>
       </div>
     </div>
 
     <div class="process-comparison reveal">
       <div class="process-side before">
         <div class="side-label">BEFORE</div>
-        <h3>従来の一方通行物流</h3>
+        <h3><span class="i18n-ja">従来の一方通行物流</span><span class="i18n-en">Conventional One-Way Logistics</span></h3>
         <ul>
           
-            <li>製造・販売・輸送・廃棄が別事業者で連携不全</li>
-            <li>単一国生産で地政学リスクに脆弱</li>
-            <li>ASEAN→日本の輸送で燻蒸処理コストが発生</li>
-            <li>使用後のパレットは荷主の手元で迷子に</li>
-            <li>BCP・ESG評価の観点で不利な構造</li>
+            <li><span class="i18n-ja">製造・販売・輸送・廃棄が別事業者で連携不全</span><span class="i18n-en">Making, selling, shipping, and disposal sit with separate firms that do not coordinate</span></li>
+            <li><span class="i18n-ja">単一国生産で地政学リスクに脆弱</span><span class="i18n-en">Single-country production is exposed to geopolitical risk</span></li>
+            <li><span class="i18n-ja">ASEAN→日本の輸送で燻蒸処理コストが発生</span><span class="i18n-en">ASEAN-to-Japan transport incurs fumigation costs</span></li>
+            <li><span class="i18n-ja">使用後のパレットは荷主の手元で迷子に</span><span class="i18n-en">After use, pallets get stranded in the hands of the shipper</span></li>
+            <li><span class="i18n-ja">BCP・ESG評価の観点で不利な構造</span><span class="i18n-en">A structure that is unfavorable for BCP and ESG ratings</span></li>
         
         </ul>
       </div>
       <div class="process-arrow">→</div>
       <div class="process-side after">
         <div class="side-label">AFTER</div>
-        <h3>グロパレの4拠点循環モデル</h3>
+        <h3><span class="i18n-ja">グロパレの4拠点循環モデル</span><span class="i18n-en">The GPC Four-Hub Circular Model</span></h3>
         <ul>
           
-            <li>製造〜回収〜再生まで4拠点で一気通貫運用</li>
-            <li>ASEAN3拠点供給で地政学リスクを構造的に分散</li>
-            <li>燻蒸不要で国際輸送が一本のラインで完結</li>
-            <li>日本拠点が回収・再販・リサイクルを請け負う</li>
-            <li>BCP・ESG・コストの3軸で同時にプラス</li>
+            <li><span class="i18n-ja">製造〜回収〜再生まで4拠点で一気通貫運用</span><span class="i18n-en">Making to collection to remaking, run end to end across four hubs</span></li>
+            <li><span class="i18n-ja">ASEAN3拠点供給で地政学リスクを構造的に分散</span><span class="i18n-en">Three ASEAN hubs structurally diversify geopolitical risk</span></li>
+            <li><span class="i18n-ja">燻蒸不要で国際輸送が一本のラインで完結</span><span class="i18n-en">Fumigation-free, so global transport completes in a single line</span></li>
+            <li><span class="i18n-ja">日本拠点が回収・再販・リサイクルを請け負う</span><span class="i18n-en">The Japan hub takes on collection, resale, and recycling</span></li>
+            <li><span class="i18n-ja">BCP・ESG・コストの3軸で同時にプラス</span><span class="i18n-en">A simultaneous plus on three axes: BCP, ESG, and cost</span></li>
         
         </ul>
       </div>
@@ -1298,13 +1320,13 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Gallery</span>
-        <span class="jp">4拠点の風景</span>
+        <span class="jp"><span class="i18n-ja">4拠点の風景</span><span class="i18n-en">Scenes From Four Hubs</span></span>
       </div>
       <div>
         <h2 class="section-title">
-          国境を越えて、<em>パレットが旅をする</em>。
+          <span class="i18n-ja">国境を越えて、<em>パレットが旅をする</em>。</span><span class="i18n-en">Across borders, <em>a pallet goes on a journey</em>.</span>
         </h2>
-        <p class="section-lead">バンコクから八丁堀まで。製造ラインから回収倉庫まで。4拠点を結ぶ「ひとつのパレットの旅」が、グロパレ循環インフラの実像です。</p>
+        <p class="section-lead"><span class="i18n-ja">バンコクから八丁堀まで。製造ラインから回収倉庫まで。4拠点を結ぶ「ひとつのパレットの旅」が、グロパレ循環インフラの実像です。</span><span class="i18n-en">From Bangkok to Hatchobori. From the production line to the collection warehouse. The journey of a single pallet linking four hubs is what the GPC circular infrastructure really is.</span></p>
       </div>
     </div>
 
@@ -1323,13 +1345,13 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Related</span>
-        <span class="jp">他の特徴</span>
+        <span class="jp"><span class="i18n-ja">他の特徴</span><span class="i18n-en">Other Features</span></span>
       </div>
       <div>
         <h2 class="section-title">
-          グロパレの<em>4つの強み</em>。
+          <span class="i18n-ja">グロパレの<em>4つの強み</em>。</span><span class="i18n-en">GPC’s <em>four strengths</em>.</span>
         </h2>
-        <p class="section-lead">唯一無二の循環構造に加え、世界初特許・産廃ゼロ・物流二法対応という4つの軸でグロパレは物流の常識を更新しています。</p>
+        <p class="section-lead"><span class="i18n-ja">唯一無二の循環構造に加え、世界初特許・産廃ゼロ・物流二法対応という4つの軸でグロパレは物流の常識を更新しています。</span><span class="i18n-en">Beyond its one-of-a-kind circular model, GPC redefines the norms of logistics across four axes: world-first patents, zero waste, and logistics-law readiness.</span></p>
       </div>
     </div>
 
@@ -1339,7 +1361,7 @@ section.content-section { padding: 140px 48px; position: relative; }
                 <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=85" alt="世界初特許" loading="lazy">
                 <div class="overlay">
                     <div class="en">WORLD'S FIRST PATENT</div>
-                    <h4>世界初特許</h4>
+                    <h4><span class="i18n-ja">世界初特許</span><span class="i18n-en">World-First Patent</span></h4>
                     <span class="arrow">View Detail →</span>
                 </div>
             </a>
@@ -1348,7 +1370,7 @@ section.content-section { padding: 140px 48px; position: relative; }
                 <img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=800&q=85" alt="産廃コストゼロ" loading="lazy">
                 <div class="overlay">
                     <div class="en">ZERO WASTE COST</div>
-                    <h4>産廃コストゼロ</h4>
+                    <h4><span class="i18n-ja">産廃コストゼロ</span><span class="i18n-en">Zero Waste Cost</span></h4>
                     <span class="arrow">View Detail →</span>
                 </div>
             </a>
@@ -1357,7 +1379,7 @@ section.content-section { padding: 140px 48px; position: relative; }
                 <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=85" alt="物流二法対応" loading="lazy">
                 <div class="overlay">
                     <div class="en">LOGISTICS LAW READY</div>
-                    <h4>物流二法対応</h4>
+                    <h4><span class="i18n-ja">物流二法対応</span><span class="i18n-en">Logistics Law Ready</span></h4>
                     <span class="arrow">View Detail →</span>
                 </div>
             </a>
@@ -1371,16 +1393,18 @@ section.content-section { padding: 140px 48px; position: relative; }
   <div class="cta-inner">
     <div class="cta-eyebrow reveal">CONTACT US</div>
     <h2 class="cta-title reveal reveal-delay-1">
-      4拠点循環、<br>
-      <em>御社の物流に組み込みます。</em>
+      <span class="i18n-ja">4拠点循環、<br>
+      <em>御社の物流に組み込みます。</em></span><span class="i18n-en">Four-hub circulation—<br>
+      <em>built into your logistics.</em></span>
     </h2>
     <p class="cta-lead reveal reveal-delay-2">
-      御社の輸送ルート・調達国・回収ニーズを踏まえた循環設計をご提案します。<br>
-      まずはお気軽にご相談ください。
+      <span class="i18n-ja">御社の輸送ルート・調達国・回収ニーズを踏まえた循環設計をご提案します。<br>
+      まずはお気軽にご相談ください。</span><span class="i18n-en">We will propose a circulation design based on your routes, sourcing countries, and collection needs.<br>
+      Reach out anytime to get started.</span>
     </p>
 
     <a href="/index.html#contact" class="cta-main reveal reveal-delay-3">
-      無料相談・お見積もりはこちら
+      <span class="i18n-ja">無料相談・お見積もりはこちら</span><span class="i18n-en">Get a free consultation &amp; quote</span>
       <svg width="22" height="14" viewBox="0 0 22 14" fill="none" stroke="currentColor" stroke-width="1.5">
         <path d="M0 7h19M14 1l6 6-6 6"/>
       </svg>
@@ -1400,45 +1424,47 @@ section.content-section { padding: 140px 48px; position: relative; }
           </div>
         </a>
         <p class="footer-tagline">"Sustainable Solutions,<br>Endless Journey"</p>
-        <p class="footer-description">
+        <p class="footer-description i18n-ja">
           パレットの完全循環インフラで、日本の物流コスト・廃棄問題・人手不足を同時解決する次世代ソリューションを提供します。
+        </p>
+        <p class="footer-description i18n-en">
+          We deliver a next-generation solution that tackles Japan&rsquo;s logistics costs, waste, and labor shortage all at once, through a fully circular pallet infrastructure.
         </p>
       </div>
       <div class="footer-nav-grid">
         <div class="footer-nav-col">
           <h5>Company</h5>
           <ul>
-            <li><a href="/about.html">会社情報</a></li>
-            <li><a href="/about.html#message">代表メッセージ</a></li>
-            <li><a href="/about.html#group">グループ会社</a></li>
-            <li><a href="https://fbmg.co.jp/" target="_blank" rel="noopener">FBマネジメントグループ ↗</a></li>
+            <li><a href="/about.html"><span class="i18n-ja">会社情報</span><span class="i18n-en">Company</span></a></li>
+            <li><a href="/about.html#message"><span class="i18n-ja">代表メッセージ</span><span class="i18n-en">CEO Message</span></a></li>
+            <li><a href="/about.html#group"><span class="i18n-ja">グループ会社</span><span class="i18n-en">Group Companies</span></a></li>
+            <li><a href="https://fbmg.co.jp/" target="_blank" rel="noopener"><span class="i18n-ja">FBマネジメントグループ ↗</span><span class="i18n-en">FB Management Group ↗</span></a></li>
           </ul>
         </div>
         <div class="footer-nav-col">
           <h5>Products</h5>
           <ul>
-            <li><a href="/ec.html">ECサイト</a></li>
-            <li><a href="/ec.html">3RDパレット</a></li>
-            <li><a href="/ec.html">三つ葉パレット</a></li>
+            <li><a href="/features/patent.html"><span class="i18n-ja">3RDパレット</span><span class="i18n-en">3RD Pallet</span></a></li>
+            <li><a href="/features/patent.html"><span class="i18n-ja">三つ葉パレット</span><span class="i18n-en">Mitsuba Pallet</span></a></li>
           </ul>
         </div>
         <div class="footer-nav-col">
           <h5>Industries</h5>
           <ul>
-            <li><a href="/industries/logistics.html">物流業界</a></li>
-            <li><a href="/industries/tire.html">タイヤ業界</a></li>
-            <li><a href="/industries/chemical.html">化学・石油</a></li>
-            <li><a href="/industries/food.html">食品・冷凍物流</a></li>
-            <li><a href="/industries/automotive.html">自動車産業</a></li>
+            <li><a href="/industries/logistics.html"><span class="i18n-ja">物流業界</span><span class="i18n-en">Logistics</span></a></li>
+            <li><a href="/industries/tire.html"><span class="i18n-ja">タイヤ業界</span><span class="i18n-en">Tire</span></a></li>
+            <li><a href="/industries/chemical.html"><span class="i18n-ja">化学・石油</span><span class="i18n-en">Chemical &amp; Petroleum</span></a></li>
+            <li><a href="/industries/food.html"><span class="i18n-ja">食品・冷凍物流</span><span class="i18n-en">Food &amp; Cold Chain</span></a></li>
+            <li><a href="/industries/automotive.html"><span class="i18n-ja">自動車産業</span><span class="i18n-en">Automotive</span></a></li>
           </ul>
         </div>
         <div class="footer-nav-col">
           <h5>Resources</h5>
           <ul>
-            <li><a href="/youtube.html">メディア出演</a></li>
-            <li><a href="/about.html">会社情報</a></li>
-            <li><a href="#">お問い合わせ</a></li>
-            <li><a href="#">プライバシーポリシー</a></li>
+            <li><a href="/youtube.html"><span class="i18n-ja">メディア出演</span><span class="i18n-en">Media</span></a></li>
+            <li><a href="/about.html"><span class="i18n-ja">会社情報</span><span class="i18n-en">Company</span></a></li>
+            <li><a href="#"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></a></li>
+            <li><a href="#"><span class="i18n-ja">プライバシーポリシー</span><span class="i18n-en">Privacy Policy</span></a></li>
           </ul>
         </div>
       </div>
@@ -1446,8 +1472,8 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="footer-bottom">
       <div class="copyright">© 2026 GLOBAL PALETTE CYCLE CO., LTD. ALL RIGHTS RESERVED.</div>
       <div class="footer-lang">
-        <a href="#" class="is-active">JP</a>
-        <a href="#">EN</a>
+        <a href="#" data-lang-btn="ja" class="is-active">JP</a>
+        <a href="#" data-lang-btn="en">EN</a>
       </div>
     </div>
   </div>
@@ -1482,6 +1508,25 @@ section.content-section { padding: 140px 48px; position: relative; }
         else header.classList.remove('scrolled');
       }, { passive: true });
     }
+  });
+})();
+</script>
+<script>
+(function(){
+  var K='gpc-lang';
+  function apply(l){
+    document.documentElement.lang=l;
+    try{localStorage.setItem(K,l);}catch(e){}
+    var btns=document.querySelectorAll('[data-lang-btn]');
+    for(var i=0;i<btns.length;i++){
+      btns[i].classList.toggle('is-active', btns[i].getAttribute('data-lang-btn')===l);
+    }
+  }
+  var init=(document.documentElement.lang==='en')?'en':'ja';
+  apply(init);
+  document.addEventListener('click',function(e){
+    var t=e.target.closest?e.target.closest('[data-lang-btn]'):null;
+    if(t){e.preventDefault();apply(t.getAttribute('data-lang-btn'));}
   });
 })();
 </script>

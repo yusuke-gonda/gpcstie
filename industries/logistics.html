@@ -1056,8 +1056,33 @@ section.content-section { padding: 140px 48px; position: relative; }
 }
 
 </style>
+<style id="i18n-style">
+/* ===== language toggle (JA default) ===== */
+html[lang="ja"] .i18n-en{display:none !important;}
+html[lang="en"] .i18n-ja{display:none !important;}
+/* hide decorative JP sub-labels in EN mode */
+html[lang="en"] .section-label .jp,
+html[lang="en"] .news-side-label .jp,
+html[lang="en"] .about-side .jp,
+html[lang="en"] .fs-label .ja,
+html[lang="en"] .stats-bar .label-jp,
+html[lang="en"] .page-hero-eyebrow .jp,
+html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
+/* language switch UI (header) */
+.lang-switch{display:inline-flex;align-items:center;gap:5px;font-size:12px;letter-spacing:.08em;}
+.lang-switch button{background:none;border:0;cursor:pointer;font:inherit;color:inherit;opacity:.5;padding:2px 3px;letter-spacing:.08em;transition:opacity .2s,color .2s;}
+.lang-switch button:hover{opacity:.85;}
+.lang-switch button.is-active{opacity:1;font-weight:700;}
+.lang-switch .sep{opacity:.35;}
+.footer-lang a{cursor:pointer;}
+.mm-lang{display:flex;align-items:center;gap:10px;margin-top:26px;padding-top:20px;border-top:1px solid rgba(0,0,0,.08);font-size:15px;letter-spacing:.08em;}
+.mm-lang a{color:inherit;text-decoration:none;opacity:.45;cursor:pointer;}
+.mm-lang a.is-active{opacity:1;font-weight:700;}
+.mm-lang span{opacity:.3;}
+</style>
 </head>
 <body>
+<script>try{var _l=localStorage.getItem('gpc-lang');if(_l==='en'||_l==='ja')document.documentElement.lang=_l;}catch(e){}</script>
 
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
@@ -1070,21 +1095,18 @@ section.content-section { padding: 140px 48px; position: relative; }
     </a>
     <nav class="nav-main">
       <a class="nav-item" href="/about.html">
-        会社情報<span class="en">About</span>
+        <span class="i18n-ja">会社情報<span class="en">About</span></span><span class="i18n-en">About</span>
       </a>
       <a class="nav-item is-active" href="#">
-        業界別<span class="en">Industries</span>
-      </a>
-      <a class="nav-item" href="/ec.html">
-        ECサイト<span class="en">Shop</span>
+        <span class="i18n-ja">業界別<span class="en">Industries</span></span><span class="i18n-en">Industries</span>
       </a>
       <a class="nav-item" href="/youtube.html">
-        メディア<span class="en">Media</span>
+        <span class="i18n-ja">メディア<span class="en">Media</span></span><span class="i18n-en">Media</span>
       </a>
     </nav>
     <div class="header-utility">
-      <a class="utility-link" href="#">EN</a>
-      <button class="cta-contact" onclick="location.href='/index.html#contact'">お問い合わせ</button>
+      <span class="lang-switch" aria-label="Language"><button type="button" data-lang-btn="ja">JP</button><span class="sep">/</span><button type="button" data-lang-btn="en">EN</button></span>
+      <button class="cta-contact" onclick="location.href='/index.html#contact'"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></button>
     </div>
   </div>
 </header>
@@ -1101,23 +1123,23 @@ section.content-section { padding: 140px 48px; position: relative; }
       <span class="sep">/</span>
       <a href="/industries/logistics.html">Industries</a>
       <span class="sep">/</span>
-      <span>物流業界</span>
+      <span><span class="i18n-ja">物流業界</span><span class="i18n-en">Logistics</span></span>
     </div>
 
     <div class="industry-label">LOGISTICS INDUSTRY</div>
 
-    <h1>物流コストを、<br><span class="accent">根本から</span><em>叩き直す。</em></h1>
+    <h1><span class="i18n-ja">物流コストを、<br><span class="accent">根本から</span><em>叩き直す。</em></span><span class="i18n-en">Logistics costs,<br><span class="accent">rebuilt</span><em> from the ground up.</em></span></h1>
 
-    <p class="lead">ドライバー不足が加速する中、1回でどれだけ積めるかが競争力を左右する。回収不能・廃棄パレットが積載効率を慢性的に圧迫し続ける、その構造を変える。</p>
+    <p class="lead"><span class="i18n-ja">ドライバー不足が加速する中、1回でどれだけ積めるかが競争力を左右する。回収不能・廃棄パレットが積載効率を慢性的に圧迫し続ける、その構造を変える。</span><span class="i18n-en">As driver shortages accelerate, how much you can load per trip decides competitiveness. We change the very structure in which unrecoverable, discarded pallets chronically erode loading efficiency.</span></p>
   </div>
 
   <div class="hero-stats">
     <div class="hero-stats-inner">
       
-            <div class="stat-item"><div class="val">14<em>%</em></div><div class="lbl">2024年問題による輸送能力減</div></div>
-            <div class="stat-item"><div class="val">30<em>%</em></div><div class="lbl">年間パレット廃棄・未回収率</div></div>
-            <div class="stat-item"><div class="val">60<em>%</em></div><div class="lbl">保管スペース削減可能</div></div>
-            <div class="stat-item"><div class="val">0<em>円</em></div><div class="lbl">産廃処理費</div></div>
+            <div class="stat-item"><div class="val">14<em>%</em></div><div class="lbl"><span class="i18n-ja">2024年問題による輸送能力減</span><span class="i18n-en">Capacity lost to the 2024 problem</span></div></div>
+            <div class="stat-item"><div class="val">30<em>%</em></div><div class="lbl"><span class="i18n-ja">年間パレット廃棄・未回収率</span><span class="i18n-en">Annual pallet scrap / non-return rate</span></div></div>
+            <div class="stat-item"><div class="val">60<em>%</em></div><div class="lbl"><span class="i18n-ja">保管スペース削減可能</span><span class="i18n-en">Storage space reduction possible</span></div></div>
+            <div class="stat-item"><div class="val">0<em><span class="i18n-ja">円</span><span class="i18n-en">JPY</span></em></div><div class="lbl"><span class="i18n-ja">産廃処理費</span><span class="i18n-en">Industrial waste cost</span></div></div>
         
     </div>
   </div>
@@ -1129,28 +1151,26 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Challenge</span>
-        <span class="jp">業界の課題</span>
+        <span class="jp"><span class="i18n-ja">業界の課題</span><span class="i18n-en">The Industry's Problem</span></span>
       </div>
       <div>
-        <h2 class="section-title">
-          ドライバー不足、回収難、廃棄コスト。<br><em>負のスパイラル</em>を断ち切る。
-        </h2>
-        <p class="section-lead">時間外労働上限規制で輸送能力が最大14%減少。「1回でどれだけ積めるか」が、これからの競争力を決定的に左右します。</p>
+        <h2 class="section-title"><span class="i18n-ja">ドライバー不足、回収難、廃棄コスト。<br><em>負のスパイラル</em>を断ち切る。</span><span class="i18n-en">Driver shortage, return failures, waste costs.<br><em>Breaking the downward spiral.</em></span></h2>
+        <p class="section-lead"><span class="i18n-ja">時間外労働上限規制で輸送能力が最大14%減少。「1回でどれだけ積めるか」が、これからの競争力を決定的に左右します。</span><span class="i18n-en">Overtime caps cut transport capacity by up to 14%. How much you can load in a single trip now decisively shapes future competitiveness.</span></p>
       </div>
     </div>
 
     <div class="challenge-grid">
       <div class="challenge-content reveal">
         <div class="challenge-num">PAIN POINTS</div>
-        <h2><span class="accent">"使い捨て物流"</span>が、利益を蝕む。</h2>
-        <p>物流業界では、ドライバー不足の深刻化、燻蒸処理のコスト負担、回収不能なパレットの産廃化など、構造的な課題が複合的に進行しています。これらを個別に対処してきた従来のアプローチでは、もはや限界が見えています。</p>
+        <h2><span class="i18n-ja"><span class="accent">"使い捨て物流"</span>が、利益を蝕む。</span><span class="i18n-en"><span class="accent">"Disposable logistics"</span> eats into your profit.</span></h2>
+        <p><span class="i18n-ja">物流業界では、ドライバー不足の深刻化、燻蒸処理のコスト負担、回収不能なパレットの産廃化など、構造的な課題が複合的に進行しています。これらを個別に対処してきた従来のアプローチでは、もはや限界が見えています。</span><span class="i18n-en">In logistics, worsening driver shortages, the cost burden of fumigation, and unrecoverable pallets turning into industrial waste are advancing together as structural problems. The conventional approach of tackling each in isolation has clearly reached its limit.</span></p>
 
         <ul class="challenge-points">
           
-            <li><span class="num-marker">01</span><span class="point-text"><strong>時間外労働規制で輸送能力が14%減</strong>。1便あたりの積載効率が直接利益に直結する時代へ。</span></li>
-            <li><span class="num-marker">02</span><span class="point-text"><strong>従来パレットの30%が回収不能・破損で廃棄</strong>。産廃処理費と環境負荷が慢性的に発生。</span></li>
-            <li><span class="num-marker">03</span><span class="point-text"><strong>木製パレットの燻蒸処理</strong>が輸出コストを増大させ、プラスチック品は高額で紛失リスクが高い。</span></li>
-            <li><span class="num-marker">04</span><span class="point-text"><strong>平置き保管</strong>が倉庫スペースを圧迫し、回収便コストと管理工数が物流原価を膨らませ続けている。</span></li>
+            <li><span class="num-marker">01</span><span class="point-text"><span class="i18n-ja"><strong>時間外労働規制で輸送能力が14%減</strong>。1便あたりの積載効率が直接利益に直結する時代へ。</span><span class="i18n-en"><strong>Overtime rules cut transport capacity by 14%</strong>. Loading efficiency per trip now ties directly to profit.</span></span></li>
+            <li><span class="num-marker">02</span><span class="point-text"><span class="i18n-ja"><strong>従来パレットの30%が回収不能・破損で廃棄</strong>。産廃処理費と環境負荷が慢性的に発生。</span><span class="i18n-en"><strong>30% of conventional pallets are scrapped</strong>—unrecoverable or damaged—so waste fees and environmental load pile up chronically.</span></span></li>
+            <li><span class="num-marker">03</span><span class="point-text"><span class="i18n-ja"><strong>木製パレットの燻蒸処理</strong>が輸出コストを増大させ、プラスチック品は高額で紛失リスクが高い。</span><span class="i18n-en"><strong>Fumigating wooden pallets</strong> drives up export costs, while plastic units are expensive with high loss risk.</span></span></li>
+            <li><span class="num-marker">04</span><span class="point-text"><span class="i18n-ja"><strong>平置き保管</strong>が倉庫スペースを圧迫し、回収便コストと管理工数が物流原価を膨らませ続けている。</span><span class="i18n-en"><strong>Floor storage</strong> crowds out warehouse space, as return-trip costs and management hours keep inflating logistics costs.</span></span></li>
         
         </ul>
       </div>
@@ -1168,13 +1188,11 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Solution</span>
-        <span class="jp">グロパレの解決策</span>
+        <span class="jp"><span class="i18n-ja">グロパレの解決策</span><span class="i18n-en">The GPC Solution</span></span>
       </div>
       <div>
-        <h2 class="section-title">
-          <em>"ワンウェイ循環"</em>という、新しい選択肢。
-        </h2>
-        <p class="section-lead">3RDパレットの低コスト循環構造と三つ葉パレットの積載革命で、物流の土台ごと書き換える。</p>
+        <h2 class="section-title"><span class="i18n-ja"><em>"ワンウェイ循環"</em>という、新しい選択肢。</span><span class="i18n-en"><em>"One-way circulation"</em>—a new option.</span></h2>
+        <p class="section-lead"><span class="i18n-ja">3RDパレットの低コスト循環構造と三つ葉パレットの積載革命で、物流の土台ごと書き換える。</span><span class="i18n-en">The low-cost circular structure of the 3RD pallet and the loading revolution of the Trefoil pallet rewrite the very foundation of logistics.</span></p>
       </div>
     </div>
 
@@ -1183,20 +1201,20 @@ section.content-section { padding: 140px 48px; position: relative; }
             <div class="solution-card reveal">
                 <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/><path d="M9 12l2 2 4-4"/></svg></div>
                 <div class="feat-num">SOLUTION 01</div>
-                <h3>ワンウェイ運用＋全国回収</h3>
-                <p>3RDパレットの低価格設計（¥1,800〜）で、回収不能時のロス耐性を確保。回収できれば再販・リサイクル、できなくても産廃ゼロの完全循環。</p>
+                <h3><span class="i18n-ja">ワンウェイ運用＋全国回収</span><span class="i18n-en">One-Way Use + Nationwide Collection</span></h3>
+                <p><span class="i18n-ja">3RDパレットの低価格設計（¥1,800〜）で、回収不能時のロス耐性を確保。回収できれば再販・リサイクル、できなくても産廃ゼロの完全循環。</span><span class="i18n-en">The 3RD pallet's low-cost design (from &yen;1,800) builds tolerance against loss when collection fails. Recovered units are resold or recycled; even uncollected ones reach zero waste through full circulation.</span></p>
             </div>
             <div class="solution-card reveal reveal-delay-1">
                 <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="10" rx="1"/><path d="M22 12h-4l-2 3h-4l-2-3H2"/></svg></div>
                 <div class="feat-num">SOLUTION 02</div>
-                <h3>積載効率 150%アップ</h3>
-                <p>三つ葉パレットの千鳥配置設計で、20ftコンテナへの積載缶数を16→72缶へ。1便あたりの輸送効率を根本から改善。</p>
+                <h3><span class="i18n-ja">積載効率 150%アップ</span><span class="i18n-en">150% Higher Load Efficiency</span></h3>
+                <p><span class="i18n-ja">三つ葉パレットの千鳥配置設計で、20ftコンテナへの積載缶数を16→72缶へ。1便あたりの輸送効率を根本から改善。</span><span class="i18n-en">The Trefoil pallet's staggered layout raises drum loading in a 20ft container from 16 to 72, fundamentally improving transport efficiency per shipment.</span></p>
             </div>
             <div class="solution-card reveal reveal-delay-2">
                 <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h18M3 12h18M3 17h18"/></svg></div>
                 <div class="feat-num">SOLUTION 03</div>
-                <h3>保管スペース60%削減</h3>
-                <p>完全組立式の3RDパレットは、面材と脚部を分離して保管可能。倉庫スペースのコスト圧迫を構造的に解消します。</p>
+                <h3><span class="i18n-ja">保管スペース60%削減</span><span class="i18n-en">60% Less Storage Space</span></h3>
+                <p><span class="i18n-ja">完全組立式の3RDパレットは、面材と脚部を分離して保管可能。倉庫スペースのコスト圧迫を構造的に解消します。</span><span class="i18n-en">The fully knock-down 3RD pallet stores its deck and legs separately, structurally resolving the cost pressure of warehouse space.</span></p>
             </div>
         
     </div>
@@ -1209,22 +1227,20 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Impact</span>
-        <span class="jp">導入効果</span>
+        <span class="jp"><span class="i18n-ja">導入効果</span><span class="i18n-en">Measurable Results</span></span>
       </div>
       <div>
-        <h2 class="section-title">
-          数字で見る、<em>導入のインパクト</em>。
-        </h2>
-        <p class="section-lead">実際の現場運用に基づく、3RDパレット×三つ葉パレットの導入効果。コスト構造そのものが変わります。</p>
+        <h2 class="section-title"><span class="i18n-ja">数字で見る、<em>導入のインパクト</em>。</span><span class="i18n-en">The impact, <em>in numbers.</em></span></h2>
+        <p class="section-lead"><span class="i18n-ja">実際の現場運用に基づく、3RDパレット×三つ葉パレットの導入効果。コスト構造そのものが変わります。</span><span class="i18n-en">Results from real on-site operation of the 3RD &times; Trefoil pallets. The cost structure itself changes.</span></p>
       </div>
     </div>
 
     <div class="impact-grid reveal">
       
-            <div class="impact-item"><div class="num">150<span class="u">%</span></div><div class="label-en">EFFICIENCY UP</div><div class="label-jp">積載効率向上</div></div>
-            <div class="impact-item"><div class="num">80<span class="u">%</span></div><div class="label-en">TIME SAVED</div><div class="label-jp">積込時間削減</div></div>
-            <div class="impact-item"><div class="num">60<span class="u">%</span></div><div class="label-en">STORAGE</div><div class="label-jp">保管面積削減</div></div>
-            <div class="impact-item"><div class="num">0<span class="u">円</span></div><div class="label-en">WASTE COST</div><div class="label-jp">産廃処理費</div></div>
+            <div class="impact-item"><div class="num">150<span class="u">%</span></div><div class="label-en">EFFICIENCY UP</div><div class="label-jp"><span class="i18n-ja">積載効率向上</span><span class="i18n-en">Load Efficiency</span></div></div>
+            <div class="impact-item"><div class="num">80<span class="u">%</span></div><div class="label-en">TIME SAVED</div><div class="label-jp"><span class="i18n-ja">積込時間削減</span><span class="i18n-en">Loading Time Cut</span></div></div>
+            <div class="impact-item"><div class="num">60<span class="u">%</span></div><div class="label-en">STORAGE</div><div class="label-jp"><span class="i18n-ja">保管面積削減</span><span class="i18n-en">Storage Saved</span></div></div>
+            <div class="impact-item"><div class="num">0<span class="u"><span class="i18n-ja">円</span><span class="i18n-en">JPY</span></span></div><div class="label-en">WASTE COST</div><div class="label-jp"><span class="i18n-ja">産廃処理費</span><span class="i18n-en">Waste Cost</span></div></div>
         
     </div>
   </div>
@@ -1236,41 +1252,39 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Process</span>
-        <span class="jp">導入前後の変化</span>
+        <span class="jp"><span class="i18n-ja">導入前後の変化</span><span class="i18n-en">Before & After</span></span>
       </div>
       <div>
-        <h2 class="section-title">
-          現場の<em>"当たり前"</em>が、こう変わる。
-        </h2>
-        <p class="section-lead">従来の運用と、グロパレ導入後の現場。具体的にどう変わるのかを比較しました。</p>
+        <h2 class="section-title"><span class="i18n-ja">現場の<em>"当たり前"</em>が、こう変わる。</span><span class="i18n-en">The shop-floor <em>"normal"</em> changes like this.</span></h2>
+        <p class="section-lead"><span class="i18n-ja">従来の運用と、グロパレ導入後の現場。具体的にどう変わるのかを比較しました。</span><span class="i18n-en">Conventional operation versus the floor after GPC—we compared exactly what changes.</span></p>
       </div>
     </div>
 
     <div class="process-comparison reveal">
       <div class="process-side before">
         <div class="side-label">BEFORE</div>
-        <h3>従来の運用</h3>
+        <h3><span class="i18n-ja">従来の運用</span><span class="i18n-en">Conventional Operation</span></h3>
         <ul>
           
-            <li>パレット回収のために回送便を出す必要がある</li>
-            <li>破損・紛失パレットは産業廃棄物として処理</li>
-            <li>平置き保管で倉庫スペースを圧迫</li>
-            <li>燻蒸処理が必要で輸出時にコスト発生</li>
-            <li>2024年問題で輸送能力が14%減</li>
+            <li><span class="i18n-ja">パレット回収のために回送便を出す必要がある</span><span class="i18n-en">Empty return trips are needed just to collect pallets</span></li>
+            <li><span class="i18n-ja">破損・紛失パレットは産業廃棄物として処理</span><span class="i18n-en">Damaged or lost pallets are processed as industrial waste</span></li>
+            <li><span class="i18n-ja">平置き保管で倉庫スペースを圧迫</span><span class="i18n-en">Floor storage crowds out warehouse space</span></li>
+            <li><span class="i18n-ja">燻蒸処理が必要で輸出時にコスト発生</span><span class="i18n-en">Fumigation is required, adding cost at export</span></li>
+            <li><span class="i18n-ja">2024年問題で輸送能力が14%減</span><span class="i18n-en">The 2024 problem cuts transport capacity by 14%</span></li>
         
         </ul>
       </div>
       <div class="process-arrow">→</div>
       <div class="process-side after">
         <div class="side-label">AFTER</div>
-        <h3>グロパレ導入後</h3>
+        <h3><span class="i18n-ja">グロパレ導入後</span><span class="i18n-en">After GPC</span></h3>
         <ul>
           
-            <li>ワンウェイ運用で回送便コストがゼロ</li>
-            <li>回収できなくても産廃ゼロ・100%リサイクル</li>
-            <li>完全組立式で保管面積60%削減</li>
-            <li>熱処理済みで燻蒸不要・そのまま輸出可能</li>
-            <li>1便あたりの積載量UPで輸送能力減を相殺</li>
+            <li><span class="i18n-ja">ワンウェイ運用で回送便コストがゼロ</span><span class="i18n-en">One-way use brings return-trip costs to zero</span></li>
+            <li><span class="i18n-ja">回収できなくても産廃ゼロ・100%リサイクル</span><span class="i18n-en">Even without collection: zero waste, 100% recyclable</span></li>
+            <li><span class="i18n-ja">完全組立式で保管面積60%削減</span><span class="i18n-en">Knock-down design cuts storage area by 60%</span></li>
+            <li><span class="i18n-ja">熱処理済みで燻蒸不要・そのまま輸出可能</span><span class="i18n-en">Heat-treated—no fumigation, ready to export as is</span></li>
+            <li><span class="i18n-ja">1便あたりの積載量UPで輸送能力減を相殺</span><span class="i18n-en">More load per trip offsets the capacity shortfall</span></li>
         
         </ul>
       </div>
@@ -1284,13 +1298,11 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Gallery</span>
-        <span class="jp">現場の風景</span>
+        <span class="jp"><span class="i18n-ja">現場の風景</span><span class="i18n-en">On Site</span></span>
       </div>
       <div>
-        <h2 class="section-title">
-          私たちが向き合う、<em>物流の現場</em>。
-        </h2>
-        <p class="section-lead">日々の現場では、見えない非効率と隠れたコストが積み重なっています。私たちはその一つひとつに向き合い、解決策を提案しています。</p>
+        <h2 class="section-title"><span class="i18n-ja">私たちが向き合う、<em>物流の現場</em>。</span><span class="i18n-en">The realities we face on the <em>logistics floor.</em></span></h2>
+        <p class="section-lead"><span class="i18n-ja">日々の現場では、見えない非効率と隠れたコストが積み重なっています。私たちはその一つひとつに向き合い、解決策を提案しています。</span><span class="i18n-en">Every day on the ground, invisible inefficiencies and hidden costs pile up. We face each one and propose a solution.</span></p>
       </div>
     </div>
 
@@ -1309,13 +1321,11 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Related</span>
-        <span class="jp">他の業界</span>
+        <span class="jp"><span class="i18n-ja">他の業界</span><span class="i18n-en">Other Industries</span></span>
       </div>
       <div>
-        <h2 class="section-title">
-          他の業界の<em>ソリューション</em>。
-        </h2>
-        <p class="section-lead">グロパレは各業界の固有課題に対し、最適なパレットとオペレーションを提供しています。</p>
+        <h2 class="section-title"><span class="i18n-ja">他の業界の<em>ソリューション</em>。</span><span class="i18n-en">Solutions for <em>other industries.</em></span></h2>
+        <p class="section-lead"><span class="i18n-ja">グロパレは各業界の固有課題に対し、最適なパレットとオペレーションを提供しています。</span><span class="i18n-en">GPC delivers the optimal pallet and operation for each industry's unique challenges.</span></p>
       </div>
     </div>
 
@@ -1325,7 +1335,7 @@ section.content-section { padding: 140px 48px; position: relative; }
                 <img src="https://images.unsplash.com/photo-1577416412292-747c6607f055?w=800&q=85" alt="輸出入・商社" loading="lazy">
                 <div class="overlay">
                     <div class="en">TRADING & EXPORT</div>
-                    <h4>輸出入・商社</h4>
+                    <h4><span class="i18n-ja">輸出入・商社</span><span class="i18n-en">Trading &amp; Export</span></h4>
                     <span class="arrow">View Detail →</span>
                 </div>
             </a>
@@ -1334,7 +1344,7 @@ section.content-section { padding: 140px 48px; position: relative; }
                 <img src="https://images.unsplash.com/photo-1486006920555-c77dcf18193c?w=800&q=85" alt="タイヤ業界" loading="lazy">
                 <div class="overlay">
                     <div class="en">TIRE INDUSTRY</div>
-                    <h4>タイヤ業界</h4>
+                    <h4><span class="i18n-ja">タイヤ業界</span><span class="i18n-en">Tire Industry</span></h4>
                     <span class="arrow">View Detail →</span>
                 </div>
             </a>
@@ -1343,7 +1353,7 @@ section.content-section { padding: 140px 48px; position: relative; }
                 <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&q=85" alt="化学・石油業界" loading="lazy">
                 <div class="overlay">
                     <div class="en">CHEMICAL & PETROLEUM</div>
-                    <h4>化学・石油業界</h4>
+                    <h4><span class="i18n-ja">化学・石油業界</span><span class="i18n-en">Chemical &amp; Petroleum</span></h4>
                     <span class="arrow">View Detail →</span>
                 </div>
             </a>
@@ -1356,17 +1366,13 @@ section.content-section { padding: 140px 48px; position: relative; }
 <section class="section-cta">
   <div class="cta-inner">
     <div class="cta-eyebrow reveal">CONTACT US</div>
-    <h2 class="cta-title reveal reveal-delay-1">
-      物流の物流コスト、<br>
-      <em>まだ捨てていますか？</em>
-    </h2>
-    <p class="cta-lead reveal reveal-delay-2">
-      御社の現場課題に合わせた最適なご提案をいたします。<br>
-      まずはお気軽にご相談ください。
-    </p>
+    <h2 class="cta-title reveal reveal-delay-1"><span class="i18n-ja">物流の物流コスト、<br>
+      <em>まだ捨てていますか？</em></span><span class="i18n-en">Your logistics costs—<br> <em>still throwing them away?</em></span></h2>
+    <p class="cta-lead reveal reveal-delay-2"><span class="i18n-ja">御社の現場課題に合わせた最適なご提案をいたします。<br>
+      まずはお気軽にご相談ください。</span><span class="i18n-en">We'll propose the best fit for your on-site challenges.<br>Reach out anytime to get started.</span></p>
 
     <a href="/index.html#contact" class="cta-main reveal reveal-delay-3">
-      無料相談・お見積もりはこちら
+      <span class="i18n-ja">無料相談・お見積もりはこちら</span><span class="i18n-en">Get a free consultation &amp; quote</span>
       <svg width="22" height="14" viewBox="0 0 22 14" fill="none" stroke="currentColor" stroke-width="1.5">
         <path d="M0 7h19M14 1l6 6-6 6"/>
       </svg>
@@ -1386,45 +1392,47 @@ section.content-section { padding: 140px 48px; position: relative; }
           </div>
         </a>
         <p class="footer-tagline">"Sustainable Solutions,<br>Endless Journey"</p>
-        <p class="footer-description">
+        <p class="footer-description i18n-ja">
           パレットの完全循環インフラで、日本の物流コスト・廃棄問題・人手不足を同時解決する次世代ソリューションを提供します。
+        </p>
+        <p class="footer-description i18n-en">
+          We deliver a next-generation solution that tackles Japan&rsquo;s logistics costs, waste, and labor shortage all at once, through a fully circular pallet infrastructure.
         </p>
       </div>
       <div class="footer-nav-grid">
         <div class="footer-nav-col">
           <h5>Company</h5>
           <ul>
-            <li><a href="/about.html">会社情報</a></li>
-            <li><a href="/about.html#message">代表メッセージ</a></li>
-            <li><a href="/about.html#group">グループ会社</a></li>
-            <li><a href="https://fbmg.co.jp/" target="_blank" rel="noopener">FBマネジメントグループ ↗</a></li>
+            <li><a href="/about.html"><span class="i18n-ja">会社情報</span><span class="i18n-en">Company</span></a></li>
+            <li><a href="/about.html#message"><span class="i18n-ja">代表メッセージ</span><span class="i18n-en">CEO Message</span></a></li>
+            <li><a href="/about.html#group"><span class="i18n-ja">グループ会社</span><span class="i18n-en">Group Companies</span></a></li>
+            <li><a href="https://fbmg.co.jp/" target="_blank" rel="noopener"><span class="i18n-ja">FBマネジメントグループ ↗</span><span class="i18n-en">FB Management Group ↗</span></a></li>
           </ul>
         </div>
         <div class="footer-nav-col">
           <h5>Products</h5>
           <ul>
-            <li><a href="/ec.html">ECサイト</a></li>
-            <li><a href="/ec.html">3RDパレット</a></li>
-            <li><a href="/ec.html">三つ葉パレット</a></li>
+            <li><a href="/features/patent.html"><span class="i18n-ja">3RDパレット</span><span class="i18n-en">3RD Pallet</span></a></li>
+            <li><a href="/features/patent.html"><span class="i18n-ja">三つ葉パレット</span><span class="i18n-en">Mitsuba Pallet</span></a></li>
           </ul>
         </div>
         <div class="footer-nav-col">
           <h5>Industries</h5>
           <ul>
-            <li><a href="/industries/logistics.html">物流業界</a></li>
-            <li><a href="/industries/tire.html">タイヤ業界</a></li>
-            <li><a href="/industries/chemical.html">化学・石油</a></li>
-            <li><a href="/industries/food.html">食品・冷凍物流</a></li>
-            <li><a href="/industries/automotive.html">自動車産業</a></li>
+            <li><a href="/industries/logistics.html"><span class="i18n-ja">物流業界</span><span class="i18n-en">Logistics</span></a></li>
+            <li><a href="/industries/tire.html"><span class="i18n-ja">タイヤ業界</span><span class="i18n-en">Tire</span></a></li>
+            <li><a href="/industries/chemical.html"><span class="i18n-ja">化学・石油</span><span class="i18n-en">Chemical &amp; Petroleum</span></a></li>
+            <li><a href="/industries/food.html"><span class="i18n-ja">食品・冷凍物流</span><span class="i18n-en">Food &amp; Cold Chain</span></a></li>
+            <li><a href="/industries/automotive.html"><span class="i18n-ja">自動車産業</span><span class="i18n-en">Automotive</span></a></li>
           </ul>
         </div>
         <div class="footer-nav-col">
           <h5>Resources</h5>
           <ul>
-            <li><a href="/youtube.html">メディア出演</a></li>
-            <li><a href="/about.html">会社情報</a></li>
-            <li><a href="#">お問い合わせ</a></li>
-            <li><a href="#">プライバシーポリシー</a></li>
+            <li><a href="/youtube.html"><span class="i18n-ja">メディア出演</span><span class="i18n-en">Media</span></a></li>
+            <li><a href="/about.html"><span class="i18n-ja">会社情報</span><span class="i18n-en">Company</span></a></li>
+            <li><a href="#"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></a></li>
+            <li><a href="#"><span class="i18n-ja">プライバシーポリシー</span><span class="i18n-en">Privacy Policy</span></a></li>
           </ul>
         </div>
       </div>
@@ -1432,8 +1440,8 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="footer-bottom">
       <div class="copyright">© 2026 GLOBAL PALETTE CYCLE CO., LTD. ALL RIGHTS RESERVED.</div>
       <div class="footer-lang">
-        <a href="#" class="is-active">JP</a>
-        <a href="#">EN</a>
+        <a href="#" data-lang-btn="ja" class="is-active">JP</a>
+        <a href="#" data-lang-btn="en">EN</a>
       </div>
     </div>
   </div>
@@ -1468,6 +1476,25 @@ section.content-section { padding: 140px 48px; position: relative; }
         else header.classList.remove('scrolled');
       }, { passive: true });
     }
+  });
+})();
+</script>
+<script>
+(function(){
+  var K='gpc-lang';
+  function apply(l){
+    document.documentElement.lang=l;
+    try{localStorage.setItem(K,l);}catch(e){}
+    var btns=document.querySelectorAll('[data-lang-btn]');
+    for(var i=0;i<btns.length;i++){
+      btns[i].classList.toggle('is-active', btns[i].getAttribute('data-lang-btn')===l);
+    }
+  }
+  var init=(document.documentElement.lang==='en')?'en':'ja';
+  apply(init);
+  document.addEventListener('click',function(e){
+    var t=e.target.closest?e.target.closest('[data-lang-btn]'):null;
+    if(t){e.preventDefault();apply(t.getAttribute('data-lang-btn'));}
   });
 })();
 </script>

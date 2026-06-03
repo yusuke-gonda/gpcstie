@@ -771,8 +771,33 @@ a { color: inherit; text-decoration: none; }
 }
 </style>
 <title>会社情報 | 株式会社グローバルパレットサイクル</title>
+<style id="i18n-style">
+/* ===== language toggle (JA default) ===== */
+html[lang="ja"] .i18n-en{display:none !important;}
+html[lang="en"] .i18n-ja{display:none !important;}
+/* hide decorative JP sub-labels in EN mode */
+html[lang="en"] .section-label .jp,
+html[lang="en"] .news-side-label .jp,
+html[lang="en"] .about-side .jp,
+html[lang="en"] .fs-label .ja,
+html[lang="en"] .stats-bar .label-jp,
+html[lang="en"] .page-hero-eyebrow .jp,
+html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
+/* language switch UI (header) */
+.lang-switch{display:inline-flex;align-items:center;gap:5px;font-size:12px;letter-spacing:.08em;}
+.lang-switch button{background:none;border:0;cursor:pointer;font:inherit;color:inherit;opacity:.5;padding:2px 3px;letter-spacing:.08em;transition:opacity .2s,color .2s;}
+.lang-switch button:hover{opacity:.85;}
+.lang-switch button.is-active{opacity:1;font-weight:700;}
+.lang-switch .sep{opacity:.35;}
+.footer-lang a{cursor:pointer;}
+.mm-lang{display:flex;align-items:center;gap:10px;margin-top:26px;padding-top:20px;border-top:1px solid rgba(0,0,0,.08);font-size:15px;letter-spacing:.08em;}
+.mm-lang a{color:inherit;text-decoration:none;opacity:.45;cursor:pointer;}
+.mm-lang a.is-active{opacity:1;font-weight:700;}
+.mm-lang span{opacity:.3;}
+</style>
 </head>
 <body>
+<script>try{var _l=localStorage.getItem('gpc-lang');if(_l==='en'||_l==='ja')document.documentElement.lang=_l;}catch(e){}</script>
 
 
 <header class="site-header" id="siteHeader">
@@ -786,21 +811,18 @@ a { color: inherit; text-decoration: none; }
     </a>
     <nav class="nav-main">
       <a class="nav-item is-active" href="/about.html">
-        会社情報<span class="en">About</span>
+        <span class="i18n-ja">会社情報<span class="en">About</span></span><span class="i18n-en">About</span>
       </a>
       <a class="nav-item" href="/industries/logistics.html">
-        業界別<span class="en">Industries</span>
-      </a>
-      <a class="nav-item" href="/ec.html">
-        ECサイト<span class="en">Shop</span>
+        <span class="i18n-ja">業界別<span class="en">Industries</span></span><span class="i18n-en">Industries</span>
       </a>
       <a class="nav-item" href="/youtube.html">
-        メディア<span class="en">Media</span>
+        <span class="i18n-ja">メディア<span class="en">Media</span></span><span class="i18n-en">Media</span>
       </a>
     </nav>
     <div class="header-utility">
-      <a class="utility-link" href="#">EN</a>
-      <button class="cta-contact" onclick="location.href='#contact'">お問い合わせ</button>
+      <span class="lang-switch" aria-label="Language"><button type="button" data-lang-btn="ja">JP</button><span class="sep">/</span><button type="button" data-lang-btn="en">EN</button></span>
+      <button class="cta-contact" onclick="location.href='#contact'"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></button>
     </div>
   </div>
 </header>
@@ -1059,47 +1081,49 @@ a { color: inherit; text-decoration: none; }
           </div>
         </a>
         <p class="footer-tagline">"Sustainable Solutions,<br>Endless Journey"</p>
-        <p class="footer-description">
+        <p class="footer-description i18n-ja">
           パレットの完全循環インフラで、日本の物流コスト・廃棄問題・人手不足を同時解決する次世代ソリューションを提供します。
+        </p>
+        <p class="footer-description i18n-en">
+          We deliver a next-generation solution that tackles Japan&rsquo;s logistics costs, waste, and labor shortage all at once, through a fully circular pallet infrastructure.
         </p>
       </div>
       <div class="footer-nav-grid">
         <div class="footer-nav-col">
           <h5>About</h5>
           <ul>
-            <li><a href="/about.html">会社概要</a></li>
-            <li><a href="/about.html#message">代表メッセージ</a></li>
+            <li><a href="/about.html"><span class="i18n-ja">会社概要</span><span class="i18n-en">Company Profile</span></a></li>
+            <li><a href="/about.html#message"><span class="i18n-ja">代表メッセージ</span><span class="i18n-en">CEO Message</span></a></li>
             <li><a href="/about.html#biography">代表略歴</a></li>
-            <li><a href="/about.html#history">沿革</a></li>
-            <li><a href="/about.html#group">グループ会社</a></li>
-            <li><a href="https://fbmg.co.jp/" target="_blank" rel="noopener">FBマネジメントグループ ↗</a></li>
+            <li><a href="/about.html#history"><span class="i18n-ja">沿革</span><span class="i18n-en">History</span></a></li>
+            <li><a href="/about.html#group"><span class="i18n-ja">グループ会社</span><span class="i18n-en">Group Companies</span></a></li>
+            <li><a href="https://fbmg.co.jp/" target="_blank" rel="noopener"><span class="i18n-ja">FBマネジメントグループ ↗</span><span class="i18n-en">FB Management Group ↗</span></a></li>
           </ul>
         </div>
         <div class="footer-nav-col">
           <h5>Products</h5>
           <ul>
-            <li><a href="/ec.html">3RDパレット</a></li>
-            <li><a href="/ec.html">三つ葉パレット</a></li>
-            <li><a href="/ec.html">ECサイト</a></li>
+            <li><a href="/features/patent.html"><span class="i18n-ja">3RDパレット</span><span class="i18n-en">3RD Pallet</span></a></li>
+            <li><a href="/features/patent.html"><span class="i18n-ja">三つ葉パレット</span><span class="i18n-en">Mitsuba Pallet</span></a></li>
           </ul>
         </div>
         <div class="footer-nav-col">
           <h5>Industries</h5>
           <ul>
-            <li><a href="/industries/logistics.html">物流業界</a></li>
-            <li><a href="/industries/tire.html">タイヤ業界</a></li>
-            <li><a href="/industries/chemical.html">化学・石油</a></li>
-            <li><a href="/industries/food.html">食品・冷凍物流</a></li>
-            <li><a href="/industries/logistics.html">業界一覧</a></li>
+            <li><a href="/industries/logistics.html"><span class="i18n-ja">物流業界</span><span class="i18n-en">Logistics</span></a></li>
+            <li><a href="/industries/tire.html"><span class="i18n-ja">タイヤ業界</span><span class="i18n-en">Tire</span></a></li>
+            <li><a href="/industries/chemical.html"><span class="i18n-ja">化学・石油</span><span class="i18n-en">Chemical &amp; Petroleum</span></a></li>
+            <li><a href="/industries/food.html"><span class="i18n-ja">食品・冷凍物流</span><span class="i18n-en">Food &amp; Cold Chain</span></a></li>
+            <li><a href="/industries/logistics.html"><span class="i18n-ja">業界一覧</span><span class="i18n-en">All Industries</span></a></li>
           </ul>
         </div>
         <div class="footer-nav-col">
           <h5>Resources</h5>
           <ul>
-            <li><a href="/index.html#news">ニュース</a></li>
-            <li><a href="/youtube.html">メディア出演</a></li>
-            <li><a href="#contact">お問い合わせ</a></li>
-            <li><a href="#">プライバシーポリシー</a></li>
+            <li><a href="/index.html#news"><span class="i18n-ja">ニュース</span><span class="i18n-en">News</span></a></li>
+            <li><a href="/youtube.html"><span class="i18n-ja">メディア出演</span><span class="i18n-en">Media</span></a></li>
+            <li><a href="#contact"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></a></li>
+            <li><a href="#"><span class="i18n-ja">プライバシーポリシー</span><span class="i18n-en">Privacy Policy</span></a></li>
           </ul>
         </div>
       </div>
@@ -1107,8 +1131,8 @@ a { color: inherit; text-decoration: none; }
     <div class="footer-bottom">
       <div class="copyright">© 2026 GLOBAL PALETTE CYCLE CO., LTD. ALL RIGHTS RESERVED.</div>
       <div class="footer-lang">
-        <a href="#" class="is-active">JP</a>
-        <a href="#">EN</a>
+        <a href="#" data-lang-btn="ja" class="is-active">JP</a>
+        <a href="#" data-lang-btn="en">EN</a>
       </div>
     </div>
   </div>
@@ -1145,5 +1169,24 @@ a { color: inherit; text-decoration: none; }
 })();
 </script>
 
+<script>
+(function(){
+  var K='gpc-lang';
+  function apply(l){
+    document.documentElement.lang=l;
+    try{localStorage.setItem(K,l);}catch(e){}
+    var btns=document.querySelectorAll('[data-lang-btn]');
+    for(var i=0;i<btns.length;i++){
+      btns[i].classList.toggle('is-active', btns[i].getAttribute('data-lang-btn')===l);
+    }
+  }
+  var init=(document.documentElement.lang==='en')?'en':'ja';
+  apply(init);
+  document.addEventListener('click',function(e){
+    var t=e.target.closest?e.target.closest('[data-lang-btn]'):null;
+    if(t){e.preventDefault();apply(t.getAttribute('data-lang-btn'));}
+  });
+})();
+</script>
 </body>
 </html>

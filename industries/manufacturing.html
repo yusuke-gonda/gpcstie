@@ -1056,8 +1056,33 @@ section.content-section { padding: 140px 48px; position: relative; }
 }
 
 </style>
+<style id="i18n-style">
+/* ===== language toggle (JA default) ===== */
+html[lang="ja"] .i18n-en{display:none !important;}
+html[lang="en"] .i18n-ja{display:none !important;}
+/* hide decorative JP sub-labels in EN mode */
+html[lang="en"] .section-label .jp,
+html[lang="en"] .news-side-label .jp,
+html[lang="en"] .about-side .jp,
+html[lang="en"] .fs-label .ja,
+html[lang="en"] .stats-bar .label-jp,
+html[lang="en"] .page-hero-eyebrow .jp,
+html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
+/* language switch UI (header) */
+.lang-switch{display:inline-flex;align-items:center;gap:5px;font-size:12px;letter-spacing:.08em;}
+.lang-switch button{background:none;border:0;cursor:pointer;font:inherit;color:inherit;opacity:.5;padding:2px 3px;letter-spacing:.08em;transition:opacity .2s,color .2s;}
+.lang-switch button:hover{opacity:.85;}
+.lang-switch button.is-active{opacity:1;font-weight:700;}
+.lang-switch .sep{opacity:.35;}
+.footer-lang a{cursor:pointer;}
+.mm-lang{display:flex;align-items:center;gap:10px;margin-top:26px;padding-top:20px;border-top:1px solid rgba(0,0,0,.08);font-size:15px;letter-spacing:.08em;}
+.mm-lang a{color:inherit;text-decoration:none;opacity:.45;cursor:pointer;}
+.mm-lang a.is-active{opacity:1;font-weight:700;}
+.mm-lang span{opacity:.3;}
+</style>
 </head>
 <body>
+<script>try{var _l=localStorage.getItem('gpc-lang');if(_l==='en'||_l==='ja')document.documentElement.lang=_l;}catch(e){}</script>
 
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
@@ -1070,21 +1095,18 @@ section.content-section { padding: 140px 48px; position: relative; }
     </a>
     <nav class="nav-main">
       <a class="nav-item" href="/about.html">
-        会社情報<span class="en">About</span>
+        <span class="i18n-ja">会社情報<span class="en">About</span></span><span class="i18n-en">About</span>
       </a>
       <a class="nav-item is-active" href="#">
-        業界別<span class="en">Industries</span>
-      </a>
-      <a class="nav-item" href="/ec.html">
-        ECサイト<span class="en">Shop</span>
+        <span class="i18n-ja">業界別<span class="en">Industries</span></span><span class="i18n-en">Industries</span>
       </a>
       <a class="nav-item" href="/youtube.html">
-        メディア<span class="en">Media</span>
+        <span class="i18n-ja">メディア<span class="en">Media</span></span><span class="i18n-en">Media</span>
       </a>
     </nav>
     <div class="header-utility">
-      <a class="utility-link" href="#">EN</a>
-      <button class="cta-contact" onclick="location.href='/index.html#contact'">お問い合わせ</button>
+      <span class="lang-switch" aria-label="Language"><button type="button" data-lang-btn="ja">JP</button><span class="sep">/</span><button type="button" data-lang-btn="en">EN</button></span>
+      <button class="cta-contact" onclick="location.href='/index.html#contact'"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></button>
     </div>
   </div>
 </header>
@@ -1101,23 +1123,23 @@ section.content-section { padding: 140px 48px; position: relative; }
       <span class="sep">/</span>
       <a href="/industries/logistics.html">Industries</a>
       <span class="sep">/</span>
-      <span>製造業</span>
+      <span><span class="i18n-ja">製造業</span><span class="i18n-en">Manufacturing</span></span>
     </div>
 
     <div class="industry-label">MANUFACTURING</div>
 
-    <h1>物流原価を削れたら、<br><em>利益が</em><span class="accent">増える。</span></h1>
+    <h1><span class="i18n-ja">物流原価を削れたら、<br><em>利益が</em><span class="accent">増える。</span></span><span class="i18n-en">Cut logistics costs,<br><em>and profit</em><span class="accent"> grows.</span></span></h1>
 
-    <p class="lead">原材料費・人件費・輸送費が高騰する中、物流コストは仕方ないものとして放置されがち。パレットの見直しで、大きな原価改善余地がある。</p>
+    <p class="lead"><span class="i18n-ja">原材料費・人件費・輸送費が高騰する中、物流コストは仕方ないものとして放置されがち。パレットの見直しで、大きな原価改善余地がある。</span><span class="i18n-en">As materials, labor, and freight costs soar, logistics costs are often left as a given. Rethinking the pallet opens up major room for cost improvement.</span></p>
   </div>
 
   <div class="hero-stats">
     <div class="hero-stats-inner">
       
-            <div class="stat-item"><div class="val">○</div><div class="lbl">カスタムサイズ対応</div></div>
-            <div class="stat-item"><div class="val">2<em>T</em></div><div class="lbl">最大積載量</div></div>
-            <div class="stat-item"><div class="val">↑</div><div class="lbl">輸送効率</div></div>
-            <div class="stat-item"><div class="val">↓</div><div class="lbl">物流原価</div></div>
+            <div class="stat-item"><div class="val">○</div><div class="lbl"><span class="i18n-ja">カスタムサイズ対応</span><span class="i18n-en">Custom Sizes Supported</span></div></div>
+            <div class="stat-item"><div class="val">2<em>T</em></div><div class="lbl"><span class="i18n-ja">最大積載量</span><span class="i18n-en">Max Load</span></div></div>
+            <div class="stat-item"><div class="val">↑</div><div class="lbl"><span class="i18n-ja">輸送効率</span><span class="i18n-en">Transport Efficiency</span></div></div>
+            <div class="stat-item"><div class="val">↓</div><div class="lbl"><span class="i18n-ja">物流原価</span><span class="i18n-en">Logistics Cost</span></div></div>
         
     </div>
   </div>
@@ -1129,28 +1151,26 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Challenge</span>
-        <span class="jp">業界の課題</span>
+        <span class="jp"><span class="i18n-ja">業界の課題</span><span class="i18n-en">The Industry's Problem</span></span>
       </div>
       <div>
-        <h2 class="section-title">
-          製造業の<em>"見えない物流コスト"</em>を、<br>可視化して削る。
-        </h2>
-        <p class="section-lead">製造業の物流コストは、製品設計と密接に関わるからこそ「仕方ない」として固定化されています。</p>
+        <h2 class="section-title"><span class="i18n-ja">製造業の<em>"見えない物流コスト"</em>を、<br>可視化して削る。</span><span class="i18n-en">Make manufacturing's <em>"invisible logistics cost"</em><br>visible—and cut it.</span></h2>
+        <p class="section-lead"><span class="i18n-ja">製造業の物流コストは、製品設計と密接に関わるからこそ「仕方ない」として固定化されています。</span><span class="i18n-en">Because it is tied closely to product design, manufacturing's logistics cost gets locked in as "unavoidable."</span></p>
       </div>
     </div>
 
     <div class="challenge-grid">
       <div class="challenge-content reveal">
         <div class="challenge-num">PAIN POINTS</div>
-        <h2><span class="accent">"パレタイズできない"</span>が、利益を奪う。</h2>
-        <p>製造業の現場では、特殊形状の部品・材料・製品が「パレタイズできない」という理由で、非効率な輸送方法を続けてきました。しかしパレット側を製品に合わせる発想で、その制約は超えられます。</p>
+        <h2><span class="i18n-ja"><span class="accent">"パレタイズできない"</span>が、利益を奪う。</span><span class="i18n-en"><span class="accent">"Can't be palletized"</span> steals your profit.</span></h2>
+        <p><span class="i18n-ja">製造業の現場では、特殊形状の部品・材料・製品が「パレタイズできない」という理由で、非効率な輸送方法を続けてきました。しかしパレット側を製品に合わせる発想で、その制約は超えられます。</span><span class="i18n-en">On the manufacturing floor, oddly shaped parts, materials, and products have meant sticking with inefficient transport because they "cannot be palletized." But by fitting the pallet to the product, that limit can be overcome.</span></p>
 
         <ul class="challenge-points">
           
-            <li><span class="num-marker">01</span><span class="point-text"><strong>原材料費・人件費・輸送費の三重高騰</strong>。原価圧迫が深刻化し、利益率の確保が困難に。</span></li>
-            <li><span class="num-marker">02</span><span class="point-text"><strong>特殊形状の部品はパレタイズ不可</strong>。手積み輸送が常態化し、効率と安全性が犠牲に。</span></li>
-            <li><span class="num-marker">03</span><span class="point-text"><strong>輸出時の燻蒸処理</strong>が追加コストに。グローバル展開のたびに物流原価が膨らむ。</span></li>
-            <li><span class="num-marker">04</span><span class="point-text"><strong>パレット回収コストが見えない</strong>。物流原価全体の中で、改善余地が把握されていない。</span></li>
+            <li><span class="num-marker">01</span><span class="point-text"><span class="i18n-ja"><strong>原材料費・人件費・輸送費の三重高騰</strong>。原価圧迫が深刻化し、利益率の確保が困難に。</span><span class="i18n-en"><strong>A triple surge in materials, labor, and freight</strong> deepens cost pressure, making margins hard to hold.</span></span></li>
+            <li><span class="num-marker">02</span><span class="point-text"><span class="i18n-ja"><strong>特殊形状の部品はパレタイズ不可</strong>。手積み輸送が常態化し、効率と安全性が犠牲に。</span><span class="i18n-en"><strong>Oddly shaped parts can't be palletized,</strong> so hand-loading becomes routine at the cost of efficiency and safety.</span></span></li>
+            <li><span class="num-marker">03</span><span class="point-text"><span class="i18n-ja"><strong>輸出時の燻蒸処理</strong>が追加コストに。グローバル展開のたびに物流原価が膨らむ。</span><span class="i18n-en"><strong>Fumigation at export</strong> adds cost, inflating logistics costs with every global move.</span></span></li>
+            <li><span class="num-marker">04</span><span class="point-text"><span class="i18n-ja"><strong>パレット回収コストが見えない</strong>。物流原価全体の中で、改善余地が把握されていない。</span><span class="i18n-en"><strong>Pallet collection costs stay invisible,</strong> so the room to improve goes unrecognized within overall logistics cost.</span></span></li>
         
         </ul>
       </div>
@@ -1168,13 +1188,11 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Solution</span>
-        <span class="jp">グロパレの解決策</span>
+        <span class="jp"><span class="i18n-ja">グロパレの解決策</span><span class="i18n-en">The GPC Solution</span></span>
       </div>
       <div>
-        <h2 class="section-title">
-          <em>カスタムサイズ</em>で、<br>製品に合わせて最適化する。
-        </h2>
-        <p class="section-lead">3RDパレットの自由サイズ設計で、従来パレタイズが難しかった部品・材料にも完全対応。物流原価そのものを再設計します。</p>
+        <h2 class="section-title"><span class="i18n-ja"><em>カスタムサイズ</em>で、<br>製品に合わせて最適化する。</span><span class="i18n-en"><em>Custom sizing</em> optimizes<br>the pallet to your product.</span></h2>
+        <p class="section-lead"><span class="i18n-ja">3RDパレットの自由サイズ設計で、従来パレタイズが難しかった部品・材料にも完全対応。物流原価そのものを再設計します。</span><span class="i18n-en">The 3RD pallet's free-size design fully handles parts and materials that were hard to palletize—redesigning the logistics cost itself.</span></p>
       </div>
     </div>
 
@@ -1183,20 +1201,20 @@ section.content-section { padding: 140px 48px; position: relative; }
             <div class="solution-card reveal">
                 <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 3v18"/></svg></div>
                 <div class="feat-num">SOLUTION 01</div>
-                <h3>カスタムサイズ対応</h3>
-                <p>製品形状に合わせてパレットサイズを自由設計。従来パレタイズが難しかった部品・材料にも完全対応します。</p>
+                <h3><span class="i18n-ja">カスタムサイズ対応</span><span class="i18n-en">Custom Sizes Supported</span></h3>
+                <p><span class="i18n-ja">製品形状に合わせてパレットサイズを自由設計。従来パレタイズが難しかった部品・材料にも完全対応します。</span><span class="i18n-en">Design the pallet size freely around your product shape—fully handling parts and materials that were hard to palletize.</span></p>
             </div>
             <div class="solution-card reveal reveal-delay-1">
                 <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h18M3 12h18M3 17h18"/></svg></div>
                 <div class="feat-num">SOLUTION 02</div>
-                <h3>輸出対応・燻蒸不要</h3>
-                <p>パーチクルボード製で燻蒸処理は不要。ISPM 15適用除外品目に該当し、そのまま海外輸出が可能。</p>
+                <h3><span class="i18n-ja">輸出対応・燻蒸不要</span><span class="i18n-en">Export-Ready, Fumigation-Free</span></h3>
+                <p><span class="i18n-ja">パーチクルボード製で燻蒸処理は不要。ISPM 15適用除外品目に該当し、そのまま海外輸出が可能。</span><span class="i18n-en">Made of particleboard, it needs no fumigation; as an ISPM 15-exempt item, it ships overseas as is.</span></p>
             </div>
             <div class="solution-card reveal reveal-delay-2">
                 <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/><path d="M9 12l2 2 4-4"/></svg></div>
                 <div class="feat-num">SOLUTION 03</div>
-                <h3>ワンウェイ＋回収再販</h3>
-                <p>低コストパレットでワンウェイ運用、回収後は中古再販＋脚部交換。物流原価を循環構造で最小化します。</p>
+                <h3><span class="i18n-ja">ワンウェイ＋回収再販</span><span class="i18n-en">One-Way + Resale</span></h3>
+                <p><span class="i18n-ja">低コストパレットでワンウェイ運用、回収後は中古再販＋脚部交換。物流原価を循環構造で最小化します。</span><span class="i18n-en">Run low-cost pallets one-way; after collection, resell and swap legs—minimizing logistics cost through circulation.</span></p>
             </div>
         
     </div>
@@ -1209,22 +1227,20 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Impact</span>
-        <span class="jp">導入効果</span>
+        <span class="jp"><span class="i18n-ja">導入効果</span><span class="i18n-en">Measurable Results</span></span>
       </div>
       <div>
-        <h2 class="section-title">
-          数字で見る、<em>導入のインパクト</em>。
-        </h2>
-        <p class="section-lead">製造業の物流原価改革は、利益率改善に直結します。</p>
+        <h2 class="section-title"><span class="i18n-ja">数字で見る、<em>導入のインパクト</em>。</span><span class="i18n-en">The impact, <em>in numbers.</em></span></h2>
+        <p class="section-lead"><span class="i18n-ja">製造業の物流原価改革は、利益率改善に直結します。</span><span class="i18n-en">Reforming manufacturing's logistics cost ties directly to better margins.</span></p>
       </div>
     </div>
 
     <div class="impact-grid reveal">
       
-            <div class="impact-item"><div class="num">○</div><div class="label-en">CUSTOM</div><div class="label-jp">特殊形状対応</div></div>
-            <div class="impact-item"><div class="num">2<span class="u">T</span></div><div class="label-en">MAX LOAD</div><div class="label-jp">最大積載</div></div>
-            <div class="impact-item"><div class="num">↑</div><div class="label-en">EFFICIENCY</div><div class="label-jp">輸送効率</div></div>
-            <div class="impact-item"><div class="num">↓</div><div class="label-en">COST</div><div class="label-jp">物流原価</div></div>
+            <div class="impact-item"><div class="num">○</div><div class="label-en">CUSTOM</div><div class="label-jp"><span class="i18n-ja">特殊形状対応</span><span class="i18n-en">Odd-Shape Support</span></div></div>
+            <div class="impact-item"><div class="num">2<span class="u">T</span></div><div class="label-en">MAX LOAD</div><div class="label-jp"><span class="i18n-ja">最大積載</span><span class="i18n-en">Max Load</span></div></div>
+            <div class="impact-item"><div class="num">↑</div><div class="label-en">EFFICIENCY</div><div class="label-jp"><span class="i18n-ja">輸送効率</span><span class="i18n-en">Transport Efficiency</span></div></div>
+            <div class="impact-item"><div class="num">↓</div><div class="label-en">COST</div><div class="label-jp"><span class="i18n-ja">物流原価</span><span class="i18n-en">Logistics Cost</span></div></div>
         
     </div>
   </div>
@@ -1236,41 +1252,39 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Process</span>
-        <span class="jp">導入前後の変化</span>
+        <span class="jp"><span class="i18n-ja">導入前後の変化</span><span class="i18n-en">Before & After</span></span>
       </div>
       <div>
-        <h2 class="section-title">
-          現場の<em>"当たり前"</em>が、こう変わる。
-        </h2>
-        <p class="section-lead">製造業の物流が、3RDパレット導入でどう変わるかを比較しました。</p>
+        <h2 class="section-title"><span class="i18n-ja">現場の<em>"当たり前"</em>が、こう変わる。</span><span class="i18n-en">The shop-floor <em>"normal"</em> changes like this.</span></h2>
+        <p class="section-lead"><span class="i18n-ja">製造業の物流が、3RDパレット導入でどう変わるかを比較しました。</span><span class="i18n-en">We compared how manufacturing logistics changes with the 3RD pallet.</span></p>
       </div>
     </div>
 
     <div class="process-comparison reveal">
       <div class="process-side before">
         <div class="side-label">BEFORE</div>
-        <h3>従来の運用</h3>
+        <h3><span class="i18n-ja">従来の運用</span><span class="i18n-en">Conventional Operation</span></h3>
         <ul>
           
-            <li>特殊形状の部品はパレタイズ不可</li>
-            <li>手積み輸送で人件費・時間がかかる</li>
-            <li>輸出時の燻蒸処理コスト</li>
-            <li>回収コストが見えないまま積み上がる</li>
-            <li>物流原価の改善余地が把握できない</li>
+            <li><span class="i18n-ja">特殊形状の部品はパレタイズ不可</span><span class="i18n-en">Oddly shaped parts can't be palletized</span></li>
+            <li><span class="i18n-ja">手積み輸送で人件費・時間がかかる</span><span class="i18n-en">Hand-loading costs labor and time</span></li>
+            <li><span class="i18n-ja">輸出時の燻蒸処理コスト</span><span class="i18n-en">Fumigation costs at export</span></li>
+            <li><span class="i18n-ja">回収コストが見えないまま積み上がる</span><span class="i18n-en">Collection costs pile up unseen</span></li>
+            <li><span class="i18n-ja">物流原価の改善余地が把握できない</span><span class="i18n-en">Room to improve logistics cost stays unclear</span></li>
         
         </ul>
       </div>
       <div class="process-arrow">→</div>
       <div class="process-side after">
         <div class="side-label">AFTER</div>
-        <h3>グロパレ導入後</h3>
+        <h3><span class="i18n-ja">グロパレ導入後</span><span class="i18n-en">After GPC</span></h3>
         <ul>
           
-            <li>カスタムサイズで全製品をパレタイズ</li>
-            <li>フォーク作業で大幅な省人化</li>
-            <li>燻蒸不要でそのまま海外輸出</li>
-            <li>ワンウェイ＋回収再販モデル</li>
-            <li>物流原価を可視化し継続改善</li>
+            <li><span class="i18n-ja">カスタムサイズで全製品をパレタイズ</span><span class="i18n-en">Custom sizes palletize every product</span></li>
+            <li><span class="i18n-ja">フォーク作業で大幅な省人化</span><span class="i18n-en">Forklift work sharply cuts headcount</span></li>
+            <li><span class="i18n-ja">燻蒸不要でそのまま海外輸出</span><span class="i18n-en">Fumigation-free, ready to export as is</span></li>
+            <li><span class="i18n-ja">ワンウェイ＋回収再販モデル</span><span class="i18n-en">A one-way plus resale model</span></li>
+            <li><span class="i18n-ja">物流原価を可視化し継続改善</span><span class="i18n-en">Make logistics cost visible and improve it continuously</span></li>
         
         </ul>
       </div>
@@ -1284,13 +1298,11 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Gallery</span>
-        <span class="jp">現場の風景</span>
+        <span class="jp"><span class="i18n-ja">現場の風景</span><span class="i18n-en">On Site</span></span>
       </div>
       <div>
-        <h2 class="section-title">
-          私たちが向き合う、<em>製造の現場</em>。
-        </h2>
-        <p class="section-lead">日々の現場では、見えない非効率と隠れたコストが積み重なっています。私たちはその一つひとつに向き合い、解決策を提案しています。</p>
+        <h2 class="section-title"><span class="i18n-ja">私たちが向き合う、<em>製造の現場</em>。</span><span class="i18n-en">The realities we face on the <em>manufacturing floor.</em></span></h2>
+        <p class="section-lead"><span class="i18n-ja">日々の現場では、見えない非効率と隠れたコストが積み重なっています。私たちはその一つひとつに向き合い、解決策を提案しています。</span><span class="i18n-en">Every day on the ground, invisible inefficiencies and hidden costs pile up. We face each one and propose a solution.</span></p>
       </div>
     </div>
 
@@ -1309,13 +1321,11 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Related</span>
-        <span class="jp">他の業界</span>
+        <span class="jp"><span class="i18n-ja">他の業界</span><span class="i18n-en">Other Industries</span></span>
       </div>
       <div>
-        <h2 class="section-title">
-          他の業界の<em>ソリューション</em>。
-        </h2>
-        <p class="section-lead">グロパレは各業界の固有課題に対し、最適なパレットとオペレーションを提供しています。</p>
+        <h2 class="section-title"><span class="i18n-ja">他の業界の<em>ソリューション</em>。</span><span class="i18n-en">Solutions for <em>other industries.</em></span></h2>
+        <p class="section-lead"><span class="i18n-ja">グロパレは各業界の固有課題に対し、最適なパレットとオペレーションを提供しています。</span><span class="i18n-en">GPC delivers the optimal pallet and operation for each industry's unique challenges.</span></p>
       </div>
     </div>
 
@@ -1325,7 +1335,7 @@ section.content-section { padding: 140px 48px; position: relative; }
                 <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=85" alt="物流業界" loading="lazy">
                 <div class="overlay">
                     <div class="en">LOGISTICS INDUSTRY</div>
-                    <h4>物流業界</h4>
+                    <h4><span class="i18n-ja">物流業界</span><span class="i18n-en">Logistics</span></h4>
                     <span class="arrow">View Detail →</span>
                 </div>
             </a>
@@ -1334,7 +1344,7 @@ section.content-section { padding: 140px 48px; position: relative; }
                 <img src="https://images.unsplash.com/photo-1577416412292-747c6607f055?w=800&q=85" alt="輸出入・商社" loading="lazy">
                 <div class="overlay">
                     <div class="en">TRADING & EXPORT</div>
-                    <h4>輸出入・商社</h4>
+                    <h4><span class="i18n-ja">輸出入・商社</span><span class="i18n-en">Trading &amp; Export</span></h4>
                     <span class="arrow">View Detail →</span>
                 </div>
             </a>
@@ -1343,7 +1353,7 @@ section.content-section { padding: 140px 48px; position: relative; }
                 <img src="https://images.unsplash.com/photo-1486006920555-c77dcf18193c?w=800&q=85" alt="タイヤ業界" loading="lazy">
                 <div class="overlay">
                     <div class="en">TIRE INDUSTRY</div>
-                    <h4>タイヤ業界</h4>
+                    <h4><span class="i18n-ja">タイヤ業界</span><span class="i18n-en">Tire Industry</span></h4>
                     <span class="arrow">View Detail →</span>
                 </div>
             </a>
@@ -1356,17 +1366,13 @@ section.content-section { padding: 140px 48px; position: relative; }
 <section class="section-cta">
   <div class="cta-inner">
     <div class="cta-eyebrow reveal">CONTACT US</div>
-    <h2 class="cta-title reveal reveal-delay-1">
-      製造の物流コスト、<br>
-      <em>まだ捨てていますか？</em>
-    </h2>
-    <p class="cta-lead reveal reveal-delay-2">
-      御社の現場課題に合わせた最適なご提案をいたします。<br>
-      まずはお気軽にご相談ください。
-    </p>
+    <h2 class="cta-title reveal reveal-delay-1"><span class="i18n-ja">製造の物流コスト、<br>
+      <em>まだ捨てていますか？</em></span><span class="i18n-en">Your manufacturing logistics costs—<br> <em>still throwing them away?</em></span></h2>
+    <p class="cta-lead reveal reveal-delay-2"><span class="i18n-ja">御社の現場課題に合わせた最適なご提案をいたします。<br>
+      まずはお気軽にご相談ください。</span><span class="i18n-en">We'll propose the best fit for your on-site challenges.<br>Reach out anytime to get started.</span></p>
 
     <a href="/index.html#contact" class="cta-main reveal reveal-delay-3">
-      無料相談・お見積もりはこちら
+      <span class="i18n-ja">無料相談・お見積もりはこちら</span><span class="i18n-en">Get a free consultation &amp; quote</span>
       <svg width="22" height="14" viewBox="0 0 22 14" fill="none" stroke="currentColor" stroke-width="1.5">
         <path d="M0 7h19M14 1l6 6-6 6"/>
       </svg>
@@ -1386,45 +1392,47 @@ section.content-section { padding: 140px 48px; position: relative; }
           </div>
         </a>
         <p class="footer-tagline">"Sustainable Solutions,<br>Endless Journey"</p>
-        <p class="footer-description">
+        <p class="footer-description i18n-ja">
           パレットの完全循環インフラで、日本の物流コスト・廃棄問題・人手不足を同時解決する次世代ソリューションを提供します。
+        </p>
+        <p class="footer-description i18n-en">
+          We deliver a next-generation solution that tackles Japan&rsquo;s logistics costs, waste, and labor shortage all at once, through a fully circular pallet infrastructure.
         </p>
       </div>
       <div class="footer-nav-grid">
         <div class="footer-nav-col">
           <h5>Company</h5>
           <ul>
-            <li><a href="/about.html">会社情報</a></li>
-            <li><a href="/about.html#message">代表メッセージ</a></li>
-            <li><a href="/about.html#group">グループ会社</a></li>
-            <li><a href="https://fbmg.co.jp/" target="_blank" rel="noopener">FBマネジメントグループ ↗</a></li>
+            <li><a href="/about.html"><span class="i18n-ja">会社情報</span><span class="i18n-en">Company</span></a></li>
+            <li><a href="/about.html#message"><span class="i18n-ja">代表メッセージ</span><span class="i18n-en">CEO Message</span></a></li>
+            <li><a href="/about.html#group"><span class="i18n-ja">グループ会社</span><span class="i18n-en">Group Companies</span></a></li>
+            <li><a href="https://fbmg.co.jp/" target="_blank" rel="noopener"><span class="i18n-ja">FBマネジメントグループ ↗</span><span class="i18n-en">FB Management Group ↗</span></a></li>
           </ul>
         </div>
         <div class="footer-nav-col">
           <h5>Products</h5>
           <ul>
-            <li><a href="/ec.html">ECサイト</a></li>
-            <li><a href="/ec.html">3RDパレット</a></li>
-            <li><a href="/ec.html">三つ葉パレット</a></li>
+            <li><a href="/features/patent.html"><span class="i18n-ja">3RDパレット</span><span class="i18n-en">3RD Pallet</span></a></li>
+            <li><a href="/features/patent.html"><span class="i18n-ja">三つ葉パレット</span><span class="i18n-en">Mitsuba Pallet</span></a></li>
           </ul>
         </div>
         <div class="footer-nav-col">
           <h5>Industries</h5>
           <ul>
-            <li><a href="/industries/logistics.html">物流業界</a></li>
-            <li><a href="/industries/tire.html">タイヤ業界</a></li>
-            <li><a href="/industries/chemical.html">化学・石油</a></li>
-            <li><a href="/industries/food.html">食品・冷凍物流</a></li>
-            <li><a href="/industries/automotive.html">自動車産業</a></li>
+            <li><a href="/industries/logistics.html"><span class="i18n-ja">物流業界</span><span class="i18n-en">Logistics</span></a></li>
+            <li><a href="/industries/tire.html"><span class="i18n-ja">タイヤ業界</span><span class="i18n-en">Tire</span></a></li>
+            <li><a href="/industries/chemical.html"><span class="i18n-ja">化学・石油</span><span class="i18n-en">Chemical &amp; Petroleum</span></a></li>
+            <li><a href="/industries/food.html"><span class="i18n-ja">食品・冷凍物流</span><span class="i18n-en">Food &amp; Cold Chain</span></a></li>
+            <li><a href="/industries/automotive.html"><span class="i18n-ja">自動車産業</span><span class="i18n-en">Automotive</span></a></li>
           </ul>
         </div>
         <div class="footer-nav-col">
           <h5>Resources</h5>
           <ul>
-            <li><a href="/youtube.html">メディア出演</a></li>
-            <li><a href="/about.html">会社情報</a></li>
-            <li><a href="#">お問い合わせ</a></li>
-            <li><a href="#">プライバシーポリシー</a></li>
+            <li><a href="/youtube.html"><span class="i18n-ja">メディア出演</span><span class="i18n-en">Media</span></a></li>
+            <li><a href="/about.html"><span class="i18n-ja">会社情報</span><span class="i18n-en">Company</span></a></li>
+            <li><a href="#"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></a></li>
+            <li><a href="#"><span class="i18n-ja">プライバシーポリシー</span><span class="i18n-en">Privacy Policy</span></a></li>
           </ul>
         </div>
       </div>
@@ -1432,8 +1440,8 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="footer-bottom">
       <div class="copyright">© 2026 GLOBAL PALETTE CYCLE CO., LTD. ALL RIGHTS RESERVED.</div>
       <div class="footer-lang">
-        <a href="#" class="is-active">JP</a>
-        <a href="#">EN</a>
+        <a href="#" data-lang-btn="ja" class="is-active">JP</a>
+        <a href="#" data-lang-btn="en">EN</a>
       </div>
     </div>
   </div>
@@ -1468,6 +1476,25 @@ section.content-section { padding: 140px 48px; position: relative; }
         else header.classList.remove('scrolled');
       }, { passive: true });
     }
+  });
+})();
+</script>
+<script>
+(function(){
+  var K='gpc-lang';
+  function apply(l){
+    document.documentElement.lang=l;
+    try{localStorage.setItem(K,l);}catch(e){}
+    var btns=document.querySelectorAll('[data-lang-btn]');
+    for(var i=0;i<btns.length;i++){
+      btns[i].classList.toggle('is-active', btns[i].getAttribute('data-lang-btn')===l);
+    }
+  }
+  var init=(document.documentElement.lang==='en')?'en':'ja';
+  apply(init);
+  document.addEventListener('click',function(e){
+    var t=e.target.closest?e.target.closest('[data-lang-btn]'):null;
+    if(t){e.preventDefault();apply(t.getAttribute('data-lang-btn'));}
   });
 })();
 </script>

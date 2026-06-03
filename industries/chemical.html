@@ -1056,8 +1056,33 @@ section.content-section { padding: 140px 48px; position: relative; }
 }
 
 </style>
+<style id="i18n-style">
+/* ===== language toggle (JA default) ===== */
+html[lang="ja"] .i18n-en{display:none !important;}
+html[lang="en"] .i18n-ja{display:none !important;}
+/* hide decorative JP sub-labels in EN mode */
+html[lang="en"] .section-label .jp,
+html[lang="en"] .news-side-label .jp,
+html[lang="en"] .about-side .jp,
+html[lang="en"] .fs-label .ja,
+html[lang="en"] .stats-bar .label-jp,
+html[lang="en"] .page-hero-eyebrow .jp,
+html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
+/* language switch UI (header) */
+.lang-switch{display:inline-flex;align-items:center;gap:5px;font-size:12px;letter-spacing:.08em;}
+.lang-switch button{background:none;border:0;cursor:pointer;font:inherit;color:inherit;opacity:.5;padding:2px 3px;letter-spacing:.08em;transition:opacity .2s,color .2s;}
+.lang-switch button:hover{opacity:.85;}
+.lang-switch button.is-active{opacity:1;font-weight:700;}
+.lang-switch .sep{opacity:.35;}
+.footer-lang a{cursor:pointer;}
+.mm-lang{display:flex;align-items:center;gap:10px;margin-top:26px;padding-top:20px;border-top:1px solid rgba(0,0,0,.08);font-size:15px;letter-spacing:.08em;}
+.mm-lang a{color:inherit;text-decoration:none;opacity:.45;cursor:pointer;}
+.mm-lang a.is-active{opacity:1;font-weight:700;}
+.mm-lang span{opacity:.3;}
+</style>
 </head>
 <body>
+<script>try{var _l=localStorage.getItem('gpc-lang');if(_l==='en'||_l==='ja')document.documentElement.lang=_l;}catch(e){}</script>
 
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
@@ -1070,21 +1095,18 @@ section.content-section { padding: 140px 48px; position: relative; }
     </a>
     <nav class="nav-main">
       <a class="nav-item" href="/about.html">
-        会社情報<span class="en">About</span>
+        <span class="i18n-ja">会社情報<span class="en">About</span></span><span class="i18n-en">About</span>
       </a>
       <a class="nav-item is-active" href="#">
-        業界別<span class="en">Industries</span>
-      </a>
-      <a class="nav-item" href="/ec.html">
-        ECサイト<span class="en">Shop</span>
+        <span class="i18n-ja">業界別<span class="en">Industries</span></span><span class="i18n-en">Industries</span>
       </a>
       <a class="nav-item" href="/youtube.html">
-        メディア<span class="en">Media</span>
+        <span class="i18n-ja">メディア<span class="en">Media</span></span><span class="i18n-en">Media</span>
       </a>
     </nav>
     <div class="header-utility">
-      <a class="utility-link" href="#">EN</a>
-      <button class="cta-contact" onclick="location.href='/index.html#contact'">お問い合わせ</button>
+      <span class="lang-switch" aria-label="Language"><button type="button" data-lang-btn="ja">JP</button><span class="sep">/</span><button type="button" data-lang-btn="en">EN</button></span>
+      <button class="cta-contact" onclick="location.href='/index.html#contact'"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></button>
     </div>
   </div>
 </header>
@@ -1101,23 +1123,23 @@ section.content-section { padding: 140px 48px; position: relative; }
       <span class="sep">/</span>
       <a href="/industries/logistics.html">Industries</a>
       <span class="sep">/</span>
-      <span>化学・石油業界</span>
+      <span><span class="i18n-ja">化学・石油業界</span><span class="i18n-en">Chemical &amp; Petroleum</span></span>
     </div>
 
     <div class="industry-label">CHEMICAL & PETROLEUM</div>
 
-    <h1>ドラム缶の転倒・衝突事故、<br><span class="accent">根本から</span><em>防げていますか？</em></h1>
+    <h1><span class="i18n-ja">ドラム缶の転倒・衝突事故、<br><span class="accent">根本から</span><em>防げていますか？</em></span><span class="i18n-en">Drum tipping and collisions—<br><span class="accent">are you preventing them</span><em> at the root?</em></span></h1>
 
-    <p class="lead">満缶200kg超のドラム缶、しかも内容物は危険物。手積み・手作業の転倒・衝突は化学物流では重大事故に直結し、作業員の腰痛・身体負担も深刻。</p>
+    <p class="lead"><span class="i18n-ja">満缶200kg超のドラム缶、しかも内容物は危険物。手積み・手作業の転倒・衝突は化学物流では重大事故に直結し、作業員の腰痛・身体負担も深刻。</span><span class="i18n-en">Full drums weigh over 200kg, and their contents are hazardous. In chemical logistics, hand-loading falls and collisions lead straight to serious accidents, while back strain on workers runs deep.</span></p>
   </div>
 
   <div class="hero-stats">
     <div class="hero-stats-inner">
       
-            <div class="stat-item"><div class="val">200<em>kg</em></div><div class="lbl">満缶ドラム缶の重量</div></div>
-            <div class="stat-item"><div class="val">100<em>%</em></div><div class="lbl">転倒防止率</div></div>
-            <div class="stat-item"><div class="val">0<em>円</em></div><div class="lbl">追加固定材コスト</div></div>
-            <div class="stat-item"><div class="val">16,292<em>人</em></div><div class="lbl">陸上貨物労災 年間</div></div>
+            <div class="stat-item"><div class="val">200<em>kg</em></div><div class="lbl"><span class="i18n-ja">満缶ドラム缶の重量</span><span class="i18n-en">Full Drum Weight</span></div></div>
+            <div class="stat-item"><div class="val">100<em>%</em></div><div class="lbl"><span class="i18n-ja">転倒防止率</span><span class="i18n-en">Tip Prevention Rate</span></div></div>
+            <div class="stat-item"><div class="val">0<em><span class="i18n-ja">円</span><span class="i18n-en">JPY</span></em></div><div class="lbl"><span class="i18n-ja">追加固定材コスト</span><span class="i18n-en">Extra Securing Cost</span></div></div>
+            <div class="stat-item"><div class="val">16,292<em><span class="i18n-ja">人</span><span class="i18n-en">people</span></em></div><div class="lbl"><span class="i18n-ja">陸上貨物労災 年間</span><span class="i18n-en">Road-Freight Injuries / Year</span></div></div>
         
     </div>
   </div>
@@ -1129,28 +1151,26 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Challenge</span>
-        <span class="jp">業界の課題</span>
+        <span class="jp"><span class="i18n-ja">業界の課題</span><span class="i18n-en">The Industry's Problem</span></span>
       </div>
       <div>
-        <h2 class="section-title">
-          危険物を扱う現場こそ、<br><em>"事故を起こさない構造"</em>が必要だ。
-        </h2>
-        <p class="section-lead">化学物流の現場では、わずかな転倒が重大事故に直結します。ラップや鎖といった「事後固定」では、構造的なリスクを取り除けません。</p>
+        <h2 class="section-title"><span class="i18n-ja">危険物を扱う現場こそ、<br><em>"事故を起こさない構造"</em>が必要だ。</span><span class="i18n-en">Sites handling hazardous goods need<br><em>a structure that prevents accidents.</em></span></h2>
+        <p class="section-lead"><span class="i18n-ja">化学物流の現場では、わずかな転倒が重大事故に直結します。ラップや鎖といった「事後固定」では、構造的なリスクを取り除けません。</span><span class="i18n-en">In chemical logistics, a small tip can trigger a major accident. After-the-fact fixes like wrap and chains cannot remove the structural risk.</span></p>
       </div>
     </div>
 
     <div class="challenge-grid">
       <div class="challenge-content reveal">
         <div class="challenge-num">PAIN POINTS</div>
-        <h2><span class="accent">手作業＝事故リスク</span>の方程式から、抜け出す。</h2>
-        <p>ドラム缶の手積み・手作業は、化学物流の現場で長年"当たり前"として続いてきました。しかし内容物が危険物である以上、その"当たり前"が許容できる時代は終わりつつあります。陸上貨物運送業の労災は年間16,292人。事故型別では「墜落・転落」「腰痛」「転倒」で6割を占めています。</p>
+        <h2><span class="i18n-ja"><span class="accent">手作業＝事故リスク</span>の方程式から、抜け出す。</span><span class="i18n-en">Break free from the <span class="accent">manual work = accident risk</span> equation.</span></h2>
+        <p><span class="i18n-ja">ドラム缶の手積み・手作業は、化学物流の現場で長年"当たり前"として続いてきました。しかし内容物が危険物である以上、その"当たり前"が許容できる時代は終わりつつあります。陸上貨物運送業の労災は年間16,292人。事故型別では「墜落・転落」「腰痛」「転倒」で6割を占めています。</span><span class="i18n-en">Hand-loading drums has long been "normal" in chemical logistics. But when the contents are hazardous, the era that tolerates that "normal" is ending. Road-freight injuries reach 16,292 people a year—falls, back injuries, and tipping account for 60% of them.</span></p>
 
         <ul class="challenge-points">
           
-            <li><span class="num-marker">01</span><span class="point-text"><strong>満缶200kg超のドラム缶手積み</strong>。重量物の取り扱いで腰痛・身体負担が常態化。</span></li>
-            <li><span class="num-marker">02</span><span class="point-text"><strong>転倒・衝突は重大事故に直結</strong>。内容物が危険物の場合、漏洩・引火など二次災害のリスクも。</span></li>
-            <li><span class="num-marker">03</span><span class="point-text"><strong>ラップ・鎖・クリップでは衝突を完全防止できない</strong>。輸送中の振動で固定材が緩むケースも。</span></li>
-            <li><span class="num-marker">04</span><span class="point-text"><strong>陸上貨物運送業の労災</strong>は年間16,292人。荷役作業時が約70%を占める。</span></li>
+            <li><span class="num-marker">01</span><span class="point-text"><span class="i18n-ja"><strong>満缶200kg超のドラム缶手積み</strong>。重量物の取り扱いで腰痛・身体負担が常態化。</span><span class="i18n-en"><strong>Hand-loading full 200kg+ drums.</strong> Handling heavy loads makes back strain routine.</span></span></li>
+            <li><span class="num-marker">02</span><span class="point-text"><span class="i18n-ja"><strong>転倒・衝突は重大事故に直結</strong>。内容物が危険物の場合、漏洩・引火など二次災害のリスクも。</span><span class="i18n-en"><strong>Tipping and collisions cause major accidents.</strong> With hazardous contents, leaks and ignition add secondary-disaster risk.</span></span></li>
+            <li><span class="num-marker">03</span><span class="point-text"><span class="i18n-ja"><strong>ラップ・鎖・クリップでは衝突を完全防止できない</strong>。輸送中の振動で固定材が緩むケースも。</span><span class="i18n-en"><strong>Wrap, chains, and clips can't fully prevent collisions.</strong> Transit vibration can loosen the securing materials.</span></span></li>
+            <li><span class="num-marker">04</span><span class="point-text"><span class="i18n-ja"><strong>陸上貨物運送業の労災</strong>は年間16,292人。荷役作業時が約70%を占める。</span><span class="i18n-en"><strong>Road-freight occupational injuries</strong> total 16,292 a year, about 70% during cargo handling.</span></span></li>
         
         </ul>
       </div>
@@ -1168,13 +1188,11 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Solution</span>
-        <span class="jp">グロパレの解決策</span>
+        <span class="jp"><span class="i18n-ja">グロパレの解決策</span><span class="i18n-en">The GPC Solution</span></span>
       </div>
       <div>
-        <h2 class="section-title">
-          <em>専用ロック機構</em>で、<br>事故を構造的に防ぐ。
-        </h2>
-        <p class="section-lead">三つ葉パレットの専用プラットフォーム＋上蓋ロック設計が、缶同士の衝突・転倒を物理的に不可能にします。</p>
+        <h2 class="section-title"><span class="i18n-ja"><em>専用ロック機構</em>で、<br>事故を構造的に防ぐ。</span><span class="i18n-en">A <em>dedicated locking mechanism</em><br>prevents accidents by design.</span></h2>
+        <p class="section-lead"><span class="i18n-ja">三つ葉パレットの専用プラットフォーム＋上蓋ロック設計が、缶同士の衝突・転倒を物理的に不可能にします。</span><span class="i18n-en">The Trefoil pallet's dedicated platform plus top-lid lock makes drum collisions and tipping physically impossible.</span></p>
       </div>
     </div>
 
@@ -1183,20 +1201,20 @@ section.content-section { padding: 140px 48px; position: relative; }
             <div class="solution-card reveal">
                 <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
                 <div class="feat-num">SOLUTION 01</div>
-                <h3>専用ロック機構で完全固定</h3>
-                <p>三つ葉パレットの上蓋ロック設計が、ドラム缶を構造的に固定。輸送中の振動でも緩まない、物理的な転倒防止を実現。</p>
+                <h3><span class="i18n-ja">専用ロック機構で完全固定</span><span class="i18n-en">Full Locking with a Dedicated Mechanism</span></h3>
+                <p><span class="i18n-ja">三つ葉パレットの上蓋ロック設計が、ドラム缶を構造的に固定。輸送中の振動でも緩まない、物理的な転倒防止を実現。</span><span class="i18n-en">The Trefoil pallet's top-lid lock structurally secures each drum—physical tip prevention that won't loosen under transit vibration.</span></p>
             </div>
             <div class="solution-card reveal reveal-delay-1">
                 <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 3v18M3 5h4M3 21h4M19 3v18M17 5h4M17 21h4M9 12h6"/></svg></div>
                 <div class="feat-num">SOLUTION 02</div>
-                <h3>フォーク作業で省人化</h3>
-                <p>手積み作業をフォーク作業に置き換えることで、重量物による身体負担を解消。作業員1名で安全に運用可能。</p>
+                <h3><span class="i18n-ja">フォーク作業で省人化</span><span class="i18n-en">Fewer Workers via Forklift</span></h3>
+                <p><span class="i18n-ja">手積み作業をフォーク作業に置き換えることで、重量物による身体負担を解消。作業員1名で安全に運用可能。</span><span class="i18n-en">Replacing hand-loading with forklift work removes the strain of heavy lifting—one worker can operate it safely.</span></p>
             </div>
             <div class="solution-card reveal reveal-delay-2">
                 <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3h6v4c0 1 1 1 1 2v10a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V9c0-1 1-1 1-2V3Z"/></svg></div>
                 <div class="feat-num">SOLUTION 03</div>
-                <h3>固定材ゼロのクリーン運用</h3>
-                <p>ラップ・鎖・クリップなど追加固定材は不要。ゴミの発生を抑え、現場の生産性と安全性を同時に向上させます。</p>
+                <h3><span class="i18n-ja">固定材ゼロのクリーン運用</span><span class="i18n-en">Clean Operation, Zero Securing Materials</span></h3>
+                <p><span class="i18n-ja">ラップ・鎖・クリップなど追加固定材は不要。ゴミの発生を抑え、現場の生産性と安全性を同時に向上させます。</span><span class="i18n-en">No extra wrap, chains, or clips. Less waste, with higher productivity and safety on site at once.</span></p>
             </div>
         
     </div>
@@ -1209,22 +1227,20 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Impact</span>
-        <span class="jp">導入効果</span>
+        <span class="jp"><span class="i18n-ja">導入効果</span><span class="i18n-en">Measurable Results</span></span>
       </div>
       <div>
-        <h2 class="section-title">
-          数字で見る、<em>導入のインパクト</em>。
-        </h2>
-        <p class="section-lead">化学物流の現場で求められる「絶対的な安全性」と「コスト効率」を、両立させます。</p>
+        <h2 class="section-title"><span class="i18n-ja">数字で見る、<em>導入のインパクト</em>。</span><span class="i18n-en">The impact, <em>in numbers.</em></span></h2>
+        <p class="section-lead"><span class="i18n-ja">化学物流の現場で求められる「絶対的な安全性」と「コスト効率」を、両立させます。</span><span class="i18n-en">We deliver both the absolute safety and the cost efficiency that chemical logistics demands.</span></p>
       </div>
     </div>
 
     <div class="impact-grid reveal">
       
-            <div class="impact-item"><div class="num">100<span class="u">%</span></div><div class="label-en">PREVENTION</div><div class="label-jp">転倒防止率</div></div>
-            <div class="impact-item"><div class="num">0<span class="u">円</span></div><div class="label-en">FIXATIVE</div><div class="label-jp">固定材コスト</div></div>
-            <div class="impact-item"><div class="num">↓<span class="u"></span></div><div class="label-en">RISK</div><div class="label-jp">事故リスク</div></div>
-            <div class="impact-item"><div class="num">↓<span class="u"></span></div><div class="label-en">LABOR</div><div class="label-jp">作業員負担</div></div>
+            <div class="impact-item"><div class="num">100<span class="u">%</span></div><div class="label-en">PREVENTION</div><div class="label-jp"><span class="i18n-ja">転倒防止率</span><span class="i18n-en">Tip Prevention</span></div></div>
+            <div class="impact-item"><div class="num">0<span class="u"><span class="i18n-ja">円</span><span class="i18n-en">JPY</span></span></div><div class="label-en">FIXATIVE</div><div class="label-jp"><span class="i18n-ja">固定材コスト</span><span class="i18n-en">Securing Cost</span></div></div>
+            <div class="impact-item"><div class="num">↓<span class="u"></span></div><div class="label-en">RISK</div><div class="label-jp"><span class="i18n-ja">事故リスク</span><span class="i18n-en">Accident Risk</span></div></div>
+            <div class="impact-item"><div class="num">↓<span class="u"></span></div><div class="label-en">LABOR</div><div class="label-jp"><span class="i18n-ja">作業員負担</span><span class="i18n-en">Worker Strain</span></div></div>
         
     </div>
   </div>
@@ -1236,41 +1252,39 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Process</span>
-        <span class="jp">導入前後の変化</span>
+        <span class="jp"><span class="i18n-ja">導入前後の変化</span><span class="i18n-en">Before & After</span></span>
       </div>
       <div>
-        <h2 class="section-title">
-          現場の<em>"当たり前"</em>が、こう変わる。
-        </h2>
-        <p class="section-lead">化学物流の現場の現実が、三つ葉パレット導入でどう変わるかを比較しました。</p>
+        <h2 class="section-title"><span class="i18n-ja">現場の<em>"当たり前"</em>が、こう変わる。</span><span class="i18n-en">The shop-floor <em>"normal"</em> changes like this.</span></h2>
+        <p class="section-lead"><span class="i18n-ja">化学物流の現場の現実が、三つ葉パレット導入でどう変わるかを比較しました。</span><span class="i18n-en">We compared how the realities of the chemical-logistics floor change with the Trefoil pallet.</span></p>
       </div>
     </div>
 
     <div class="process-comparison reveal">
       <div class="process-side before">
         <div class="side-label">BEFORE</div>
-        <h3>従来の運用</h3>
+        <h3><span class="i18n-ja">従来の運用</span><span class="i18n-en">Conventional Operation</span></h3>
         <ul>
           
-            <li>200kg超のドラム缶を複数名で手積み</li>
-            <li>ラップ・鎖・クリップで事後固定</li>
-            <li>輸送中の振動で固定材が緩むリスク</li>
-            <li>転倒・漏洩・引火の二次災害リスク</li>
-            <li>作業員の腰痛・身体負担が慢性化</li>
+            <li><span class="i18n-ja">200kg超のドラム缶を複数名で手積み</span><span class="i18n-en">Several workers hand-load 200kg+ drums</span></li>
+            <li><span class="i18n-ja">ラップ・鎖・クリップで事後固定</span><span class="i18n-en">Wrap, chains, and clips secure loads after the fact</span></li>
+            <li><span class="i18n-ja">輸送中の振動で固定材が緩むリスク</span><span class="i18n-en">Securing materials can loosen from transit vibration</span></li>
+            <li><span class="i18n-ja">転倒・漏洩・引火の二次災害リスク</span><span class="i18n-en">Risk of tipping, leaks, and ignition as secondary disasters</span></li>
+            <li><span class="i18n-ja">作業員の腰痛・身体負担が慢性化</span><span class="i18n-en">Chronic back strain and bodily burden on workers</span></li>
         
         </ul>
       </div>
       <div class="process-arrow">→</div>
       <div class="process-side after">
         <div class="side-label">AFTER</div>
-        <h3>グロパレ導入後</h3>
+        <h3><span class="i18n-ja">グロパレ導入後</span><span class="i18n-en">After GPC</span></h3>
         <ul>
           
-            <li>フォーク作業で安全に積込</li>
-            <li>専用ロック機構で構造的固定</li>
-            <li>振動でも緩まない物理的な固定</li>
-            <li>転倒リスクを根本から排除</li>
-            <li>作業員1名で安全に運用可能</li>
+            <li><span class="i18n-ja">フォーク作業で安全に積込</span><span class="i18n-en">Safe loading by forklift</span></li>
+            <li><span class="i18n-ja">専用ロック機構で構造的固定</span><span class="i18n-en">Structural securing via a dedicated lock</span></li>
+            <li><span class="i18n-ja">振動でも緩まない物理的な固定</span><span class="i18n-en">Physical securing that won't loosen under vibration</span></li>
+            <li><span class="i18n-ja">転倒リスクを根本から排除</span><span class="i18n-en">Tipping risk eliminated at the root</span></li>
+            <li><span class="i18n-ja">作業員1名で安全に運用可能</span><span class="i18n-en">One worker can operate it safely</span></li>
         
         </ul>
       </div>
@@ -1284,13 +1298,11 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Gallery</span>
-        <span class="jp">現場の風景</span>
+        <span class="jp"><span class="i18n-ja">現場の風景</span><span class="i18n-en">On Site</span></span>
       </div>
       <div>
-        <h2 class="section-title">
-          私たちが向き合う、<em>化学・石油の現場</em>。
-        </h2>
-        <p class="section-lead">日々の現場では、見えない非効率と隠れたコストが積み重なっています。私たちはその一つひとつに向き合い、解決策を提案しています。</p>
+        <h2 class="section-title"><span class="i18n-ja">私たちが向き合う、<em>化学・石油の現場</em>。</span><span class="i18n-en">The realities we face on the <em>chemical &amp; petroleum floor.</em></span></h2>
+        <p class="section-lead"><span class="i18n-ja">日々の現場では、見えない非効率と隠れたコストが積み重なっています。私たちはその一つひとつに向き合い、解決策を提案しています。</span><span class="i18n-en">Every day on the ground, invisible inefficiencies and hidden costs pile up. We face each one and propose a solution.</span></p>
       </div>
     </div>
 
@@ -1309,13 +1321,11 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Related</span>
-        <span class="jp">他の業界</span>
+        <span class="jp"><span class="i18n-ja">他の業界</span><span class="i18n-en">Other Industries</span></span>
       </div>
       <div>
-        <h2 class="section-title">
-          他の業界の<em>ソリューション</em>。
-        </h2>
-        <p class="section-lead">グロパレは各業界の固有課題に対し、最適なパレットとオペレーションを提供しています。</p>
+        <h2 class="section-title"><span class="i18n-ja">他の業界の<em>ソリューション</em>。</span><span class="i18n-en">Solutions for <em>other industries.</em></span></h2>
+        <p class="section-lead"><span class="i18n-ja">グロパレは各業界の固有課題に対し、最適なパレットとオペレーションを提供しています。</span><span class="i18n-en">GPC delivers the optimal pallet and operation for each industry's unique challenges.</span></p>
       </div>
     </div>
 
@@ -1325,7 +1335,7 @@ section.content-section { padding: 140px 48px; position: relative; }
                 <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=85" alt="物流業界" loading="lazy">
                 <div class="overlay">
                     <div class="en">LOGISTICS INDUSTRY</div>
-                    <h4>物流業界</h4>
+                    <h4><span class="i18n-ja">物流業界</span><span class="i18n-en">Logistics</span></h4>
                     <span class="arrow">View Detail →</span>
                 </div>
             </a>
@@ -1334,7 +1344,7 @@ section.content-section { padding: 140px 48px; position: relative; }
                 <img src="https://images.unsplash.com/photo-1577416412292-747c6607f055?w=800&q=85" alt="輸出入・商社" loading="lazy">
                 <div class="overlay">
                     <div class="en">TRADING & EXPORT</div>
-                    <h4>輸出入・商社</h4>
+                    <h4><span class="i18n-ja">輸出入・商社</span><span class="i18n-en">Trading &amp; Export</span></h4>
                     <span class="arrow">View Detail →</span>
                 </div>
             </a>
@@ -1343,7 +1353,7 @@ section.content-section { padding: 140px 48px; position: relative; }
                 <img src="https://images.unsplash.com/photo-1486006920555-c77dcf18193c?w=800&q=85" alt="タイヤ業界" loading="lazy">
                 <div class="overlay">
                     <div class="en">TIRE INDUSTRY</div>
-                    <h4>タイヤ業界</h4>
+                    <h4><span class="i18n-ja">タイヤ業界</span><span class="i18n-en">Tire Industry</span></h4>
                     <span class="arrow">View Detail →</span>
                 </div>
             </a>
@@ -1356,17 +1366,13 @@ section.content-section { padding: 140px 48px; position: relative; }
 <section class="section-cta">
   <div class="cta-inner">
     <div class="cta-eyebrow reveal">CONTACT US</div>
-    <h2 class="cta-title reveal reveal-delay-1">
-      化学・石油の物流コスト、<br>
-      <em>まだ捨てていますか？</em>
-    </h2>
-    <p class="cta-lead reveal reveal-delay-2">
-      御社の現場課題に合わせた最適なご提案をいたします。<br>
-      まずはお気軽にご相談ください。
-    </p>
+    <h2 class="cta-title reveal reveal-delay-1"><span class="i18n-ja">化学・石油の物流コスト、<br>
+      <em>まだ捨てていますか？</em></span><span class="i18n-en">Your chemical &amp; petroleum logistics costs—<br> <em>still throwing them away?</em></span></h2>
+    <p class="cta-lead reveal reveal-delay-2"><span class="i18n-ja">御社の現場課題に合わせた最適なご提案をいたします。<br>
+      まずはお気軽にご相談ください。</span><span class="i18n-en">We'll propose the best fit for your on-site challenges.<br>Reach out anytime to get started.</span></p>
 
     <a href="/index.html#contact" class="cta-main reveal reveal-delay-3">
-      無料相談・お見積もりはこちら
+      <span class="i18n-ja">無料相談・お見積もりはこちら</span><span class="i18n-en">Get a free consultation &amp; quote</span>
       <svg width="22" height="14" viewBox="0 0 22 14" fill="none" stroke="currentColor" stroke-width="1.5">
         <path d="M0 7h19M14 1l6 6-6 6"/>
       </svg>
@@ -1386,45 +1392,47 @@ section.content-section { padding: 140px 48px; position: relative; }
           </div>
         </a>
         <p class="footer-tagline">"Sustainable Solutions,<br>Endless Journey"</p>
-        <p class="footer-description">
+        <p class="footer-description i18n-ja">
           パレットの完全循環インフラで、日本の物流コスト・廃棄問題・人手不足を同時解決する次世代ソリューションを提供します。
+        </p>
+        <p class="footer-description i18n-en">
+          We deliver a next-generation solution that tackles Japan&rsquo;s logistics costs, waste, and labor shortage all at once, through a fully circular pallet infrastructure.
         </p>
       </div>
       <div class="footer-nav-grid">
         <div class="footer-nav-col">
           <h5>Company</h5>
           <ul>
-            <li><a href="/about.html">会社情報</a></li>
-            <li><a href="/about.html#message">代表メッセージ</a></li>
-            <li><a href="/about.html#group">グループ会社</a></li>
-            <li><a href="https://fbmg.co.jp/" target="_blank" rel="noopener">FBマネジメントグループ ↗</a></li>
+            <li><a href="/about.html"><span class="i18n-ja">会社情報</span><span class="i18n-en">Company</span></a></li>
+            <li><a href="/about.html#message"><span class="i18n-ja">代表メッセージ</span><span class="i18n-en">CEO Message</span></a></li>
+            <li><a href="/about.html#group"><span class="i18n-ja">グループ会社</span><span class="i18n-en">Group Companies</span></a></li>
+            <li><a href="https://fbmg.co.jp/" target="_blank" rel="noopener"><span class="i18n-ja">FBマネジメントグループ ↗</span><span class="i18n-en">FB Management Group ↗</span></a></li>
           </ul>
         </div>
         <div class="footer-nav-col">
           <h5>Products</h5>
           <ul>
-            <li><a href="/ec.html">ECサイト</a></li>
-            <li><a href="/ec.html">3RDパレット</a></li>
-            <li><a href="/ec.html">三つ葉パレット</a></li>
+            <li><a href="/features/patent.html"><span class="i18n-ja">3RDパレット</span><span class="i18n-en">3RD Pallet</span></a></li>
+            <li><a href="/features/patent.html"><span class="i18n-ja">三つ葉パレット</span><span class="i18n-en">Mitsuba Pallet</span></a></li>
           </ul>
         </div>
         <div class="footer-nav-col">
           <h5>Industries</h5>
           <ul>
-            <li><a href="/industries/logistics.html">物流業界</a></li>
-            <li><a href="/industries/tire.html">タイヤ業界</a></li>
-            <li><a href="/industries/chemical.html">化学・石油</a></li>
-            <li><a href="/industries/food.html">食品・冷凍物流</a></li>
-            <li><a href="/industries/automotive.html">自動車産業</a></li>
+            <li><a href="/industries/logistics.html"><span class="i18n-ja">物流業界</span><span class="i18n-en">Logistics</span></a></li>
+            <li><a href="/industries/tire.html"><span class="i18n-ja">タイヤ業界</span><span class="i18n-en">Tire</span></a></li>
+            <li><a href="/industries/chemical.html"><span class="i18n-ja">化学・石油</span><span class="i18n-en">Chemical &amp; Petroleum</span></a></li>
+            <li><a href="/industries/food.html"><span class="i18n-ja">食品・冷凍物流</span><span class="i18n-en">Food &amp; Cold Chain</span></a></li>
+            <li><a href="/industries/automotive.html"><span class="i18n-ja">自動車産業</span><span class="i18n-en">Automotive</span></a></li>
           </ul>
         </div>
         <div class="footer-nav-col">
           <h5>Resources</h5>
           <ul>
-            <li><a href="/youtube.html">メディア出演</a></li>
-            <li><a href="/about.html">会社情報</a></li>
-            <li><a href="#">お問い合わせ</a></li>
-            <li><a href="#">プライバシーポリシー</a></li>
+            <li><a href="/youtube.html"><span class="i18n-ja">メディア出演</span><span class="i18n-en">Media</span></a></li>
+            <li><a href="/about.html"><span class="i18n-ja">会社情報</span><span class="i18n-en">Company</span></a></li>
+            <li><a href="#"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></a></li>
+            <li><a href="#"><span class="i18n-ja">プライバシーポリシー</span><span class="i18n-en">Privacy Policy</span></a></li>
           </ul>
         </div>
       </div>
@@ -1432,8 +1440,8 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="footer-bottom">
       <div class="copyright">© 2026 GLOBAL PALETTE CYCLE CO., LTD. ALL RIGHTS RESERVED.</div>
       <div class="footer-lang">
-        <a href="#" class="is-active">JP</a>
-        <a href="#">EN</a>
+        <a href="#" data-lang-btn="ja" class="is-active">JP</a>
+        <a href="#" data-lang-btn="en">EN</a>
       </div>
     </div>
   </div>
@@ -1468,6 +1476,25 @@ section.content-section { padding: 140px 48px; position: relative; }
         else header.classList.remove('scrolled');
       }, { passive: true });
     }
+  });
+})();
+</script>
+<script>
+(function(){
+  var K='gpc-lang';
+  function apply(l){
+    document.documentElement.lang=l;
+    try{localStorage.setItem(K,l);}catch(e){}
+    var btns=document.querySelectorAll('[data-lang-btn]');
+    for(var i=0;i<btns.length;i++){
+      btns[i].classList.toggle('is-active', btns[i].getAttribute('data-lang-btn')===l);
+    }
+  }
+  var init=(document.documentElement.lang==='en')?'en':'ja';
+  apply(init);
+  document.addEventListener('click',function(e){
+    var t=e.target.closest?e.target.closest('[data-lang-btn]'):null;
+    if(t){e.preventDefault();apply(t.getAttribute('data-lang-btn'));}
   });
 })();
 </script>

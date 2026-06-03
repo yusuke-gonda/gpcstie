@@ -1056,8 +1056,33 @@ section.content-section { padding: 140px 48px; position: relative; }
 }
 
 </style>
+<style id="i18n-style">
+/* ===== language toggle (JA default) ===== */
+html[lang="ja"] .i18n-en{display:none !important;}
+html[lang="en"] .i18n-ja{display:none !important;}
+/* hide decorative JP sub-labels in EN mode */
+html[lang="en"] .section-label .jp,
+html[lang="en"] .news-side-label .jp,
+html[lang="en"] .about-side .jp,
+html[lang="en"] .fs-label .ja,
+html[lang="en"] .stats-bar .label-jp,
+html[lang="en"] .page-hero-eyebrow .jp,
+html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
+/* language switch UI (header) */
+.lang-switch{display:inline-flex;align-items:center;gap:5px;font-size:12px;letter-spacing:.08em;}
+.lang-switch button{background:none;border:0;cursor:pointer;font:inherit;color:inherit;opacity:.5;padding:2px 3px;letter-spacing:.08em;transition:opacity .2s,color .2s;}
+.lang-switch button:hover{opacity:.85;}
+.lang-switch button.is-active{opacity:1;font-weight:700;}
+.lang-switch .sep{opacity:.35;}
+.footer-lang a{cursor:pointer;}
+.mm-lang{display:flex;align-items:center;gap:10px;margin-top:26px;padding-top:20px;border-top:1px solid rgba(0,0,0,.08);font-size:15px;letter-spacing:.08em;}
+.mm-lang a{color:inherit;text-decoration:none;opacity:.45;cursor:pointer;}
+.mm-lang a.is-active{opacity:1;font-weight:700;}
+.mm-lang span{opacity:.3;}
+</style>
 </head>
 <body>
+<script>try{var _l=localStorage.getItem('gpc-lang');if(_l==='en'||_l==='ja')document.documentElement.lang=_l;}catch(e){}</script>
 
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
@@ -1070,21 +1095,18 @@ section.content-section { padding: 140px 48px; position: relative; }
     </a>
     <nav class="nav-main">
       <a class="nav-item" href="/about.html">
-        会社情報<span class="en">About</span>
+        <span class="i18n-ja">会社情報<span class="en">About</span></span><span class="i18n-en">About</span>
       </a>
       <a class="nav-item" href="/index.html#industries">
-        業界別<span class="en">Industries</span>
-      </a>
-      <a class="nav-item" href="/ec.html">
-        ECサイト<span class="en">Shop</span>
+        <span class="i18n-ja">業界別<span class="en">Industries</span></span><span class="i18n-en">Industries</span>
       </a>
       <a class="nav-item" href="/youtube.html">
-        メディア<span class="en">Media</span>
+        <span class="i18n-ja">メディア<span class="en">Media</span></span><span class="i18n-en">Media</span>
       </a>
     </nav>
     <div class="header-utility">
-      <a class="utility-link" href="#">EN</a>
-      <button class="cta-contact" onclick="location.href='/index.html#contact'">お問い合わせ</button>
+      <span class="lang-switch" aria-label="Language"><button type="button" data-lang-btn="ja">JP</button><span class="sep">/</span><button type="button" data-lang-btn="en">EN</button></span>
+      <button class="cta-contact" onclick="location.href='/index.html#contact'"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></button>
     </div>
   </div>
 </header>
@@ -1101,23 +1123,23 @@ section.content-section { padding: 140px 48px; position: relative; }
       <span class="sep">/</span>
       <span>Features</span>
       <span class="sep">/</span>
-      <span>物流二法対応</span>
+      <span><span class="i18n-ja">物流二法対応</span><span class="i18n-en">Logistics Law Ready</span></span>
     </div>
 
     <div class="industry-label">LOGISTICS LAW READY</div>
 
-    <h1>2024年問題に、<br><span class="accent">パレットで</span><em>応える。</em></h1>
+    <h1><span class="i18n-ja">2024年問題に、<br><span class="accent">パレットで</span><em>応える。</em></span><span class="i18n-en">Answering the 2024 Problem<br><span class="accent">with the</span><em> pallet.</em></span></h1>
 
-    <p class="lead">時間外労働規制で輸送能力が最大14%減。改正物流二法は荷主・物流事業者すべてに「積載効率向上」を求める。グロパレのパレタイズ革命が、規制対応と競争力強化を同時に実現する。</p>
+    <p class="lead"><span class="i18n-ja">時間外労働規制で輸送能力が最大14%減。改正物流二法は荷主・物流事業者すべてに「積載効率向上」を求める。グロパレのパレタイズ革命が、規制対応と競争力強化を同時に実現する。</span><span class="i18n-en">Overtime caps cut transport capacity by up to 14%. The revised logistics laws require every shipper and carrier to "improve loading efficiency." The GPC palletizing revolution delivers compliance and competitiveness at the same time.</span></p>
   </div>
 
   <div class="hero-stats">
     <div class="hero-stats-inner">
       
-            <div class="stat-item"><div class="val">14<em>%</em></div><div class="lbl">2024年問題による輸送能力減</div></div>
-            <div class="stat-item"><div class="val">150<em>%</em></div><div class="lbl">積載効率アップで相殺</div></div>
-            <div class="stat-item"><div class="val">80<em>%</em></div><div class="lbl">積込時間削減</div></div>
-            <div class="stat-item"><div class="val">2026<em>.4</em></div><div class="lbl">改正物流二法 全面施行</div></div>
+            <div class="stat-item"><div class="val">14<em>%</em></div><div class="lbl"><span class="i18n-ja">2024年問題による輸送能力減</span><span class="i18n-en">Capacity Lost to the 2024 Problem</span></div></div>
+            <div class="stat-item"><div class="val">150<em>%</em></div><div class="lbl"><span class="i18n-ja">積載効率アップで相殺</span><span class="i18n-en">Offset by Higher Efficiency</span></div></div>
+            <div class="stat-item"><div class="val">80<em>%</em></div><div class="lbl"><span class="i18n-ja">積込時間削減</span><span class="i18n-en">Loading Time Cut</span></div></div>
+            <div class="stat-item"><div class="val">2026<em>.4</em></div><div class="lbl"><span class="i18n-ja">改正物流二法 全面施行</span><span class="i18n-en">Revised Laws Fully in Force</span></div></div>
         
     </div>
   </div>
@@ -1129,28 +1151,28 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Challenge</span>
-        <span class="jp">規制と現場の板挟み</span>
+        <span class="jp"><span class="i18n-ja">規制と現場の板挟み</span><span class="i18n-en">Caught Between Rules and Reality</span></span>
       </div>
       <div>
         <h2 class="section-title">
-          法対応か、競争力か。<br><em>"どちらか"の時代は終わった。</em>
+          <span class="i18n-ja">法対応か、競争力か。<br><em>"どちらか"の時代は終わった。</em></span><span class="i18n-en">Compliance or competitiveness?<br><em>The "either-or" era is over.</em></span>
         </h2>
-        <p class="section-lead">2024年問題と改正物流二法のダブル圧力。法令を満たしながら、同時に1便あたりの利益を確保できる仕組みが今求められています。</p>
+        <p class="section-lead"><span class="i18n-ja">2024年問題と改正物流二法のダブル圧力。法令を満たしながら、同時に1便あたりの利益を確保できる仕組みが今求められています。</span><span class="i18n-en">The double pressure of the 2024 Problem and the revised logistics laws. What is needed now is a system that meets the law while securing profit per trip.</span></p>
       </div>
     </div>
 
     <div class="challenge-grid">
       <div class="challenge-content reveal">
         <div class="challenge-num">PAIN POINTS</div>
-        <h2><span class="accent">"規制対応"</span>が、<br>競争力を削ぐ構造。</h2>
-        <p>輸送能力が14%減少する中、荷主には積載効率向上の努力義務が課される。コンプライアンスのために積み込みを丁寧にすると現場が止まり、現場を優先すると法令リスクが残る、というジレンマが続いています。</p>
+        <h2><span class="i18n-ja"><span class="accent">"規制対応"</span>が、<br>競争力を削ぐ構造。</span><span class="i18n-en"><span class="accent">"Compliance"</span><br>that erodes competitiveness.</span></h2>
+        <p><span class="i18n-ja">輸送能力が14%減少する中、荷主には積載効率向上の努力義務が課される。コンプライアンスのために積み込みを丁寧にすると現場が止まり、現場を優先すると法令リスクが残る、というジレンマが続いています。</span><span class="i18n-en">As transport capacity falls 14%, shippers face a duty to improve loading efficiency. Load carefully for compliance and the floor stalls; prioritize the floor and legal risk remains. The dilemma persists.</span></p>
 
         <ul class="challenge-points">
           
-            <li><span class="num-marker">01</span><span class="point-text"><strong>時間外労働上限規制で輸送能力が最大14%減</strong>、2030年には34%減の見込み。供給力そのものが構造的に縮む。</span></li>
-            <li><span class="num-marker">02</span><span class="point-text"><strong>改正物流二法（2025年4月一部施行・2026年4月全面施行）</strong>で、荷主・連鎖化事業者・物流事業者すべてに積載効率向上の努力義務。</span></li>
-            <li><span class="num-marker">03</span><span class="point-text"><strong>判断基準にパレタイズ活用が明記</strong>。パレットを使わない積み込みは、明示的に「改善対象」と位置付けられた。</span></li>
-            <li><span class="num-marker">04</span><span class="point-text"><strong>陸上貨物運送業の労災は年間16,292人</strong>、その約70%が荷役作業時。手積みからの脱却は安全衛生上も急務。</span></li>
+            <li><span class="num-marker">01</span><span class="point-text"><span class="i18n-ja"><strong>時間外労働上限規制で輸送能力が最大14%減</strong>、2030年には34%減の見込み。供給力そのものが構造的に縮む。</span><span class="i18n-en"><strong>Overtime caps cut transport capacity by up to 14%</strong>, projected to reach 34% by 2030. Supply capacity itself shrinks structurally.</span></span></li>
+            <li><span class="num-marker">02</span><span class="point-text"><span class="i18n-ja"><strong>改正物流二法（2025年4月一部施行・2026年4月全面施行）</strong>で、荷主・連鎖化事業者・物流事業者すべてに積載効率向上の努力義務。</span><span class="i18n-en"><strong>The revised logistics laws (partial enforcement April 2025, full enforcement April 2026)</strong> impose a duty to improve loading efficiency on every shipper, chain operator, and carrier.</span></span></li>
+            <li><span class="num-marker">03</span><span class="point-text"><span class="i18n-ja"><strong>判断基準にパレタイズ活用が明記</strong>。パレットを使わない積み込みは、明示的に「改善対象」と位置付けられた。</span><span class="i18n-en"><strong>The official criteria explicitly cite palletizing</strong>; non-palletized loading is now expressly designated "subject to improvement."</span></span></li>
+            <li><span class="num-marker">04</span><span class="point-text"><span class="i18n-ja"><strong>陸上貨物運送業の労災は年間16,292人</strong>、その約70%が荷役作業時。手積みからの脱却は安全衛生上も急務。</span><span class="i18n-en"><strong>Road-freight workplace accidents total 16,292 a year</strong>, about 70% during cargo handling. Moving away from manual loading is an urgent safety priority too.</span></span></li>
         
         </ul>
       </div>
@@ -1168,13 +1190,13 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Solution</span>
-        <span class="jp">二法対応の打ち手</span>
+        <span class="jp"><span class="i18n-ja">二法対応の打ち手</span><span class="i18n-en">The Move for Compliance</span></span>
       </div>
       <div>
         <h2 class="section-title">
-          <em>"パレットで応える"</em>、改正物流二法。
+          <span class="i18n-ja"><em>"パレットで応える"</em>、改正物流二法。</span><span class="i18n-en"><em>Answering with the pallet:</em> the revised logistics laws.</span>
         </h2>
-        <p class="section-lead">積載効率向上・荷役の機械化・置き去り防止。改正物流二法が求める3つの要素を、グロパレのパレットがそのまま実装します。</p>
+        <p class="section-lead"><span class="i18n-ja">積載効率向上・荷役の機械化・置き去り防止。改正物流二法が求める3つの要素を、グロパレのパレットがそのまま実装します。</span><span class="i18n-en">Higher loading efficiency, mechanized handling, no driver detention. GPC pallets directly implement the three things the revised laws demand.</span></p>
       </div>
     </div>
 
@@ -1183,20 +1205,20 @@ section.content-section { padding: 140px 48px; position: relative; }
             <div class="solution-card reveal">
                 <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg></div>
                 <div class="feat-num">SOLUTION 01</div>
-                <h3>積載効率 150%アップ</h3>
-                <p>三つ葉パレットの千鳥配置で、20ftコンテナへの積載缶数を16→72缶へ。1便あたりの輸送効率を構造的に引き上げ、輸送能力14%減を相殺します。</p>
+                <h3><span class="i18n-ja">積載効率 150%アップ</span><span class="i18n-en">+150% Loading Efficiency</span></h3>
+                <p><span class="i18n-ja">三つ葉パレットの千鳥配置で、20ftコンテナへの積載缶数を16→72缶へ。1便あたりの輸送効率を構造的に引き上げ、輸送能力14%減を相殺します。</span><span class="i18n-en">The Trefoil pallet’s staggered layout raises drums per 20ft container from 16 to 72. It structurally lifts efficiency per trip, offsetting the 14% capacity loss.</span></p>
             </div>
             <div class="solution-card reveal reveal-delay-1">
                 <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
                 <div class="feat-num">SOLUTION 02</div>
-                <h3>積込時間 80%削減</h3>
-                <p>2時間40分かかっていた手積みが30分に。荷役時間の短縮は、ドライバー拘束時間の削減＝時間外労働規制への直接的な対応です。</p>
+                <h3><span class="i18n-ja">積込時間 80%削減</span><span class="i18n-en">−80% Loading Time</span></h3>
+                <p><span class="i18n-ja">2時間40分かかっていた手積みが30分に。荷役時間の短縮は、ドライバー拘束時間の削減＝時間外労働規制への直接的な対応です。</span><span class="i18n-en">Manual loading that took 2h40m now takes 30 minutes. Shorter handling means shorter driver hours—a direct response to overtime regulation.</span></p>
             </div>
             <div class="solution-card reveal reveal-delay-2">
                 <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
                 <div class="feat-num">SOLUTION 03</div>
-                <h3>荷主責任・置き去り規制対応</h3>
-                <p>パレタイズ前提の運用は、改正物流二法の判断基準で「望ましい取組」として明記。荷主責任・置き去り防止規制にも構造的に対応できます。</p>
+                <h3><span class="i18n-ja">荷主責任・置き去り規制対応</span><span class="i18n-en">Shipper-Liability &amp; Detention Ready</span></h3>
+                <p><span class="i18n-ja">パレタイズ前提の運用は、改正物流二法の判断基準で「望ましい取組」として明記。荷主責任・置き去り防止規制にも構造的に対応できます。</span><span class="i18n-en">Palletized operation is named a "desirable measure" in the revised laws’ criteria, structurally addressing shipper liability and anti-detention rules.</span></p>
             </div>
         
     </div>
@@ -1209,22 +1231,22 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Impact</span>
-        <span class="jp">法対応がもたらす効果</span>
+        <span class="jp"><span class="i18n-ja">法対応がもたらす効果</span><span class="i18n-en">What Compliance Delivers</span></span>
       </div>
       <div>
         <h2 class="section-title">
-          規制対応が、<em>そのまま競争力になる</em>。
+          <span class="i18n-ja">規制対応が、<em>そのまま競争力になる</em>。</span><span class="i18n-en">Compliance <em>becomes competitiveness</em>.</span>
         </h2>
-        <p class="section-lead">改正物流二法の努力義務を満たすことが、現場の負担軽減・コスト削減・荷主評価向上へと直結します。</p>
+        <p class="section-lead"><span class="i18n-ja">改正物流二法の努力義務を満たすことが、現場の負担軽減・コスト削減・荷主評価向上へと直結します。</span><span class="i18n-en">Meeting the revised laws’ duty translates directly into a lighter workload, lower cost, and stronger shipper ratings.</span></p>
       </div>
     </div>
 
     <div class="impact-grid reveal">
       
-            <div class="impact-item"><div class="num">150<span class="u">%</span></div><div class="label-en">LOAD EFFICIENCY</div><div class="label-jp">積載効率向上</div></div>
-            <div class="impact-item"><div class="num">80<span class="u">%</span></div><div class="label-en">TIME SAVED</div><div class="label-jp">積込時間削減</div></div>
-            <div class="impact-item"><div class="num">14<span class="u">%</span></div><div class="label-en">CAPACITY OFFSET</div><div class="label-jp">輸送能力減を相殺</div></div>
-            <div class="impact-item"><div class="num">2026<span class="u">.4</span></div><div class="label-en">FULLY READY</div><div class="label-jp">全面施行に先回り</div></div>
+            <div class="impact-item"><div class="num">150<span class="u">%</span></div><div class="label-en">LOAD EFFICIENCY</div><div class="label-jp"><span class="i18n-ja">積載効率向上</span><span class="i18n-en">Load Efficiency</span></div></div>
+            <div class="impact-item"><div class="num">80<span class="u">%</span></div><div class="label-en">TIME SAVED</div><div class="label-jp"><span class="i18n-ja">積込時間削減</span><span class="i18n-en">Time Saved</span></div></div>
+            <div class="impact-item"><div class="num">14<span class="u">%</span></div><div class="label-en">CAPACITY OFFSET</div><div class="label-jp"><span class="i18n-ja">輸送能力減を相殺</span><span class="i18n-en">Capacity Offset</span></div></div>
+            <div class="impact-item"><div class="num">2026<span class="u">.4</span></div><div class="label-en">FULLY READY</div><div class="label-jp"><span class="i18n-ja">全面施行に先回り</span><span class="i18n-en">Ahead of Enforcement</span></div></div>
         
     </div>
   </div>
@@ -1236,41 +1258,41 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Process</span>
-        <span class="jp">対応前後の変化</span>
+        <span class="jp"><span class="i18n-ja">対応前後の変化</span><span class="i18n-en">Before &amp; After</span></span>
       </div>
       <div>
         <h2 class="section-title">
-          規制対応が、<em>"コスト"から"競争力"に変わる</em>。
+          <span class="i18n-ja">規制対応が、<em>"コスト"から"競争力"に変わる</em>。</span><span class="i18n-en">Compliance turns <em>from "cost" into "competitiveness."</em></span>
         </h2>
-        <p class="section-lead">物流二法は単なる縛りではなく、これまでの非効率を一掃するきっかけです。先手を打った企業から、構造的な強さを手にしていきます。</p>
+        <p class="section-lead"><span class="i18n-ja">物流二法は単なる縛りではなく、これまでの非効率を一掃するきっかけです。先手を打った企業から、構造的な強さを手にしていきます。</span><span class="i18n-en">The logistics laws are not just constraints—they are a chance to sweep away old inefficiency. Companies that move first gain structural strength.</span></p>
       </div>
     </div>
 
     <div class="process-comparison reveal">
       <div class="process-side before">
         <div class="side-label">BEFORE</div>
-        <h3>従来の非パレタイズ運用</h3>
+        <h3><span class="i18n-ja">従来の非パレタイズ運用</span><span class="i18n-en">Conventional Non-Palletized Operation</span></h3>
         <ul>
           
-            <li>手積み・手降ろしでドライバー拘束時間が長い</li>
-            <li>時間外労働規制で輸送能力が14%減</li>
-            <li>1便あたりの積載量が頭打ちで売上の天井が低い</li>
-            <li>荷役作業時の労災リスクが慢性的に存在</li>
-            <li>改正物流二法の判断基準で「改善対象」となる</li>
+            <li><span class="i18n-ja">手積み・手降ろしでドライバー拘束時間が長い</span><span class="i18n-en">Manual load and unload keep drivers tied up for hours</span></li>
+            <li><span class="i18n-ja">時間外労働規制で輸送能力が14%減</span><span class="i18n-en">Overtime caps cut transport capacity by 14%</span></li>
+            <li><span class="i18n-ja">1便あたりの積載量が頭打ちで売上の天井が低い</span><span class="i18n-en">Load per trip plateaus, capping revenue</span></li>
+            <li><span class="i18n-ja">荷役作業時の労災リスクが慢性的に存在</span><span class="i18n-en">Chronic accident risk during cargo handling</span></li>
+            <li><span class="i18n-ja">改正物流二法の判断基準で「改善対象」となる</span><span class="i18n-en">Flagged "subject to improvement" under the revised laws</span></li>
         
         </ul>
       </div>
       <div class="process-arrow">→</div>
       <div class="process-side after">
         <div class="side-label">AFTER</div>
-        <h3>グロパレ × 物流二法対応</h3>
+        <h3><span class="i18n-ja">グロパレ × 物流二法対応</span><span class="i18n-en">GPC × Logistics-Law Ready</span></h3>
         <ul>
           
-            <li>パレタイズ化でドライバー荷役時間を80%削減</li>
-            <li>積載効率150%UPで輸送能力減を構造的に相殺</li>
-            <li>1便あたりの売上が増えて利益率が改善</li>
-            <li>フォーク作業中心へ転換、労災リスクが大幅低減</li>
-            <li>改正物流二法の判断基準で「望ましい取組」に該当</li>
+            <li><span class="i18n-ja">パレタイズ化でドライバー荷役時間を80%削減</span><span class="i18n-en">Palletizing cuts driver handling time by 80%</span></li>
+            <li><span class="i18n-ja">積載効率150%UPで輸送能力減を構造的に相殺</span><span class="i18n-en">+150% efficiency structurally offsets the capacity loss</span></li>
+            <li><span class="i18n-ja">1便あたりの売上が増えて利益率が改善</span><span class="i18n-en">More revenue per trip improves margins</span></li>
+            <li><span class="i18n-ja">フォーク作業中心へ転換、労災リスクが大幅低減</span><span class="i18n-en">Shift to forklift work sharply reduces accident risk</span></li>
+            <li><span class="i18n-ja">改正物流二法の判断基準で「望ましい取組」に該当</span><span class="i18n-en">Qualifies as a "desirable measure" under the revised laws</span></li>
         
         </ul>
       </div>
@@ -1284,13 +1306,13 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Gallery</span>
-        <span class="jp">対応現場</span>
+        <span class="jp"><span class="i18n-ja">対応現場</span><span class="i18n-en">Compliance on Site</span></span>
       </div>
       <div>
         <h2 class="section-title">
-          物流二法を、<em>現場でこう実装する</em>。
+          <span class="i18n-ja">物流二法を、<em>現場でこう実装する</em>。</span><span class="i18n-en">The logistics laws—<em>implemented like this on site</em>.</span>
         </h2>
-        <p class="section-lead">法令対応はオフィスの中で完結するものではありません。トラックヤード・倉庫・コンテナの中で、パレットが具体的にどう動くかが鍵です。</p>
+        <p class="section-lead"><span class="i18n-ja">法令対応はオフィスの中で完結するものではありません。トラックヤード・倉庫・コンテナの中で、パレットが具体的にどう動くかが鍵です。</span><span class="i18n-en">Compliance does not end in the office. The key is exactly how the pallet moves in the truck yard, the warehouse, and the container.</span></p>
       </div>
     </div>
 
@@ -1309,13 +1331,13 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Related</span>
-        <span class="jp">他の特徴</span>
+        <span class="jp"><span class="i18n-ja">他の特徴</span><span class="i18n-en">Other Features</span></span>
       </div>
       <div>
         <h2 class="section-title">
-          グロパレの<em>4つの強み</em>。
+          <span class="i18n-ja">グロパレの<em>4つの強み</em>。</span><span class="i18n-en">GPC’s <em>four strengths</em>.</span>
         </h2>
-        <p class="section-lead">物流二法対応に加え、世界初特許・産廃ゼロ・唯一無二の循環構造という4つの軸でグロパレは物流の常識を更新しています。</p>
+        <p class="section-lead"><span class="i18n-ja">物流二法対応に加え、世界初特許・産廃ゼロ・唯一無二の循環構造という4つの軸でグロパレは物流の常識を更新しています。</span><span class="i18n-en">Beyond logistics-law readiness, GPC redefines the norms of logistics across four axes: world-first patents, zero waste, and a one-of-a-kind circular model.</span></p>
       </div>
     </div>
 
@@ -1325,7 +1347,7 @@ section.content-section { padding: 140px 48px; position: relative; }
                 <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=85" alt="世界初特許" loading="lazy">
                 <div class="overlay">
                     <div class="en">WORLD'S FIRST PATENT</div>
-                    <h4>世界初特許</h4>
+                    <h4><span class="i18n-ja">世界初特許</span><span class="i18n-en">World-First Patent</span></h4>
                     <span class="arrow">View Detail →</span>
                 </div>
             </a>
@@ -1334,7 +1356,7 @@ section.content-section { padding: 140px 48px; position: relative; }
                 <img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=800&q=85" alt="産廃コストゼロ" loading="lazy">
                 <div class="overlay">
                     <div class="en">ZERO WASTE COST</div>
-                    <h4>産廃コストゼロ</h4>
+                    <h4><span class="i18n-ja">産廃コストゼロ</span><span class="i18n-en">Zero Waste Cost</span></h4>
                     <span class="arrow">View Detail →</span>
                 </div>
             </a>
@@ -1343,7 +1365,7 @@ section.content-section { padding: 140px 48px; position: relative; }
                 <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=85" alt="唯一無二の循環構造" loading="lazy">
                 <div class="overlay">
                     <div class="en">UNIQUE CIRCULAR MODEL</div>
-                    <h4>唯一無二の循環構造</h4>
+                    <h4><span class="i18n-ja">唯一無二の循環構造</span><span class="i18n-en">Unique Circular Model</span></h4>
                     <span class="arrow">View Detail →</span>
                 </div>
             </a>
@@ -1357,16 +1379,18 @@ section.content-section { padding: 140px 48px; position: relative; }
   <div class="cta-inner">
     <div class="cta-eyebrow reveal">CONTACT US</div>
     <h2 class="cta-title reveal reveal-delay-1">
-      物流二法、<br>
-      <em>準備できていますか？</em>
+      <span class="i18n-ja">物流二法、<br>
+      <em>準備できていますか？</em></span><span class="i18n-en">The logistics laws—<br>
+      <em>are you ready?</em></span>
     </h2>
     <p class="cta-lead reveal reveal-delay-2">
-      御社の輸送ルート・荷役体制を踏まえた、改正物流二法対応プランをご提案します。<br>
-      まずはお気軽にご相談ください。
+      <span class="i18n-ja">御社の輸送ルート・荷役体制を踏まえた、改正物流二法対応プランをご提案します。<br>
+      まずはお気軽にご相談ください。</span><span class="i18n-en">We will propose a revised-logistics-law compliance plan based on your routes and handling setup.<br>
+      Reach out anytime to get started.</span>
     </p>
 
     <a href="/index.html#contact" class="cta-main reveal reveal-delay-3">
-      無料相談・お見積もりはこちら
+      <span class="i18n-ja">無料相談・お見積もりはこちら</span><span class="i18n-en">Get a free consultation &amp; quote</span>
       <svg width="22" height="14" viewBox="0 0 22 14" fill="none" stroke="currentColor" stroke-width="1.5">
         <path d="M0 7h19M14 1l6 6-6 6"/>
       </svg>
@@ -1386,45 +1410,47 @@ section.content-section { padding: 140px 48px; position: relative; }
           </div>
         </a>
         <p class="footer-tagline">"Sustainable Solutions,<br>Endless Journey"</p>
-        <p class="footer-description">
+        <p class="footer-description i18n-ja">
           パレットの完全循環インフラで、日本の物流コスト・廃棄問題・人手不足を同時解決する次世代ソリューションを提供します。
+        </p>
+        <p class="footer-description i18n-en">
+          We deliver a next-generation solution that tackles Japan&rsquo;s logistics costs, waste, and labor shortage all at once, through a fully circular pallet infrastructure.
         </p>
       </div>
       <div class="footer-nav-grid">
         <div class="footer-nav-col">
           <h5>Company</h5>
           <ul>
-            <li><a href="/about.html">会社情報</a></li>
-            <li><a href="/about.html#message">代表メッセージ</a></li>
-            <li><a href="/about.html#group">グループ会社</a></li>
-            <li><a href="https://fbmg.co.jp/" target="_blank" rel="noopener">FBマネジメントグループ ↗</a></li>
+            <li><a href="/about.html"><span class="i18n-ja">会社情報</span><span class="i18n-en">Company</span></a></li>
+            <li><a href="/about.html#message"><span class="i18n-ja">代表メッセージ</span><span class="i18n-en">CEO Message</span></a></li>
+            <li><a href="/about.html#group"><span class="i18n-ja">グループ会社</span><span class="i18n-en">Group Companies</span></a></li>
+            <li><a href="https://fbmg.co.jp/" target="_blank" rel="noopener"><span class="i18n-ja">FBマネジメントグループ ↗</span><span class="i18n-en">FB Management Group ↗</span></a></li>
           </ul>
         </div>
         <div class="footer-nav-col">
           <h5>Products</h5>
           <ul>
-            <li><a href="/ec.html">ECサイト</a></li>
-            <li><a href="/ec.html">3RDパレット</a></li>
-            <li><a href="/ec.html">三つ葉パレット</a></li>
+            <li><a href="/features/patent.html"><span class="i18n-ja">3RDパレット</span><span class="i18n-en">3RD Pallet</span></a></li>
+            <li><a href="/features/patent.html"><span class="i18n-ja">三つ葉パレット</span><span class="i18n-en">Mitsuba Pallet</span></a></li>
           </ul>
         </div>
         <div class="footer-nav-col">
           <h5>Industries</h5>
           <ul>
-            <li><a href="/industries/logistics.html">物流業界</a></li>
-            <li><a href="/industries/tire.html">タイヤ業界</a></li>
-            <li><a href="/industries/chemical.html">化学・石油</a></li>
-            <li><a href="/industries/food.html">食品・冷凍物流</a></li>
-            <li><a href="/industries/automotive.html">自動車産業</a></li>
+            <li><a href="/industries/logistics.html"><span class="i18n-ja">物流業界</span><span class="i18n-en">Logistics</span></a></li>
+            <li><a href="/industries/tire.html"><span class="i18n-ja">タイヤ業界</span><span class="i18n-en">Tire</span></a></li>
+            <li><a href="/industries/chemical.html"><span class="i18n-ja">化学・石油</span><span class="i18n-en">Chemical &amp; Petroleum</span></a></li>
+            <li><a href="/industries/food.html"><span class="i18n-ja">食品・冷凍物流</span><span class="i18n-en">Food &amp; Cold Chain</span></a></li>
+            <li><a href="/industries/automotive.html"><span class="i18n-ja">自動車産業</span><span class="i18n-en">Automotive</span></a></li>
           </ul>
         </div>
         <div class="footer-nav-col">
           <h5>Resources</h5>
           <ul>
-            <li><a href="/youtube.html">メディア出演</a></li>
-            <li><a href="/about.html">会社情報</a></li>
-            <li><a href="#">お問い合わせ</a></li>
-            <li><a href="#">プライバシーポリシー</a></li>
+            <li><a href="/youtube.html"><span class="i18n-ja">メディア出演</span><span class="i18n-en">Media</span></a></li>
+            <li><a href="/about.html"><span class="i18n-ja">会社情報</span><span class="i18n-en">Company</span></a></li>
+            <li><a href="#"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></a></li>
+            <li><a href="#"><span class="i18n-ja">プライバシーポリシー</span><span class="i18n-en">Privacy Policy</span></a></li>
           </ul>
         </div>
       </div>
@@ -1432,8 +1458,8 @@ section.content-section { padding: 140px 48px; position: relative; }
     <div class="footer-bottom">
       <div class="copyright">© 2026 GLOBAL PALETTE CYCLE CO., LTD. ALL RIGHTS RESERVED.</div>
       <div class="footer-lang">
-        <a href="#" class="is-active">JP</a>
-        <a href="#">EN</a>
+        <a href="#" data-lang-btn="ja" class="is-active">JP</a>
+        <a href="#" data-lang-btn="en">EN</a>
       </div>
     </div>
   </div>
@@ -1468,6 +1494,25 @@ section.content-section { padding: 140px 48px; position: relative; }
         else header.classList.remove('scrolled');
       }, { passive: true });
     }
+  });
+})();
+</script>
+<script>
+(function(){
+  var K='gpc-lang';
+  function apply(l){
+    document.documentElement.lang=l;
+    try{localStorage.setItem(K,l);}catch(e){}
+    var btns=document.querySelectorAll('[data-lang-btn]');
+    for(var i=0;i<btns.length;i++){
+      btns[i].classList.toggle('is-active', btns[i].getAttribute('data-lang-btn')===l);
+    }
+  }
+  var init=(document.documentElement.lang==='en')?'en':'ja';
+  apply(init);
+  document.addEventListener('click',function(e){
+    var t=e.target.closest?e.target.closest('[data-lang-btn]'):null;
+    if(t){e.preventDefault();apply(t.getAttribute('data-lang-btn'));}
   });
 })();
 </script>
