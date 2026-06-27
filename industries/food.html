@@ -1069,16 +1069,23 @@ html[lang="en"] .stats-bar .label-jp,
 html[lang="en"] .page-hero-eyebrow .jp,
 html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
 /* language switch UI (header) */
-.lang-switch{display:inline-flex;align-items:center;font-size:12.5px;font-weight:600;letter-spacing:.06em;border:1px solid rgba(11,140,140,.5);border-radius:999px;overflow:hidden;line-height:1;}
-.lang-switch .sep{display:none;}
-.lang-switch button{background:none;border:0;cursor:pointer;font:inherit;font-weight:600;color:#4A4A4A;padding:5px 12px;letter-spacing:.06em;transition:background .2s,color .2s;}
-.lang-switch button:hover{background:rgba(11,140,140,.1);}
-.lang-switch button.is-active{background:#0B8C8C;color:#fff;}
+.lang-switch{display:inline-flex;align-items:center;gap:5px;font-size:12px;letter-spacing:.08em;}
+.lang-switch button{background:none;border:0;cursor:pointer;font:inherit;color:inherit;opacity:.5;padding:2px 3px;letter-spacing:.08em;transition:opacity .2s,color .2s;}
+.lang-switch button:hover{opacity:.85;}
+.lang-switch button.is-active{opacity:1;font-weight:700;}
+.lang-switch .sep{opacity:.35;}
 .footer-lang a{cursor:pointer;}
 .mm-lang{display:flex;align-items:center;gap:10px;margin-top:26px;padding-top:20px;border-top:1px solid rgba(0,0,0,.08);font-size:15px;letter-spacing:.08em;}
 .mm-lang a{color:inherit;text-decoration:none;opacity:.45;cursor:pointer;}
 .mm-lang a.is-active{opacity:1;font-weight:700;}
 .mm-lang span{opacity:.3;}
+</style>
+
+<style id="readability-floor">
+/* Readability floor: PC body & explanatory text >= 16px (decorative labels unchanged) */
+@media (min-width:769px){
+  .section-lead, .news-title-text, .about-text p, .about-text a, .message-content p, .timeline-body, .group-card p, .info-value, .industry-hero .lead, .challenge-points .point-text, .challenge-content p, .solution-card p, .process-side li { font-size:16px !important; line-height:1.85 !important; }
+}
 </style>
 </head>
 <body>
@@ -1106,7 +1113,7 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
     </nav>
     <div class="header-utility">
       <span class="lang-switch" aria-label="Language"><button type="button" data-lang-btn="ja">JP</button><span class="sep">/</span><button type="button" data-lang-btn="en">EN</button></span>
-      <button class="cta-contact" onclick="location.href='/index.html#contact'"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></button>
+      <button class="cta-contact" onclick="location.href='/contact.html'"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></button>
     </div>
   </div>
 </header>
@@ -1123,23 +1130,23 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
       <span class="sep">/</span>
       <a href="/industries/logistics.html">Industries</a>
       <span class="sep">/</span>
-      <span><span class="i18n-ja">食品・冷凍物流</span><span class="i18n-en">Food &amp; Cold Chain</span></span>
+      <span>食品・冷凍物流</span>
     </div>
 
     <div class="industry-label">FOOD & COLD CHAIN</div>
 
-    <h1><span class="i18n-ja">冷凍パレット、<br><em>1/6</em>の価格で<span class="accent">同じ性能。</span></span><span class="i18n-en">Frozen-grade pallets,<br><em>1/6</em> the price,<span class="accent"> same performance.</span></span></h1>
+    <h1>冷凍パレット、<br><em>1/6</em>の価格で<span class="accent">同じ性能。</span></h1>
 
-    <p class="lead"><span class="i18n-ja">輸入食材・冷凍物流でのパレット回収不能が慢性化。冷凍対応パレット（¥12,000以上）は高額で、廃棄コストが見えないまま積み上がっている。</span><span class="i18n-en">Unrecoverable pallets are chronic in imported-food and cold-chain logistics. Freezer-grade pallets (&yen;12,000+) are expensive, and disposal costs pile up unseen.</span></p>
+    <p class="lead">輸入食材・冷凍物流でのパレット回収不能が慢性化。冷凍対応パレット（¥12,000以上）は高額で、廃棄コストが見えないまま積み上がっている。</p>
   </div>
 
   <div class="hero-stats">
     <div class="hero-stats-inner">
       
-            <div class="stat-item"><div class="val">1/6</div><div class="lbl"><span class="i18n-ja">冷凍パレット価格比</span><span class="i18n-en">Frozen-Pallet Price Ratio</span></div></div>
-            <div class="stat-item"><div class="val">0<em><span class="i18n-ja">円</span><span class="i18n-en">JPY</span></em></div><div class="lbl"><span class="i18n-ja">燻蒸コスト</span><span class="i18n-en">Fumigation Cost</span></div></div>
-            <div class="stat-item"><div class="val">¥1,800<em>〜</em></div><div class="lbl"><span class="i18n-ja">冷凍対応3RD価格</span><span class="i18n-en">Frozen-Grade 3RD Price</span></div></div>
-            <div class="stat-item"><div class="val">100<em>%</em></div><div class="lbl"><span class="i18n-ja">回収再販可能</span><span class="i18n-en">Resale Ready</span></div></div>
+            <div class="stat-item"><div class="val">1/6</div><div class="lbl">冷凍パレット価格比</div></div>
+            <div class="stat-item"><div class="val">0<em>円</em></div><div class="lbl">燻蒸コスト</div></div>
+            <div class="stat-item"><div class="val">¥1,800<em>〜</em></div><div class="lbl">冷凍対応3RD価格</div></div>
+            <div class="stat-item"><div class="val">100<em>%</em></div><div class="lbl">回収再販可能</div></div>
         
     </div>
   </div>
@@ -1151,26 +1158,28 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Challenge</span>
-        <span class="jp"><span class="i18n-ja">業界の課題</span><span class="i18n-en">The Industry's Problem</span></span>
+        <span class="jp">業界の課題</span>
       </div>
       <div>
-        <h2 class="section-title"><span class="i18n-ja">冷凍物流の<em>"高コスト前提"</em>を、<br>もう疑う時。</span><span class="i18n-en">Time to question the <em>"high-cost premise"</em><br>of cold-chain logistics.</span></h2>
-        <p class="section-lead"><span class="i18n-ja">冷凍対応パレットは¥12,000以上が業界標準。回収不能時のロスは、利益を確実に削っていきます。</span><span class="i18n-en">Freezer-grade pallets start at &yen;12,000 as the industry norm. When they can't be recovered, the loss steadily eats into profit.</span></p>
+        <h2 class="section-title">
+          冷凍物流の<em>"高コスト前提"</em>を、<br>もう疑う時。
+        </h2>
+        <p class="section-lead">冷凍対応パレットは¥12,000以上が業界標準。回収不能時のロスは、利益を確実に削っていきます。</p>
       </div>
     </div>
 
     <div class="challenge-grid">
       <div class="challenge-content reveal">
         <div class="challenge-num">PAIN POINTS</div>
-        <h2><span class="i18n-ja"><span class="accent">高額パレット</span>が、利益を冷凍する。</span><span class="i18n-en"><span class="accent">Costly pallets</span> freeze your profit.</span></h2>
-        <p><span class="i18n-ja">輸入食材や冷凍食品の物流では、特殊な冷凍対応パレットが必要とされてきました。しかしその高額さゆえに、回収不能時のロスは膨大。「仕方ない」と諦められてきたこの構造を、今こそ見直すべきです。</span><span class="i18n-en">Imported and frozen-food logistics has always required special freezer-grade pallets. But their high price makes losses huge when they cannot be recovered. It is time to rethink the structure we have written off as "unavoidable."</span></p>
+        <h2><span class="accent">高額パレット</span>が、利益を冷凍する。</h2>
+        <p>輸入食材や冷凍食品の物流では、特殊な冷凍対応パレットが必要とされてきました。しかしその高額さゆえに、回収不能時のロスは膨大。「仕方ない」と諦められてきたこの構造を、今こそ見直すべきです。</p>
 
         <ul class="challenge-points">
           
-            <li><span class="num-marker">01</span><span class="point-text"><span class="i18n-ja"><strong>冷凍対応パレットは¥12,000以上</strong>。1枚あたりの単価が高く、紛失時のロスが大きい。</span><span class="i18n-en"><strong>Freezer-grade pallets exceed &yen;12,000.</strong> The high unit price makes every loss costly.</span></span></li>
-            <li><span class="num-marker">02</span><span class="point-text"><span class="i18n-ja"><strong>輸入食材の回収不能が慢性化</strong>。海外から日本へのワンウェイ運用が常態化している。</span><span class="i18n-en"><strong>Unrecoverable imported-food pallets are chronic,</strong> as one-way shipping from overseas to Japan is the norm.</span></span></li>
-            <li><span class="num-marker">03</span><span class="point-text"><span class="i18n-ja"><strong>廃棄コストが見えないまま積み上がる</strong>。物流原価に紛れて把握しにくい構造的問題。</span><span class="i18n-en"><strong>Disposal costs pile up unseen,</strong> buried in logistics costs and hard to grasp.</span></span></li>
-            <li><span class="num-marker">04</span><span class="point-text"><span class="i18n-ja"><strong>木製パレットは衛生面・燻蒸面で輸入不向き</strong>。食品物流に最適化された選択肢が少ない。</span><span class="i18n-en"><strong>Wooden pallets suit imports poorly</strong> on hygiene and fumigation, leaving few options built for food logistics.</span></span></li>
+            <li><span class="num-marker">01</span><span class="point-text"><strong>冷凍対応パレットは¥12,000以上</strong>。1枚あたりの単価が高く、紛失時のロスが大きい。</span></li>
+            <li><span class="num-marker">02</span><span class="point-text"><strong>輸入食材の回収不能が慢性化</strong>。海外から日本へのワンウェイ運用が常態化している。</span></li>
+            <li><span class="num-marker">03</span><span class="point-text"><strong>廃棄コストが見えないまま積み上がる</strong>。物流原価に紛れて把握しにくい構造的問題。</span></li>
+            <li><span class="num-marker">04</span><span class="point-text"><strong>木製パレットは衛生面・燻蒸面で輸入不向き</strong>。食品物流に最適化された選択肢が少ない。</span></li>
         
         </ul>
       </div>
@@ -1188,11 +1197,13 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Solution</span>
-        <span class="jp"><span class="i18n-ja">グロパレの解決策</span><span class="i18n-en">The GPC Solution</span></span>
+        <span class="jp">グロパレの解決策</span>
       </div>
       <div>
-        <h2 class="section-title"><span class="i18n-ja"><em>3RDパレット冷凍仕様</em>で、<br>1/6コストの循環物流へ。</span><span class="i18n-en">With the <em>frozen-spec 3RD pallet,</em><br>move to 1/6-cost circular logistics.</span></h2>
-        <p class="section-lead"><span class="i18n-ja">冷凍特殊パレットの1/6以下のコストで、燻蒸不要・ワンウェイ・回収再販に対応した冷凍仕様3RDパレットを提供します。</span><span class="i18n-en">At under 1/6 the cost of special freezer pallets, the frozen-spec 3RD pallet supports fumigation-free, one-way use, and resale.</span></p>
+        <h2 class="section-title">
+          <em>3RDパレット冷凍仕様</em>で、<br>1/6コストの循環物流へ。
+        </h2>
+        <p class="section-lead">冷凍特殊パレットの1/6以下のコストで、燻蒸不要・ワンウェイ・回収再販に対応した冷凍仕様3RDパレットを提供します。</p>
       </div>
     </div>
 
@@ -1201,20 +1212,20 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
             <div class="solution-card reveal">
                 <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/></svg></div>
                 <div class="feat-num">SOLUTION 01</div>
-                <h3><span class="i18n-ja">冷凍対応で¥1,800〜</span><span class="i18n-en">Freezer-Grade from &yen;1,800</span></h3>
-                <p><span class="i18n-ja">3RDパレット（冷凍仕様）なら、業界相場¥12,000以上の冷凍特殊パレットと同等性能を1/6以下のコストで実現。</span><span class="i18n-en">The frozen-spec 3RD pallet matches the performance of &yen;12,000+ special freezer pallets at under 1/6 the cost.</span></p>
+                <h3>冷凍対応で¥1,800〜</h3>
+                <p>3RDパレット（冷凍仕様）なら、業界相場¥12,000以上の冷凍特殊パレットと同等性能を1/6以下のコストで実現。</p>
             </div>
             <div class="solution-card reveal reveal-delay-1">
                 <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/><path d="M9 12l2 2 4-4"/></svg></div>
                 <div class="feat-num">SOLUTION 02</div>
-                <h3><span class="i18n-ja">燻蒸不要・ワンウェイ対応</span><span class="i18n-en">Fumigation-Free, One-Way Ready</span></h3>
-                <p><span class="i18n-ja">パーチクルボード製で燻蒸処理は不要。海外から日本までのワンウェイ運用で、回収便コストもゼロに。</span><span class="i18n-en">Made of particleboard, it needs no fumigation; one-way use from overseas to Japan brings return-trip costs to zero.</span></p>
+                <h3>燻蒸不要・ワンウェイ対応</h3>
+                <p>パーチクルボード製で燻蒸処理は不要。海外から日本までのワンウェイ運用で、回収便コストもゼロに。</p>
             </div>
             <div class="solution-card reveal reveal-delay-2">
                 <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h18M3 12h18M3 17h18"/></svg></div>
                 <div class="feat-num">SOLUTION 03</div>
-                <h3><span class="i18n-ja">回収再販モデル対応</span><span class="i18n-en">Built for Resale</span></h3>
-                <p><span class="i18n-ja">使用済みパレットは中古再販、損傷品はリサイクル。完全循環で産廃ゼロの食品物流を実現します。</span><span class="i18n-en">Used pallets are resold and damaged ones recycled—full circulation delivers zero-waste food logistics.</span></p>
+                <h3>回収再販モデル対応</h3>
+                <p>使用済みパレットは中古再販、損傷品はリサイクル。完全循環で産廃ゼロの食品物流を実現します。</p>
             </div>
         
     </div>
@@ -1227,20 +1238,22 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Impact</span>
-        <span class="jp"><span class="i18n-ja">導入効果</span><span class="i18n-en">Measurable Results</span></span>
+        <span class="jp">導入効果</span>
       </div>
       <div>
-        <h2 class="section-title"><span class="i18n-ja">数字で見る、<em>導入のインパクト</em>。</span><span class="i18n-en">The impact, <em>in numbers.</em></span></h2>
-        <p class="section-lead"><span class="i18n-ja">高額パレットからの解放で、食品物流のコスト構造を根本から書き換えます。</span><span class="i18n-en">Free from costly pallets, we rewrite the cost structure of food logistics at its core.</span></p>
+        <h2 class="section-title">
+          数字で見る、<em>導入のインパクト</em>。
+        </h2>
+        <p class="section-lead">高額パレットからの解放で、食品物流のコスト構造を根本から書き換えます。</p>
       </div>
     </div>
 
     <div class="impact-grid reveal">
       
-            <div class="impact-item"><div class="num">1/6</div><div class="label-en">PRICE RATIO</div><div class="label-jp"><span class="i18n-ja">価格比</span><span class="i18n-en">Price Ratio</span></div></div>
-            <div class="impact-item"><div class="num">0<span class="u"><span class="i18n-ja">円</span><span class="i18n-en">JPY</span></span></div><div class="label-en">FUMIGATION</div><div class="label-jp"><span class="i18n-ja">燻蒸コスト</span><span class="i18n-en">Fumigation Cost</span></div></div>
-            <div class="impact-item"><div class="num">100<span class="u">%</span></div><div class="label-en">RECYCLABLE</div><div class="label-jp"><span class="i18n-ja">リサイクル可能</span><span class="i18n-en">Recyclable</span></div></div>
-            <div class="impact-item"><div class="num">○</div><div class="label-en">FROZEN</div><div class="label-jp"><span class="i18n-ja">冷凍対応</span><span class="i18n-en">Freezer Ready</span></div></div>
+            <div class="impact-item"><div class="num">1/6</div><div class="label-en">PRICE RATIO</div><div class="label-jp">価格比</div></div>
+            <div class="impact-item"><div class="num">0<span class="u">円</span></div><div class="label-en">FUMIGATION</div><div class="label-jp">燻蒸コスト</div></div>
+            <div class="impact-item"><div class="num">100<span class="u">%</span></div><div class="label-en">RECYCLABLE</div><div class="label-jp">リサイクル可能</div></div>
+            <div class="impact-item"><div class="num">○</div><div class="label-en">FROZEN</div><div class="label-jp">冷凍対応</div></div>
         
     </div>
   </div>
@@ -1252,39 +1265,41 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Process</span>
-        <span class="jp"><span class="i18n-ja">導入前後の変化</span><span class="i18n-en">Before & After</span></span>
+        <span class="jp">導入前後の変化</span>
       </div>
       <div>
-        <h2 class="section-title"><span class="i18n-ja">現場の<em>"当たり前"</em>が、こう変わる。</span><span class="i18n-en">The shop-floor <em>"normal"</em> changes like this.</span></h2>
-        <p class="section-lead"><span class="i18n-ja">冷凍物流現場の運用が、3RDパレット導入でどう変わるかを比較しました。</span><span class="i18n-en">We compared how cold-chain operations change with the 3RD pallet.</span></p>
+        <h2 class="section-title">
+          現場の<em>"当たり前"</em>が、こう変わる。
+        </h2>
+        <p class="section-lead">冷凍物流現場の運用が、3RDパレット導入でどう変わるかを比較しました。</p>
       </div>
     </div>
 
     <div class="process-comparison reveal">
       <div class="process-side before">
         <div class="side-label">BEFORE</div>
-        <h3><span class="i18n-ja">従来の運用</span><span class="i18n-en">Conventional Operation</span></h3>
+        <h3>従来の運用</h3>
         <ul>
           
-            <li><span class="i18n-ja">冷凍対応パレット¥12,000以上の高額調達</span><span class="i18n-en">Costly procurement of &yen;12,000+ freezer pallets</span></li>
-            <li><span class="i18n-ja">輸入食材の回収不能が常態化</span><span class="i18n-en">Unrecoverable imported-food pallets are routine</span></li>
-            <li><span class="i18n-ja">廃棄コストが原価に紛れて見えない</span><span class="i18n-en">Disposal costs hidden inside overall cost</span></li>
-            <li><span class="i18n-ja">木製は衛生・燻蒸面で輸入不向き</span><span class="i18n-en">Wood suits imports poorly on hygiene and fumigation</span></li>
-            <li><span class="i18n-ja">高額パレット紛失時のロスが膨大</span><span class="i18n-en">Losing a costly pallet means a huge loss</span></li>
+            <li>冷凍対応パレット¥12,000以上の高額調達</li>
+            <li>輸入食材の回収不能が常態化</li>
+            <li>廃棄コストが原価に紛れて見えない</li>
+            <li>木製は衛生・燻蒸面で輸入不向き</li>
+            <li>高額パレット紛失時のロスが膨大</li>
         
         </ul>
       </div>
       <div class="process-arrow">→</div>
       <div class="process-side after">
         <div class="side-label">AFTER</div>
-        <h3><span class="i18n-ja">グロパレ導入後</span><span class="i18n-en">After GPC</span></h3>
+        <h3>グロパレ導入後</h3>
         <ul>
           
-            <li><span class="i18n-ja">3RDパレット冷凍仕様¥1,800〜で調達</span><span class="i18n-en">Procure the frozen-spec 3RD pallet from &yen;1,800</span></li>
-            <li><span class="i18n-ja">ワンウェイ運用で回収不要</span><span class="i18n-en">One-way use means no collection needed</span></li>
-            <li><span class="i18n-ja">産廃ゼロの完全循環モデル</span><span class="i18n-en">A zero-waste, fully circular model</span></li>
-            <li><span class="i18n-ja">燻蒸不要で衛生的・国際輸送対応</span><span class="i18n-en">Fumigation-free, hygienic, export-ready</span></li>
-            <li><span class="i18n-ja">低単価で紛失時のロスを最小化</span><span class="i18n-en">Low unit price minimizes loss on misplacement</span></li>
+            <li>3RDパレット冷凍仕様¥1,800〜で調達</li>
+            <li>ワンウェイ運用で回収不要</li>
+            <li>産廃ゼロの完全循環モデル</li>
+            <li>燻蒸不要で衛生的・国際輸送対応</li>
+            <li>低単価で紛失時のロスを最小化</li>
         
         </ul>
       </div>
@@ -1298,11 +1313,13 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Gallery</span>
-        <span class="jp"><span class="i18n-ja">現場の風景</span><span class="i18n-en">On Site</span></span>
+        <span class="jp">現場の風景</span>
       </div>
       <div>
-        <h2 class="section-title"><span class="i18n-ja">私たちが向き合う、<em>食品・冷凍の現場</em>。</span><span class="i18n-en">The realities we face on the <em>food &amp; cold-chain floor.</em></span></h2>
-        <p class="section-lead"><span class="i18n-ja">日々の現場では、見えない非効率と隠れたコストが積み重なっています。私たちはその一つひとつに向き合い、解決策を提案しています。</span><span class="i18n-en">Every day on the ground, invisible inefficiencies and hidden costs pile up. We face each one and propose a solution.</span></p>
+        <h2 class="section-title">
+          私たちが向き合う、<em>食品・冷凍の現場</em>。
+        </h2>
+        <p class="section-lead">日々の現場では、見えない非効率と隠れたコストが積み重なっています。私たちはその一つひとつに向き合い、解決策を提案しています。</p>
       </div>
     </div>
 
@@ -1321,11 +1338,13 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Related</span>
-        <span class="jp"><span class="i18n-ja">他の業界</span><span class="i18n-en">Other Industries</span></span>
+        <span class="jp">他の業界</span>
       </div>
       <div>
-        <h2 class="section-title"><span class="i18n-ja">他の業界の<em>ソリューション</em>。</span><span class="i18n-en">Solutions for <em>other industries.</em></span></h2>
-        <p class="section-lead"><span class="i18n-ja">グロパレは各業界の固有課題に対し、最適なパレットとオペレーションを提供しています。</span><span class="i18n-en">GPC delivers the optimal pallet and operation for each industry's unique challenges.</span></p>
+        <h2 class="section-title">
+          他の業界の<em>ソリューション</em>。
+        </h2>
+        <p class="section-lead">グロパレは各業界の固有課題に対し、最適なパレットとオペレーションを提供しています。</p>
       </div>
     </div>
 
@@ -1335,7 +1354,7 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
                 <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=85" alt="物流業界" loading="lazy">
                 <div class="overlay">
                     <div class="en">LOGISTICS INDUSTRY</div>
-                    <h4><span class="i18n-ja">物流業界</span><span class="i18n-en">Logistics</span></h4>
+                    <h4>物流業界</h4>
                     <span class="arrow">View Detail →</span>
                 </div>
             </a>
@@ -1344,7 +1363,7 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
                 <img src="https://images.unsplash.com/photo-1577416412292-747c6607f055?w=800&q=85" alt="輸出入・商社" loading="lazy">
                 <div class="overlay">
                     <div class="en">TRADING & EXPORT</div>
-                    <h4><span class="i18n-ja">輸出入・商社</span><span class="i18n-en">Trading &amp; Export</span></h4>
+                    <h4>輸出入・商社</h4>
                     <span class="arrow">View Detail →</span>
                 </div>
             </a>
@@ -1353,7 +1372,7 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
                 <img src="https://images.unsplash.com/photo-1486006920555-c77dcf18193c?w=800&q=85" alt="タイヤ業界" loading="lazy">
                 <div class="overlay">
                     <div class="en">TIRE INDUSTRY</div>
-                    <h4><span class="i18n-ja">タイヤ業界</span><span class="i18n-en">Tire Industry</span></h4>
+                    <h4>タイヤ業界</h4>
                     <span class="arrow">View Detail →</span>
                 </div>
             </a>
@@ -1366,13 +1385,17 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
 <section class="section-cta">
   <div class="cta-inner">
     <div class="cta-eyebrow reveal">CONTACT US</div>
-    <h2 class="cta-title reveal reveal-delay-1"><span class="i18n-ja">食品・冷凍の物流コスト、<br>
-      <em>まだ捨てていますか？</em></span><span class="i18n-en">Your food &amp; cold-chain logistics costs—<br> <em>still throwing them away?</em></span></h2>
-    <p class="cta-lead reveal reveal-delay-2"><span class="i18n-ja">御社の現場課題に合わせた最適なご提案をいたします。<br>
-      まずはお気軽にご相談ください。</span><span class="i18n-en">We'll propose the best fit for your on-site challenges.<br>Reach out anytime to get started.</span></p>
+    <h2 class="cta-title reveal reveal-delay-1">
+      食品・冷凍の物流コスト、<br>
+      <em>まだ捨てていますか？</em>
+    </h2>
+    <p class="cta-lead reveal reveal-delay-2">
+      御社の現場課題に合わせた最適なご提案をいたします。<br>
+      まずはお気軽にご相談ください。
+    </p>
 
-    <a href="/index.html#contact" class="cta-main reveal reveal-delay-3">
-      <span class="i18n-ja">無料相談・お見積もりはこちら</span><span class="i18n-en">Get a free consultation &amp; quote</span>
+    <a href="/contact.html" class="cta-main reveal reveal-delay-3">
+      無料相談・お見積もりはこちら
       <svg width="22" height="14" viewBox="0 0 22 14" fill="none" stroke="currentColor" stroke-width="1.5">
         <path d="M0 7h19M14 1l6 6-6 6"/>
       </svg>
@@ -1432,7 +1455,7 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
             <li><a href="/youtube.html"><span class="i18n-ja">メディア出演</span><span class="i18n-en">Media</span></a></li>
             <li><a href="/about.html"><span class="i18n-ja">会社情報</span><span class="i18n-en">Company</span></a></li>
             <li><a href="#"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></a></li>
-            <li><a href="#"><span class="i18n-ja">プライバシーポリシー</span><span class="i18n-en">Privacy Policy</span></a></li>
+            <li><a href="/privacy.html"><span class="i18n-ja">プライバシーポリシー</span><span class="i18n-en">Privacy Policy</span></a></li>
           </ul>
         </div>
       </div>

@@ -1541,15 +1541,11 @@ html[lang="en"] .fs-label .ja,
 html[lang="en"] .stats-bar .label-jp,
 html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
 /* language switch UI (header) */
-.lang-switch{display:inline-flex;align-items:center;font-size:12.5px;font-weight:600;letter-spacing:.06em;border:1px solid rgba(255,255,255,.6);border-radius:999px;overflow:hidden;line-height:1;}
-.lang-switch .sep{display:none;}
-.lang-switch button{background:none;border:0;cursor:pointer;font:inherit;font-weight:600;color:rgba(255,255,255,.92);padding:5px 12px;letter-spacing:.06em;transition:background .2s,color .2s;}
-.lang-switch button:hover{background:rgba(255,255,255,.16);}
-.lang-switch button.is-active{background:#0B8C8C;color:#fff;}
-.site-header.scrolled .lang-switch{border-color:rgba(11,140,140,.5);}
-.site-header.scrolled .lang-switch button{color:#4A4A4A;}
-.site-header.scrolled .lang-switch button:hover{background:rgba(11,140,140,.1);}
-.site-header.scrolled .lang-switch button.is-active{background:#0B8C8C;color:#fff;}
+.lang-switch{display:inline-flex;align-items:center;gap:5px;font-size:12px;letter-spacing:.08em;}
+.lang-switch button{background:none;border:0;cursor:pointer;font:inherit;color:inherit;opacity:.5;padding:2px 3px;letter-spacing:.08em;transition:opacity .2s,color .2s;}
+.lang-switch button:hover{opacity:.85;}
+.lang-switch button.is-active{opacity:1;font-weight:700;}
+.lang-switch .sep{opacity:.35;}
 /* footer lang as buttons */
 .footer-lang a{cursor:pointer;}
 /* mobile menu lang */
@@ -1562,6 +1558,13 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
 .hero-title.i18n-en .line{display:block;width:100%;margin:0 auto;white-space:normal;}
 .hero-title.i18n-en .accent,.hero-title.i18n-en em{display:inline;}
 @media (max-width:768px){.hero-title.i18n-en{font-size:clamp(19px,5.4vw,28px);}}
+</style>
+
+<style id="readability-floor">
+/* Readability floor: PC body & explanatory text >= 16px (decorative labels unchanged) */
+@media (min-width:769px){
+  .section-lead, .news-title-text, .about-text p, .about-text a, .message-content p, .timeline-body, .group-card p, .info-value, .industry-hero .lead, .challenge-points .point-text, .challenge-content p, .solution-card p, .process-side li { font-size:16px !important; line-height:1.85 !important; }
+}
 </style>
 </head>
 <body>
@@ -1604,7 +1607,7 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
     </nav>
     <div class="header-utility">
       <span class="lang-switch" aria-label="Language"><button type="button" data-lang-btn="ja">JP</button><span class="sep">/</span><button type="button" data-lang-btn="en">EN</button></span>
-      <button class="cta-contact" onclick="location.href='#contact'"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></button>
+      <button class="cta-contact" onclick="location.href='/contact.html'"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></button>
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
@@ -1619,7 +1622,7 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
     <a class="mm-item" href="/about.html"><span class="i18n-ja"><span class="ja">会社情報</span><span class="en">About</span></span><span class="i18n-en"><span class="ja">About</span></span></a>
     <a class="mm-item" href="/industries/logistics.html"><span class="i18n-ja"><span class="ja">業界別</span><span class="en">Industries</span></span><span class="i18n-en"><span class="ja">Industries</span></span></a>
     <a class="mm-item" href="/youtube.html"><span class="i18n-ja"><span class="ja">メディア</span><span class="en">Media</span></span><span class="i18n-en"><span class="ja">Media</span></span></a>
-    <a class="mm-item mm-contact" href="#contact"><span class="i18n-ja"><span class="ja">お問い合わせ</span><span class="en">Contact</span></span><span class="i18n-en"><span class="ja">Contact</span></span></a>
+    <a class="mm-item mm-contact" href="/contact.html"><span class="i18n-ja"><span class="ja">お問い合わせ</span><span class="en">Contact</span></span><span class="i18n-en"><span class="ja">Contact</span></span></a>
     <div class="mm-lang"><a data-lang-btn="ja">JP</a><span>/</span><a data-lang-btn="en">EN</a></div>
   </nav>
 </div>
@@ -1827,19 +1830,19 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
         <div class="news-tab"><span class="i18n-ja">メディア</span><span class="i18n-en">Media</span></div>
       </div>
       <div class="news-list">
-        <a href="#" class="news-item">
+        <a href="/news/20260518-logistics-law-guideline.html" class="news-item">
           <div class="news-date">2026.05.18</div>
           <div class="news-tag tag-news"><span class="i18n-ja">お知らせ</span><span class="i18n-en">News</span></div>
           <div class="news-title-text"><span class="i18n-ja">物流二法本格施行に伴う、3RDパレット対応ガイドラインを公開しました</span><span class="i18n-en">Published the 3RD Pallet compliance guideline for the full enforcement of Japan&rsquo;s revised logistics laws</span></div>
           <div class="news-arrow">→</div>
         </a>
-        <a href="#" class="news-item">
+        <a href="/news/20260502-mitsuba-2dan.html" class="news-item">
           <div class="news-date">2026.05.02</div>
           <div class="news-tag tag-product"><span class="i18n-ja">製品</span><span class="i18n-en">Products</span></div>
           <div class="news-title-text"><span class="i18n-ja">三つ葉パレット 2段積みセット仕様の販売を開始しました</span><span class="i18n-en">Sales begin for the Mitsuba Pallet double-stack set specification</span></div>
           <div class="news-arrow">→</div>
         </a>
-        <a href="#" class="news-item">
+        <a href="/news/20260415-expo2026.html" class="news-item">
           <div class="news-date">2026.04.15</div>
           <div class="news-tag tag-event"><span class="i18n-ja">展示会</span><span class="i18n-en">Events</span></div>
           <div class="news-title-text"><span class="i18n-ja">国際物流総合展2026に出展いたします(東京ビッグサイト・6/2-6/4)</span><span class="i18n-en">Exhibiting at the International Logistics Exhibition 2026 (Tokyo Big Sight, Jun 2&ndash;4)</span></div>
@@ -1851,14 +1854,14 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
           <div class="news-title-text"><span class="i18n-ja">岩田代表のYouTube出演動画一覧ページを公開しました</span><span class="i18n-en">Launched a page collecting CEO Iwata&rsquo;s YouTube appearances</span></div>
           <div class="news-arrow">→</div>
         </a>
-        <a href="#" class="news-item">
+        <a href="/news/20260327-vietnam-hcmc.html" class="news-item">
           <div class="news-date">2026.03.27</div>
           <div class="news-tag tag-news"><span class="i18n-ja">お知らせ</span><span class="i18n-en">News</span></div>
           <div class="news-title-text"><span class="i18n-ja">ベトナム Ho Chi Minh 製造拠点が本格稼働を開始しました</span><span class="i18n-en">Our Ho Chi Minh manufacturing base in Vietnam has entered full operation</span></div>
           <div class="news-arrow">→</div>
         </a>
       </div>
-      <a class="news-more" href="/index.html#news">
+      <a class="news-more" href="/news/index.html">
         View All News
         <svg width="20" height="12" viewBox="0 0 20 12" fill="none" stroke="currentColor" stroke-width="1.5">
           <path d="M0 6h17M13 1l5 5-5 5"/>
@@ -2310,10 +2313,10 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
         <div class="footer-nav-col">
           <h5>Resources</h5>
           <ul>
-            <li><a href="/index.html#news"><span class="i18n-ja">ニュース</span><span class="i18n-en">News</span></a></li>
+            <li><a href="/news/index.html"><span class="i18n-ja">ニュース</span><span class="i18n-en">News</span></a></li>
             <li><a href="/youtube.html"><span class="i18n-ja">メディア出演</span><span class="i18n-en">Media</span></a></li>
-            <li><a href="#contact"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></a></li>
-            <li><a href="#"><span class="i18n-ja">プライバシーポリシー</span><span class="i18n-en">Privacy Policy</span></a></li>
+            <li><a href="/contact.html"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></a></li>
+            <li><a href="/privacy.html"><span class="i18n-ja">プライバシーポリシー</span><span class="i18n-en">Privacy Policy</span></a></li>
           </ul>
         </div>
       </div>

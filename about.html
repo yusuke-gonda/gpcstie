@@ -784,16 +784,23 @@ html[lang="en"] .stats-bar .label-jp,
 html[lang="en"] .page-hero-eyebrow .jp,
 html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
 /* language switch UI (header) */
-.lang-switch{display:inline-flex;align-items:center;font-size:12.5px;font-weight:600;letter-spacing:.06em;border:1px solid rgba(11,140,140,.5);border-radius:999px;overflow:hidden;line-height:1;}
-.lang-switch .sep{display:none;}
-.lang-switch button{background:none;border:0;cursor:pointer;font:inherit;font-weight:600;color:#4A4A4A;padding:5px 12px;letter-spacing:.06em;transition:background .2s,color .2s;}
-.lang-switch button:hover{background:rgba(11,140,140,.1);}
-.lang-switch button.is-active{background:#0B8C8C;color:#fff;}
+.lang-switch{display:inline-flex;align-items:center;gap:5px;font-size:12px;letter-spacing:.08em;}
+.lang-switch button{background:none;border:0;cursor:pointer;font:inherit;color:inherit;opacity:.5;padding:2px 3px;letter-spacing:.08em;transition:opacity .2s,color .2s;}
+.lang-switch button:hover{opacity:.85;}
+.lang-switch button.is-active{opacity:1;font-weight:700;}
+.lang-switch .sep{opacity:.35;}
 .footer-lang a{cursor:pointer;}
 .mm-lang{display:flex;align-items:center;gap:10px;margin-top:26px;padding-top:20px;border-top:1px solid rgba(0,0,0,.08);font-size:15px;letter-spacing:.08em;}
 .mm-lang a{color:inherit;text-decoration:none;opacity:.45;cursor:pointer;}
 .mm-lang a.is-active{opacity:1;font-weight:700;}
 .mm-lang span{opacity:.3;}
+</style>
+
+<style id="readability-floor">
+/* Readability floor: PC body & explanatory text >= 16px (decorative labels unchanged) */
+@media (min-width:769px){
+  .section-lead, .news-title-text, .about-text p, .about-text a, .message-content p, .timeline-body, .group-card p, .info-value, .industry-hero .lead, .challenge-points .point-text, .challenge-content p, .solution-card p, .process-side li { font-size:16px !important; line-height:1.85 !important; }
+}
 </style>
 </head>
 <body>
@@ -822,7 +829,7 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
     </nav>
     <div class="header-utility">
       <span class="lang-switch" aria-label="Language"><button type="button" data-lang-btn="ja">JP</button><span class="sep">/</span><button type="button" data-lang-btn="en">EN</button></span>
-      <button class="cta-contact" onclick="location.href='#contact'"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></button>
+      <button class="cta-contact" onclick="location.href='/contact.html'"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></button>
     </div>
   </div>
 </header>
@@ -974,11 +981,56 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
     <div style="text-align: center;" class="reveal">
       <div class="section-num">— GROUP 03 —</div>
       <h2 class="section-h2">
-        <em>グループ会社・協力会社</em>
+        <em><span class="i18n-ja">グループ会社・協力会社</span><span class="i18n-en">Group &amp; Partner Companies</span></em>
       </h2>
       <p class="page-lead" style="margin: 0 auto;">
-        グローバルパレットサイクルは、グループ企業との連携と、海外協力会社との強固な製造パートナーシップにより、製造・販売・経営の各領域で事業基盤を構築しています。
+        <span class="i18n-ja">グローバルパレットサイクルは、グループ企業との連携と、海外協力会社との強固な製造パートナーシップにより、製造・販売・経営の各領域で事業基盤を構築しています。</span><span class="i18n-en">Global Palette Cycle builds its business foundation across manufacturing, sales and management through collaboration with group companies and strong manufacturing partnerships with overseas partners.</span>
       </p>
+    </div>
+
+    <div style="text-align: center;" class="reveal">
+      <div class="section-num" style="margin-top: 56px;">— GROUP COMPANIES —</div>
+    </div>
+    <div class="group-stack">
+      <div class="group-card is-primary reveal">
+        <div class="group-card-head">
+          <div>
+            <h3>八大株式会社</h3>
+            <div class="en">Hachidai Co., Ltd.</div>
+          </div>
+          <span class="group-tag">— GROUP COMPANY —</span>
+        </div>
+        <p><span class="i18n-ja">首都圏を拠点に、食品・チルド・一般貨物の輸送と倉庫業務を展開する総合物流企業。「物流を通じ豊かな生活を創造する」を掲げ、輸送・倉庫から不動産仲介まで幅広く事業を展開しています。</span><span class="i18n-en">A comprehensive logistics company based in the Tokyo metropolitan area, handling transport and warehousing for food, chilled and general cargo. Under the philosophy of &ldquo;creating richer lives through logistics,&rdquo; it operates across transport, warehousing and real-estate brokerage.</span></p>
+        <a class="group-link" href="https://hachidai.co.jp/" target="_blank" rel="noopener"><span class="i18n-ja">公式サイトを見る ↗</span><span class="i18n-en">Visit Website ↗</span></a>
+      </div>
+      <div class="group-connector" aria-hidden="true"></div>
+      <div class="group-card reveal">
+        <div class="group-card-head">
+          <div>
+            <h3>日本ロジソリューションズ株式会社</h3>
+            <div class="en">Japan Logi Solutions Co., Ltd.</div>
+          </div>
+          <span class="group-tag">— GROUP COMPANY —</span>
+        </div>
+        <p><span class="i18n-ja">運送業界の未来を切り拓くロジスティクス・ソリューションの専門企業。特定技能・外国人ドライバーの採用支援から、効率的で信頼性の高い物流サービスまで幅広く提供しています。</span><span class="i18n-en">A specialist in logistics solutions for the future of the transport industry, providing everything from recruitment support for specified-skilled and foreign drivers to efficient, reliable logistics services.</span></p>
+        <a class="group-link" href="https://japan-logi-sol.jp/" target="_blank" rel="noopener"><span class="i18n-ja">公式サイトを見る ↗</span><span class="i18n-en">Visit Website ↗</span></a>
+      </div>
+      <div class="group-connector" aria-hidden="true"></div>
+      <div class="group-card reveal">
+        <div class="group-card-head">
+          <div>
+            <h3>ハチダイエクスプレス株式会社</h3>
+            <div class="en">Hachidai Express Co., Ltd.</div>
+          </div>
+          <span class="group-tag">— GROUP COMPANY —</span>
+        </div>
+        <p><span class="i18n-ja">一般区域貨物自動車運送事業を担う運送会社。地域に密着し、小回りの利く輸送網で物流の動脈を支えています。</span><span class="i18n-en">A trucking company engaged in general regional freight transport, supporting the arteries of logistics with an agile, community-rooted transport network.</span></p>
+        <a class="group-link" href="https://www.yoneda-unyu.co.jp/" target="_blank" rel="noopener"><span class="i18n-ja">公式サイトを見る ↗</span><span class="i18n-en">Visit Website ↗</span></a>
+      </div>
+    </div>
+
+    <div style="text-align: center;" class="reveal">
+      <div class="section-num" style="margin-top: 64px;">— PARTNER COMPANIES —</div>
     </div>
     <div class="group-stack">
       <div class="group-card is-primary reveal">
@@ -987,19 +1039,13 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
             <h3>FBマネジメントグループ</h3>
             <div class="en">FB Management Group</div>
           </div>
-          <span class="group-tag">— GROUP COMPANY —</span>
+          <span class="group-tag">— PARTNER COMPANY —</span>
         </div>
-        <p>
-          成長意欲のある地方有力企業に特化した実業型の総合ソリューション会社。外部環境に左右されない収益基盤を築く「多柱化経営」と「グローバル展開」を軸に、自社で実業を手がけて得たノウハウと国内外のネットワークを活かして経営に伴走します。グローバルパレットサイクルの100%出資親会社として、経営基盤を支えています。
-        </p>
-        <a class="group-link" href="https://fbmg.co.jp/" target="_blank" rel="noopener">
-          公式サイトを見る ↗
-        </a>
+        <p><span class="i18n-ja">成長意欲のある地方有力企業に特化した実業型の総合ソリューション会社。外部環境に左右されない収益基盤を築く「多柱化経営」と「グローバル展開」を軸に、自社で実業を手がけて得たノウハウと国内外のネットワークを活かして経営に伴走します。</span><span class="i18n-en">A hands-on, business-driven solutions firm specializing in ambitious leading regional companies. Centered on &ldquo;multi-pillar management&rdquo; and global expansion, it partners in management using the know-how and networks gained from running real businesses.</span></p>
+        <a class="group-link" href="https://fbmg.co.jp/" target="_blank" rel="noopener"><span class="i18n-ja">公式サイトを見る ↗</span><span class="i18n-en">Visit Website ↗</span></a>
       </div>
-
       <div class="group-connector" aria-hidden="true"></div>
-
-      <div class="group-card is-secondary reveal reveal-delay-1">
+      <div class="group-card reveal">
         <div class="group-card-head">
           <div>
             <h3>FiX3RD Co., Ltd.</h3>
@@ -1007,12 +1053,8 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
           </div>
           <span class="group-tag">— PARTNER COMPANY —</span>
         </div>
-        <p>
-          タイ・バンコクに本社を置く、3RDパレット・三つ葉パレットの製造を担う協力会社。世界初の特許技術を保有し、ASEAN3拠点での製造を統括しています。
-        </p>
-        <a class="group-link" href="#" target="_blank" rel="noopener">
-          公式サイトを見る ↗
-        </a>
+        <p><span class="i18n-ja">タイ・バンコクに本社を置く、3RDパレット・三つ葉パレットの製造を担う協力会社。世界初の特許技術を保有し、ASEAN3拠点での製造を統括しています。</span><span class="i18n-en">Headquartered in Bangkok, Thailand, this partner manufactures the 3RD Pallet and Mitsuba Pallet. Holding world-first patented technology, it oversees production across three ASEAN sites.</span></p>
+        <a class="group-link" href="https://www.fix3rd.com/" target="_blank" rel="noopener"><span class="i18n-ja">公式サイトを見る ↗</span><span class="i18n-en">Visit Website ↗</span></a>
       </div>
     </div>
   </div>
@@ -1024,44 +1066,48 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
     <div style="text-align: center;" class="reveal">
       <div class="section-num">— PROFILE 04 —</div>
       <h2 class="section-h2">
-        <em>会社概要</em>
+        <em><span class="i18n-ja">会社概要</span><span class="i18n-en">Company Profile</span></em>
       </h2>
     </div>
     <div class="info-table reveal">
       <div class="info-row">
-        <div class="info-label">会社名</div>
+        <div class="info-label"><span class="i18n-ja">会社名</span><span class="i18n-en">Company</span></div>
         <div class="info-value">株式会社グローバルパレットサイクル<br><span style="font-family: var(--serif-display); font-style: italic; color: var(--teal-dark); font-size: 13px;">Global Palette Cycle Co., Ltd.</span></div>
       </div>
       <div class="info-row">
-        <div class="info-label">創業</div>
-        <div class="info-value">2025年</div>
+        <div class="info-label"><span class="i18n-ja">創業</span><span class="i18n-en">Founded</span></div>
+        <div class="info-value"><span class="i18n-ja">2025年</span><span class="i18n-en">2025</span></div>
       </div>
       <div class="info-row">
-        <div class="info-label">資本関係</div>
-        <div class="info-value">FBマネジメントグループの100%出資会社（完全子会社）</div>
+        <div class="info-label"><span class="i18n-ja">代表取締役</span><span class="i18n-en">Representative Director</span></div>
+        <div class="info-value"><span class="i18n-ja">岩田 享也</span><span class="i18n-en">Takaya Iwata</span></div>
       </div>
       <div class="info-row">
-        <div class="info-label">代表取締役</div>
-        <div class="info-value">岩田 享也</div>
+        <div class="info-label"><span class="i18n-ja">本社所在地</span><span class="i18n-en">Head Office</span></div>
+        <div class="info-value"><span class="i18n-ja">〒103-0013 東京都中央区日本橋人形町2-16-7</span><span class="i18n-en">2-16-7 Nihonbashi-Ningyocho, Chuo-ku, Tokyo 103-0013, Japan</span></div>
       </div>
       <div class="info-row">
-        <div class="info-label">本社所在地</div>
-        <div class="info-value">〒104-0032 東京都中央区八丁堀2-3-9 H¹O八丁堀3階</div>
+        <div class="info-label"><span class="i18n-ja">電話番号</span><span class="i18n-en">Phone</span></div>
+        <div class="info-value">03-5534-2711</div>
       </div>
       <div class="info-row">
-        <div class="info-label">事業内容</div>
-        <div class="info-value">パレットの製造・販売・回収・リサイクル / 循環型物流インフラの構築 / 物流コンサルティング</div>
+        <div class="info-label"><span class="i18n-ja">FAX番号</span><span class="i18n-en">Fax</span></div>
+        <div class="info-value">03-5534-2712</div>
       </div>
       <div class="info-row">
-        <div class="info-label">取扱製品</div>
-        <div class="info-value">3RDパレット / 三つ葉パレット</div>
+        <div class="info-label"><span class="i18n-ja">事業内容</span><span class="i18n-en">Business</span></div>
+        <div class="info-value"><span class="i18n-ja">パレットの製造・販売・回収・リサイクル / 循環型物流インフラの構築 / 物流改革の支援</span><span class="i18n-en">Manufacturing, sales, collection &amp; recycling of pallets / Building circular logistics infrastructure / Logistics reform support</span></div>
       </div>
       <div class="info-row">
-        <div class="info-label">供給拠点</div>
-        <div class="info-value">タイ・Bangkok / マレーシア・Seremban / ベトナム・Ho Chi Minh / 日本・東京</div>
+        <div class="info-label"><span class="i18n-ja">取扱製品</span><span class="i18n-en">Products</span></div>
+        <div class="info-value"><span class="i18n-ja">3RDパレット / 三つ葉パレット</span><span class="i18n-en">3RD Pallet / Mitsuba Pallet</span></div>
       </div>
       <div class="info-row">
-        <div class="info-label">タグライン</div>
+        <div class="info-label"><span class="i18n-ja">供給拠点</span><span class="i18n-en">Supply Bases</span></div>
+        <div class="info-value"><span class="i18n-ja">タイ・Bangkok / マレーシア・Seremban / ベトナム・Ho Chi Minh / 日本・東京</span><span class="i18n-en">Thailand (Bangkok) / Malaysia (Seremban) / Vietnam (Ho Chi Minh) / Japan (Tokyo)</span></div>
+      </div>
+      <div class="info-row">
+        <div class="info-label"><span class="i18n-ja">タグライン</span><span class="i18n-en">Tagline</span></div>
         <div class="info-value"><em style="font-family: var(--serif-display); font-style: italic; color: var(--teal);">Sustainable Solutions, Endless Journey</em></div>
       </div>
     </div>
@@ -1120,10 +1166,10 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
         <div class="footer-nav-col">
           <h5>Resources</h5>
           <ul>
-            <li><a href="/index.html#news"><span class="i18n-ja">ニュース</span><span class="i18n-en">News</span></a></li>
+            <li><a href="/news/index.html"><span class="i18n-ja">ニュース</span><span class="i18n-en">News</span></a></li>
             <li><a href="/youtube.html"><span class="i18n-ja">メディア出演</span><span class="i18n-en">Media</span></a></li>
-            <li><a href="#contact"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></a></li>
-            <li><a href="#"><span class="i18n-ja">プライバシーポリシー</span><span class="i18n-en">Privacy Policy</span></a></li>
+            <li><a href="/contact.html"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></a></li>
+            <li><a href="/privacy.html"><span class="i18n-ja">プライバシーポリシー</span><span class="i18n-en">Privacy Policy</span></a></li>
           </ul>
         </div>
       </div>

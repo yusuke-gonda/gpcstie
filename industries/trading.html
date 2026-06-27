@@ -1069,16 +1069,23 @@ html[lang="en"] .stats-bar .label-jp,
 html[lang="en"] .page-hero-eyebrow .jp,
 html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
 /* language switch UI (header) */
-.lang-switch{display:inline-flex;align-items:center;font-size:12.5px;font-weight:600;letter-spacing:.06em;border:1px solid rgba(11,140,140,.5);border-radius:999px;overflow:hidden;line-height:1;}
-.lang-switch .sep{display:none;}
-.lang-switch button{background:none;border:0;cursor:pointer;font:inherit;font-weight:600;color:#4A4A4A;padding:5px 12px;letter-spacing:.06em;transition:background .2s,color .2s;}
-.lang-switch button:hover{background:rgba(11,140,140,.1);}
-.lang-switch button.is-active{background:#0B8C8C;color:#fff;}
+.lang-switch{display:inline-flex;align-items:center;gap:5px;font-size:12px;letter-spacing:.08em;}
+.lang-switch button{background:none;border:0;cursor:pointer;font:inherit;color:inherit;opacity:.5;padding:2px 3px;letter-spacing:.08em;transition:opacity .2s,color .2s;}
+.lang-switch button:hover{opacity:.85;}
+.lang-switch button.is-active{opacity:1;font-weight:700;}
+.lang-switch .sep{opacity:.35;}
 .footer-lang a{cursor:pointer;}
 .mm-lang{display:flex;align-items:center;gap:10px;margin-top:26px;padding-top:20px;border-top:1px solid rgba(0,0,0,.08);font-size:15px;letter-spacing:.08em;}
 .mm-lang a{color:inherit;text-decoration:none;opacity:.45;cursor:pointer;}
 .mm-lang a.is-active{opacity:1;font-weight:700;}
 .mm-lang span{opacity:.3;}
+</style>
+
+<style id="readability-floor">
+/* Readability floor: PC body & explanatory text >= 16px (decorative labels unchanged) */
+@media (min-width:769px){
+  .section-lead, .news-title-text, .about-text p, .about-text a, .message-content p, .timeline-body, .group-card p, .info-value, .industry-hero .lead, .challenge-points .point-text, .challenge-content p, .solution-card p, .process-side li { font-size:16px !important; line-height:1.85 !important; }
+}
 </style>
 </head>
 <body>
@@ -1106,7 +1113,7 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
     </nav>
     <div class="header-utility">
       <span class="lang-switch" aria-label="Language"><button type="button" data-lang-btn="ja">JP</button><span class="sep">/</span><button type="button" data-lang-btn="en">EN</button></span>
-      <button class="cta-contact" onclick="location.href='/index.html#contact'"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></button>
+      <button class="cta-contact" onclick="location.href='/contact.html'"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></button>
     </div>
   </div>
 </header>
@@ -1123,23 +1130,23 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
       <span class="sep">/</span>
       <a href="/industries/logistics.html">Industries</a>
       <span class="sep">/</span>
-      <span><span class="i18n-ja">輸出入・商社</span><span class="i18n-en">Trading &amp; Export</span></span>
+      <span>輸出入・商社</span>
     </div>
 
     <div class="industry-label">TRADING & EXPORT</div>
 
-    <h1><span class="i18n-ja">燻蒸不要。回収不要。<br><em>利益だけ</em><span class="accent">残る。</span></span><span class="i18n-en">No fumigation. No collection.<br><em>Just profit</em><span class="accent"> remains.</span></span></h1>
+    <h1>燻蒸不要。回収不要。<br><em>利益だけ</em><span class="accent">残る。</span></h1>
 
-    <p class="lead"><span class="i18n-ja">ASEAN輸送で燻蒸対応・ワンウェイ廃棄・返却不能パレット。見えないコストが国際物流のマージンを蝕み続ける、その連鎖を断つ。</span><span class="i18n-en">In ASEAN shipping: fumigation, one-way disposal, non-returnable pallets. We break the chain of hidden costs that keeps eating international-logistics margins.</span></p>
+    <p class="lead">ASEAN輸送で燻蒸対応・ワンウェイ廃棄・返却不能パレット。見えないコストが国際物流のマージンを蝕み続ける、その連鎖を断つ。</p>
   </div>
 
   <div class="hero-stats">
     <div class="hero-stats-inner">
       
-            <div class="stat-item"><div class="val">0<em><span class="i18n-ja">円</span><span class="i18n-en">JPY</span></em></div><div class="lbl"><span class="i18n-ja">燻蒸処理コスト</span><span class="i18n-en">Fumigation Cost</span></div></div>
-            <div class="stat-item"><div class="val">3<em><span class="i18n-ja">拠点</span><span class="i18n-en">sites</span></em></div><div class="lbl"><span class="i18n-ja">ASEAN製造拠点</span><span class="i18n-en">ASEAN Production Sites</span></div></div>
-            <div class="stat-item"><div class="val">100<em>%</em></div><div class="lbl"><span class="i18n-ja">国際輸送一貫対応</span><span class="i18n-en">Seamless Cross-Border Shipping</span></div></div>
-            <div class="stat-item"><div class="val">2<em>T</em></div><div class="lbl"><span class="i18n-ja">最大積載量</span><span class="i18n-en">Max Load</span></div></div>
+            <div class="stat-item"><div class="val">0<em>円</em></div><div class="lbl">燻蒸処理コスト</div></div>
+            <div class="stat-item"><div class="val">3<em>拠点</em></div><div class="lbl">ASEAN製造拠点</div></div>
+            <div class="stat-item"><div class="val">100<em>%</em></div><div class="lbl">国際輸送一貫対応</div></div>
+            <div class="stat-item"><div class="val">2<em>T</em></div><div class="lbl">最大積載量</div></div>
         
     </div>
   </div>
@@ -1151,26 +1158,28 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Challenge</span>
-        <span class="jp"><span class="i18n-ja">業界の課題</span><span class="i18n-en">The Industry's Problem</span></span>
+        <span class="jp">業界の課題</span>
       </div>
       <div>
-        <h2 class="section-title"><span class="i18n-ja">国際物流に潜む、<br><em>見えないコスト</em>の正体。</span><span class="i18n-en">The hidden cost<br><em>lurking in international logistics.</em></span></h2>
-        <p class="section-lead"><span class="i18n-ja">ASEAN各国との貿易が拡大するほど、燻蒸処理・返却不能パレット・廃棄費用が利益を圧迫していきます。</span><span class="i18n-en">The more trade with ASEAN grows, the more fumigation, non-returnable pallets, and disposal fees squeeze profit.</span></p>
+        <h2 class="section-title">
+          国際物流に潜む、<br><em>見えないコスト</em>の正体。
+        </h2>
+        <p class="section-lead">ASEAN各国との貿易が拡大するほど、燻蒸処理・返却不能パレット・廃棄費用が利益を圧迫していきます。</p>
       </div>
     </div>
 
     <div class="challenge-grid">
       <div class="challenge-content reveal">
         <div class="challenge-num">PAIN POINTS</div>
-        <h2><span class="i18n-ja"><span class="accent">国際輸送</span>のたびに、マージンが消えていく。</span><span class="i18n-en">With every <span class="accent">cross-border shipment,</span> margin disappears.</span></h2>
-        <p><span class="i18n-ja">輸出入を行う商社・メーカーにとって、パレットは「ただの容器」ではなく、利益率に直結する戦略アイテムです。木製は燻蒸が必須、プラスチックは高額で紛失リスク。返却不能なまま海外で廃棄される現状が続いています。</span><span class="i18n-en">For trading firms and makers, a pallet is not "just a container"—it is a strategic item tied directly to margin. Wood requires fumigation; plastic is costly with loss risk. Today, pallets are still scrapped overseas, never returned.</span></p>
+        <h2><span class="accent">国際輸送</span>のたびに、マージンが消えていく。</h2>
+        <p>輸出入を行う商社・メーカーにとって、パレットは「ただの容器」ではなく、利益率に直結する戦略アイテムです。木製は燻蒸が必須、プラスチックは高額で紛失リスク。返却不能なまま海外で廃棄される現状が続いています。</p>
 
         <ul class="challenge-points">
           
-            <li><span class="num-marker">01</span><span class="point-text"><span class="i18n-ja"><strong>木製パレットは燻蒸処理が必須</strong>。ISPM No.15対応で輸出のたびにコストが積み上がる。</span><span class="i18n-en"><strong>Wooden pallets require fumigation.</strong> ISPM No.15 compliance stacks up cost on every export.</span></span></li>
-            <li><span class="num-marker">02</span><span class="point-text"><span class="i18n-ja"><strong>輸送用プラスチックパレットは¥12,000〜</strong>。紛失・損傷リスクが高く、ワンウェイ運用には不向き。</span><span class="i18n-en"><strong>Transport plastic pallets start at &yen;12,000,</strong> with high loss and damage risk—poorly suited to one-way use.</span></span></li>
-            <li><span class="num-marker">03</span><span class="point-text"><span class="i18n-ja"><strong>返却不能なパレットが海外で廃棄</strong>される現状。回収便を出すと採算が合わず、見えないロスが累積。</span><span class="i18n-en"><strong>Non-returnable pallets get scrapped overseas.</strong> Sending a collection trip doesn't pay, so hidden losses accumulate.</span></span></li>
-            <li><span class="num-marker">04</span><span class="point-text"><span class="i18n-ja"><strong>地政学リスクで単一国製造に依存できない</strong>時代。複数拠点からの安定供給が経営の前提条件に。</span><span class="i18n-en"><strong>Geopolitical risk rules out single-country production.</strong> Stable supply from multiple sites is now a business prerequisite.</span></span></li>
+            <li><span class="num-marker">01</span><span class="point-text"><strong>木製パレットは燻蒸処理が必須</strong>。ISPM No.15対応で輸出のたびにコストが積み上がる。</span></li>
+            <li><span class="num-marker">02</span><span class="point-text"><strong>輸送用プラスチックパレットは¥12,000〜</strong>。紛失・損傷リスクが高く、ワンウェイ運用には不向き。</span></li>
+            <li><span class="num-marker">03</span><span class="point-text"><strong>返却不能なパレットが海外で廃棄</strong>される現状。回収便を出すと採算が合わず、見えないロスが累積。</span></li>
+            <li><span class="num-marker">04</span><span class="point-text"><strong>地政学リスクで単一国製造に依存できない</strong>時代。複数拠点からの安定供給が経営の前提条件に。</span></li>
         
         </ul>
       </div>
@@ -1188,11 +1197,13 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Solution</span>
-        <span class="jp"><span class="i18n-ja">グロパレの解決策</span><span class="i18n-en">The GPC Solution</span></span>
+        <span class="jp">グロパレの解決策</span>
       </div>
       <div>
-        <h2 class="section-title"><span class="i18n-ja"><em>ASEAN3拠点</em>で、国際物流を循環へ。</span><span class="i18n-en"><em>Three ASEAN sites</em> turn<br>international logistics circular.</span></h2>
-        <p class="section-lead"><span class="i18n-ja">タイ・マレーシア・ベトナムの現地製造拠点が、燻蒸不要のパーチクルボード製パレットを安定供給します。</span><span class="i18n-en">Local production in Thailand, Malaysia, and Vietnam steadily supplies fumigation-free particleboard pallets.</span></p>
+        <h2 class="section-title">
+          <em>ASEAN3拠点</em>で、国際物流を循環へ。
+        </h2>
+        <p class="section-lead">タイ・マレーシア・ベトナムの現地製造拠点が、燻蒸不要のパーチクルボード製パレットを安定供給します。</p>
       </div>
     </div>
 
@@ -1201,20 +1212,20 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
             <div class="solution-card reveal">
                 <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></div>
                 <div class="feat-num">SOLUTION 01</div>
-                <h3><span class="i18n-ja">燻蒸不要・ISPM 15適用除外</span><span class="i18n-en">Fumigation-Free, ISPM 15 Exempt</span></h3>
-                <p><span class="i18n-ja">熱処理加工済みパーチクルボードを採用。FAO国際基準ISPM 15の適用除外品目に該当し、燻蒸処理なしで国際輸送が可能。</span><span class="i18n-en">Built from heat-treated particleboard, it qualifies as ISPM 15-exempt under the FAO standard—shipping internationally without fumigation.</span></p>
+                <h3>燻蒸不要・ISPM 15適用除外</h3>
+                <p>熱処理加工済みパーチクルボードを採用。FAO国際基準ISPM 15の適用除外品目に該当し、燻蒸処理なしで国際輸送が可能。</p>
             </div>
             <div class="solution-card reveal reveal-delay-1">
                 <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L4 7v10l8 5 8-5V7l-8-5Z"/><path d="M12 22V12M4 7l8 5 8-5"/></svg></div>
                 <div class="feat-num">SOLUTION 02</div>
-                <h3><span class="i18n-ja">東南アジア3拠点供給</span><span class="i18n-en">Supply from 3 Southeast Asian Sites</span></h3>
-                <p><span class="i18n-ja">タイBangkok・マレーシアSeremban・ベトナムHo Chi Minhの3拠点で製造。地政学リスクを分散し、安定供給を実現。</span><span class="i18n-en">Produced at three sites—Bangkok, Seremban, and Ho Chi Minh—spreading geopolitical risk for stable supply.</span></p>
+                <h3>東南アジア3拠点供給</h3>
+                <p>タイBangkok・マレーシアSeremban・ベトナムHo Chi Minhの3拠点で製造。地政学リスクを分散し、安定供給を実現。</p>
             </div>
             <div class="solution-card reveal reveal-delay-2">
                 <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h18M3 12h18M3 17h18"/></svg></div>
                 <div class="feat-num">SOLUTION 03</div>
-                <h3><span class="i18n-ja">現地調達＋日本一貫対応</span><span class="i18n-en">Local Sourcing, Seamless to Japan</span></h3>
-                <p><span class="i18n-ja">ASEAN現地で製造したパレットに荷を積み、そのまま日本まで一貫輸送。返却不要のワンウェイ運用で廃棄コストもゼロ。</span><span class="i18n-en">Load cargo onto pallets made locally in ASEAN and ship seamlessly to Japan—one-way use with no return brings disposal costs to zero.</span></p>
+                <h3>現地調達＋日本一貫対応</h3>
+                <p>ASEAN現地で製造したパレットに荷を積み、そのまま日本まで一貫輸送。返却不要のワンウェイ運用で廃棄コストもゼロ。</p>
             </div>
         
     </div>
@@ -1227,20 +1238,22 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Impact</span>
-        <span class="jp"><span class="i18n-ja">導入効果</span><span class="i18n-en">Measurable Results</span></span>
+        <span class="jp">導入効果</span>
       </div>
       <div>
-        <h2 class="section-title"><span class="i18n-ja">数字で見る、<em>導入のインパクト</em>。</span><span class="i18n-en">The impact, <em>in numbers.</em></span></h2>
-        <p class="section-lead"><span class="i18n-ja">燻蒸コスト、回収コスト、廃棄コスト。3つの見えないコストを同時に消滅させます。</span><span class="i18n-en">Fumigation, collection, disposal—three hidden costs erased at once.</span></p>
+        <h2 class="section-title">
+          数字で見る、<em>導入のインパクト</em>。
+        </h2>
+        <p class="section-lead">燻蒸コスト、回収コスト、廃棄コスト。3つの見えないコストを同時に消滅させます。</p>
       </div>
     </div>
 
     <div class="impact-grid reveal">
       
-            <div class="impact-item"><div class="num">0<span class="u"><span class="i18n-ja">円</span><span class="i18n-en">JPY</span></span></div><div class="label-en">FUMIGATION</div><div class="label-jp"><span class="i18n-ja">燻蒸処理費</span><span class="i18n-en">Fumigation Cost</span></div></div>
-            <div class="impact-item"><div class="num">3<span class="u"><span class="i18n-ja">拠点</span><span class="i18n-en">sites</span></span></div><div class="label-en">ASEAN SUPPLY</div><div class="label-jp"><span class="i18n-ja">東南アジア製造</span><span class="i18n-en">SE-Asia Production</span></div></div>
-            <div class="impact-item"><div class="num">100<span class="u">%</span></div><div class="label-en">ONE-WAY</div><div class="label-jp"><span class="i18n-ja">ワンウェイ運用</span><span class="i18n-en">One-Way Operation</span></div></div>
-            <div class="impact-item"><div class="num">¥1,800<span class="u">〜</span></div><div class="label-en">UNIT PRICE</div><div class="label-jp"><span class="i18n-ja">パレット単価</span><span class="i18n-en">Pallet Unit Price</span></div></div>
+            <div class="impact-item"><div class="num">0<span class="u">円</span></div><div class="label-en">FUMIGATION</div><div class="label-jp">燻蒸処理費</div></div>
+            <div class="impact-item"><div class="num">3<span class="u">拠点</span></div><div class="label-en">ASEAN SUPPLY</div><div class="label-jp">東南アジア製造</div></div>
+            <div class="impact-item"><div class="num">100<span class="u">%</span></div><div class="label-en">ONE-WAY</div><div class="label-jp">ワンウェイ運用</div></div>
+            <div class="impact-item"><div class="num">¥1,800<span class="u">〜</span></div><div class="label-en">UNIT PRICE</div><div class="label-jp">パレット単価</div></div>
         
     </div>
   </div>
@@ -1252,39 +1265,41 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Process</span>
-        <span class="jp"><span class="i18n-ja">導入前後の変化</span><span class="i18n-en">Before & After</span></span>
+        <span class="jp">導入前後の変化</span>
       </div>
       <div>
-        <h2 class="section-title"><span class="i18n-ja">現場の<em>"当たり前"</em>が、こう変わる。</span><span class="i18n-en">The shop-floor <em>"normal"</em> changes like this.</span></h2>
-        <p class="section-lead"><span class="i18n-ja">従来の国際物流とグロパレ導入後の比較。コスト構造が一新されます。</span><span class="i18n-en">Conventional international logistics versus after GPC—the cost structure is renewed.</span></p>
+        <h2 class="section-title">
+          現場の<em>"当たり前"</em>が、こう変わる。
+        </h2>
+        <p class="section-lead">従来の国際物流とグロパレ導入後の比較。コスト構造が一新されます。</p>
       </div>
     </div>
 
     <div class="process-comparison reveal">
       <div class="process-side before">
         <div class="side-label">BEFORE</div>
-        <h3><span class="i18n-ja">従来の運用</span><span class="i18n-en">Conventional Operation</span></h3>
+        <h3>従来の運用</h3>
         <ul>
           
-            <li><span class="i18n-ja">輸出のたびに木製パレットの燻蒸処理が必要</span><span class="i18n-en">Wooden pallets need fumigation on every export</span></li>
-            <li><span class="i18n-ja">プラスチックパレット¥12,000〜の高額調達</span><span class="i18n-en">Costly procurement of &yen;12,000+ plastic pallets</span></li>
-            <li><span class="i18n-ja">返却不能パレットの海外廃棄が常態化</span><span class="i18n-en">Non-returnable pallets routinely scrapped overseas</span></li>
-            <li><span class="i18n-ja">単一国依存による地政学リスク</span><span class="i18n-en">Geopolitical risk from single-country reliance</span></li>
-            <li><span class="i18n-ja">回収便を出すと採算が合わない</span><span class="i18n-en">Collection trips simply don't pay</span></li>
+            <li>輸出のたびに木製パレットの燻蒸処理が必要</li>
+            <li>プラスチックパレット¥12,000〜の高額調達</li>
+            <li>返却不能パレットの海外廃棄が常態化</li>
+            <li>単一国依存による地政学リスク</li>
+            <li>回収便を出すと採算が合わない</li>
         
         </ul>
       </div>
       <div class="process-arrow">→</div>
       <div class="process-side after">
         <div class="side-label">AFTER</div>
-        <h3><span class="i18n-ja">グロパレ導入後</span><span class="i18n-en">After GPC</span></h3>
+        <h3>グロパレ導入後</h3>
         <ul>
           
-            <li><span class="i18n-ja">パーチクルボード製で燻蒸処理は不要</span><span class="i18n-en">Particleboard build needs no fumigation</span></li>
-            <li><span class="i18n-ja">3RDパレット¥1,800〜の低コスト調達</span><span class="i18n-en">Low-cost procurement of the 3RD pallet from &yen;1,800</span></li>
-            <li><span class="i18n-ja">ワンウェイ運用で返却前提なし</span><span class="i18n-en">One-way use with no return required</span></li>
-            <li><span class="i18n-ja">ASEAN3拠点でリスク分散</span><span class="i18n-en">Risk spread across three ASEAN sites</span></li>
-            <li><span class="i18n-ja">回収不要・産廃ゼロのモデル</span><span class="i18n-en">A no-collection, zero-waste model</span></li>
+            <li>パーチクルボード製で燻蒸処理は不要</li>
+            <li>3RDパレット¥1,800〜の低コスト調達</li>
+            <li>ワンウェイ運用で返却前提なし</li>
+            <li>ASEAN3拠点でリスク分散</li>
+            <li>回収不要・産廃ゼロのモデル</li>
         
         </ul>
       </div>
@@ -1298,11 +1313,13 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Gallery</span>
-        <span class="jp"><span class="i18n-ja">現場の風景</span><span class="i18n-en">On Site</span></span>
+        <span class="jp">現場の風景</span>
       </div>
       <div>
-        <h2 class="section-title"><span class="i18n-ja">私たちが向き合う、<em>輸出入の現場</em>。</span><span class="i18n-en">The realities we face on the <em>import/export floor.</em></span></h2>
-        <p class="section-lead"><span class="i18n-ja">日々の現場では、見えない非効率と隠れたコストが積み重なっています。私たちはその一つひとつに向き合い、解決策を提案しています。</span><span class="i18n-en">Every day on the ground, invisible inefficiencies and hidden costs pile up. We face each one and propose a solution.</span></p>
+        <h2 class="section-title">
+          私たちが向き合う、<em>輸出入の現場</em>。
+        </h2>
+        <p class="section-lead">日々の現場では、見えない非効率と隠れたコストが積み重なっています。私たちはその一つひとつに向き合い、解決策を提案しています。</p>
       </div>
     </div>
 
@@ -1321,11 +1338,13 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Related</span>
-        <span class="jp"><span class="i18n-ja">他の業界</span><span class="i18n-en">Other Industries</span></span>
+        <span class="jp">他の業界</span>
       </div>
       <div>
-        <h2 class="section-title"><span class="i18n-ja">他の業界の<em>ソリューション</em>。</span><span class="i18n-en">Solutions for <em>other industries.</em></span></h2>
-        <p class="section-lead"><span class="i18n-ja">グロパレは各業界の固有課題に対し、最適なパレットとオペレーションを提供しています。</span><span class="i18n-en">GPC delivers the optimal pallet and operation for each industry's unique challenges.</span></p>
+        <h2 class="section-title">
+          他の業界の<em>ソリューション</em>。
+        </h2>
+        <p class="section-lead">グロパレは各業界の固有課題に対し、最適なパレットとオペレーションを提供しています。</p>
       </div>
     </div>
 
@@ -1335,7 +1354,7 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
                 <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=85" alt="物流業界" loading="lazy">
                 <div class="overlay">
                     <div class="en">LOGISTICS INDUSTRY</div>
-                    <h4><span class="i18n-ja">物流業界</span><span class="i18n-en">Logistics</span></h4>
+                    <h4>物流業界</h4>
                     <span class="arrow">View Detail →</span>
                 </div>
             </a>
@@ -1344,7 +1363,7 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
                 <img src="https://images.unsplash.com/photo-1486006920555-c77dcf18193c?w=800&q=85" alt="タイヤ業界" loading="lazy">
                 <div class="overlay">
                     <div class="en">TIRE INDUSTRY</div>
-                    <h4><span class="i18n-ja">タイヤ業界</span><span class="i18n-en">Tire Industry</span></h4>
+                    <h4>タイヤ業界</h4>
                     <span class="arrow">View Detail →</span>
                 </div>
             </a>
@@ -1353,7 +1372,7 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
                 <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&q=85" alt="化学・石油業界" loading="lazy">
                 <div class="overlay">
                     <div class="en">CHEMICAL & PETROLEUM</div>
-                    <h4><span class="i18n-ja">化学・石油業界</span><span class="i18n-en">Chemical &amp; Petroleum</span></h4>
+                    <h4>化学・石油業界</h4>
                     <span class="arrow">View Detail →</span>
                 </div>
             </a>
@@ -1366,13 +1385,17 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
 <section class="section-cta">
   <div class="cta-inner">
     <div class="cta-eyebrow reveal">CONTACT US</div>
-    <h2 class="cta-title reveal reveal-delay-1"><span class="i18n-ja">輸出入の物流コスト、<br>
-      <em>まだ捨てていますか？</em></span><span class="i18n-en">Your import/export logistics costs—<br> <em>still throwing them away?</em></span></h2>
-    <p class="cta-lead reveal reveal-delay-2"><span class="i18n-ja">御社の現場課題に合わせた最適なご提案をいたします。<br>
-      まずはお気軽にご相談ください。</span><span class="i18n-en">We'll propose the best fit for your on-site challenges.<br>Reach out anytime to get started.</span></p>
+    <h2 class="cta-title reveal reveal-delay-1">
+      輸出入の物流コスト、<br>
+      <em>まだ捨てていますか？</em>
+    </h2>
+    <p class="cta-lead reveal reveal-delay-2">
+      御社の現場課題に合わせた最適なご提案をいたします。<br>
+      まずはお気軽にご相談ください。
+    </p>
 
-    <a href="/index.html#contact" class="cta-main reveal reveal-delay-3">
-      <span class="i18n-ja">無料相談・お見積もりはこちら</span><span class="i18n-en">Get a free consultation &amp; quote</span>
+    <a href="/contact.html" class="cta-main reveal reveal-delay-3">
+      無料相談・お見積もりはこちら
       <svg width="22" height="14" viewBox="0 0 22 14" fill="none" stroke="currentColor" stroke-width="1.5">
         <path d="M0 7h19M14 1l6 6-6 6"/>
       </svg>
@@ -1432,7 +1455,7 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
             <li><a href="/youtube.html"><span class="i18n-ja">メディア出演</span><span class="i18n-en">Media</span></a></li>
             <li><a href="/about.html"><span class="i18n-ja">会社情報</span><span class="i18n-en">Company</span></a></li>
             <li><a href="#"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></a></li>
-            <li><a href="#"><span class="i18n-ja">プライバシーポリシー</span><span class="i18n-en">Privacy Policy</span></a></li>
+            <li><a href="/privacy.html"><span class="i18n-ja">プライバシーポリシー</span><span class="i18n-en">Privacy Policy</span></a></li>
           </ul>
         </div>
       </div>

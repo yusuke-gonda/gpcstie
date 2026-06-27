@@ -1069,16 +1069,23 @@ html[lang="en"] .stats-bar .label-jp,
 html[lang="en"] .page-hero-eyebrow .jp,
 html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
 /* language switch UI (header) */
-.lang-switch{display:inline-flex;align-items:center;font-size:12.5px;font-weight:600;letter-spacing:.06em;border:1px solid rgba(11,140,140,.5);border-radius:999px;overflow:hidden;line-height:1;}
-.lang-switch .sep{display:none;}
-.lang-switch button{background:none;border:0;cursor:pointer;font:inherit;font-weight:600;color:#4A4A4A;padding:5px 12px;letter-spacing:.06em;transition:background .2s,color .2s;}
-.lang-switch button:hover{background:rgba(11,140,140,.1);}
-.lang-switch button.is-active{background:#0B8C8C;color:#fff;}
+.lang-switch{display:inline-flex;align-items:center;gap:5px;font-size:12px;letter-spacing:.08em;}
+.lang-switch button{background:none;border:0;cursor:pointer;font:inherit;color:inherit;opacity:.5;padding:2px 3px;letter-spacing:.08em;transition:opacity .2s,color .2s;}
+.lang-switch button:hover{opacity:.85;}
+.lang-switch button.is-active{opacity:1;font-weight:700;}
+.lang-switch .sep{opacity:.35;}
 .footer-lang a{cursor:pointer;}
 .mm-lang{display:flex;align-items:center;gap:10px;margin-top:26px;padding-top:20px;border-top:1px solid rgba(0,0,0,.08);font-size:15px;letter-spacing:.08em;}
 .mm-lang a{color:inherit;text-decoration:none;opacity:.45;cursor:pointer;}
 .mm-lang a.is-active{opacity:1;font-weight:700;}
 .mm-lang span{opacity:.3;}
+</style>
+
+<style id="readability-floor">
+/* Readability floor: PC body & explanatory text >= 16px (decorative labels unchanged) */
+@media (min-width:769px){
+  .section-lead, .news-title-text, .about-text p, .about-text a, .message-content p, .timeline-body, .group-card p, .info-value, .industry-hero .lead, .challenge-points .point-text, .challenge-content p, .solution-card p, .process-side li { font-size:16px !important; line-height:1.85 !important; }
+}
 </style>
 </head>
 <body>
@@ -1106,7 +1113,7 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
     </nav>
     <div class="header-utility">
       <span class="lang-switch" aria-label="Language"><button type="button" data-lang-btn="ja">JP</button><span class="sep">/</span><button type="button" data-lang-btn="en">EN</button></span>
-      <button class="cta-contact" onclick="location.href='/index.html#contact'"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></button>
+      <button class="cta-contact" onclick="location.href='/contact.html'"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></button>
     </div>
   </div>
 </header>
@@ -1123,23 +1130,23 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
       <span class="sep">/</span>
       <a href="/industries/logistics.html">Industries</a>
       <span class="sep">/</span>
-      <span><span class="i18n-ja">タイヤ業界</span><span class="i18n-en">Tire Industry</span></span>
+      <span>タイヤ業界</span>
     </div>
 
     <div class="industry-label">TIRE INDUSTRY</div>
 
-    <h1><span class="i18n-ja">1台のトラックで、<br><em>1.5倍</em><span class="accent">積める。</span>今すぐ。</span><span class="i18n-en"><em>1.5&times;</em> the load<span class="accent"> per truck.</span><br>Starting today.</span></h1>
+    <h1>1台のトラックで、<br><em>1.5倍</em><span class="accent">積める。</span>今すぐ。</h1>
 
-    <p class="lead"><span class="i18n-ja">タイヤは転倒・荷崩れリスクが高く、PC3段パレットは積載量が減少し回収も必要。7名×2時間以上の手積みが常態化、作業員の腰痛・身体負担も慢性化している。</span><span class="i18n-en">Tires carry high tipping and load-collapse risk; three-tier plastic pallets cut capacity and still need collecting. Manual loading by 7 workers over 2+ hours is the norm, and back strain has become chronic.</span></p>
+    <p class="lead">タイヤは転倒・荷崩れリスクが高く、PC3段パレットは積載量が減少し回収も必要。7名×2時間以上の手積みが常態化、作業員の腰痛・身体負担も慢性化している。</p>
   </div>
 
   <div class="hero-stats">
     <div class="hero-stats-inner">
       
-            <div class="stat-item"><div class="val">150<em>%</em></div><div class="lbl"><span class="i18n-ja">積載効率アップ</span><span class="i18n-en">Higher Load Efficiency</span></div></div>
-            <div class="stat-item"><div class="val">80<em>%</em></div><div class="lbl"><span class="i18n-ja">積み込み時間削減</span><span class="i18n-en">Loading Time Cut</span></div></div>
-            <div class="stat-item"><div class="val">×1.5</div><div class="lbl"><span class="i18n-ja">PC3段比積載数</span><span class="i18n-en">Load vs 3-Tier Plastic</span></div></div>
-            <div class="stat-item"><div class="val">0<em><span class="i18n-ja">名</span><span class="i18n-en">workers</span></em></div><div class="lbl"><span class="i18n-ja">手積み作業員（削減）</span><span class="i18n-en">Manual Loaders (Reduced)</span></div></div>
+            <div class="stat-item"><div class="val">150<em>%</em></div><div class="lbl">積載効率アップ</div></div>
+            <div class="stat-item"><div class="val">80<em>%</em></div><div class="lbl">積み込み時間削減</div></div>
+            <div class="stat-item"><div class="val">×1.5</div><div class="lbl">PC3段比積載数</div></div>
+            <div class="stat-item"><div class="val">0<em>名</em></div><div class="lbl">手積み作業員（削減）</div></div>
         
     </div>
   </div>
@@ -1151,26 +1158,28 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Challenge</span>
-        <span class="jp"><span class="i18n-ja">業界の課題</span><span class="i18n-en">The Industry's Problem</span></span>
+        <span class="jp">業界の課題</span>
       </div>
       <div>
-        <h2 class="section-title"><span class="i18n-ja">タイヤ輸送の<em>"当たり前"</em>を、<br>もう一度<em>疑ってみる。</em></span><span class="i18n-en">Question the <em>"normal"</em> in tire transport<br><em>once again.</em></span></h2>
-        <p class="section-lead"><span class="i18n-ja">丸型物体であるタイヤは、転倒・荷崩れ・デッドスペースという3つの構造的課題を抱え続けてきました。</span><span class="i18n-en">Being round, tires have always carried three structural problems: tipping, load collapse, and dead space.</span></p>
+        <h2 class="section-title">
+          タイヤ輸送の<em>"当たり前"</em>を、<br>もう一度<em>疑ってみる。</em>
+        </h2>
+        <p class="section-lead">丸型物体であるタイヤは、転倒・荷崩れ・デッドスペースという3つの構造的課題を抱え続けてきました。</p>
       </div>
     </div>
 
     <div class="challenge-grid">
       <div class="challenge-content reveal">
         <div class="challenge-num">PAIN POINTS</div>
-        <h2><span class="i18n-ja"><span class="accent">7名×2時間</span>の手積みは、もう限界。</span><span class="i18n-en"><span class="accent">7 workers, 2 hours</span> of hand-loading has hit its limit.</span></h2>
-        <p><span class="i18n-ja">タイヤ物流の現場では、円筒形という形状特性により、これまで多くの非効率と危険性が"当たり前"として受け入れられてきました。しかし2024年問題と人手不足の加速で、その"当たり前"はもはや持続不可能になっています。</span><span class="i18n-en">On the tire-logistics floor, the cylindrical shape made many inefficiencies and hazards feel "normal" for years. But with the 2024 problem and accelerating labor shortages, that "normal" is no longer sustainable.</span></p>
+        <h2><span class="accent">7名×2時間</span>の手積みは、もう限界。</h2>
+        <p>タイヤ物流の現場では、円筒形という形状特性により、これまで多くの非効率と危険性が"当たり前"として受け入れられてきました。しかし2024年問題と人手不足の加速で、その"当たり前"はもはや持続不可能になっています。</p>
 
         <ul class="challenge-points">
           
-            <li><span class="num-marker">01</span><span class="point-text"><span class="i18n-ja"><strong>転倒・荷崩れリスクが高い</strong>。丸型ゆえに固定が難しく、輸送中の事故リスクが常に隣り合わせ。</span><span class="i18n-en"><strong>High tipping and collapse risk.</strong> Round shapes are hard to secure, so accident risk rides along the whole trip.</span></span></li>
-            <li><span class="num-marker">02</span><span class="point-text"><span class="i18n-ja"><strong>PC3段パレットは積載量が減少</strong>。さらに使用後の回収が必要で、回送便コストが発生し続ける。</span><span class="i18n-en"><strong>Three-tier plastic pallets cut capacity</strong>—and they must be collected, so empty-return costs keep recurring.</span></span></li>
-            <li><span class="num-marker">03</span><span class="point-text"><span class="i18n-ja"><strong>7名×2時間以上の手積み作業</strong>が常態化。人件費と作業員の身体負担が深刻化。</span><span class="i18n-en"><strong>Hand-loading by 7 workers for 2+ hours</strong> is routine, driving up labor costs and bodily strain.</span></span></li>
-            <li><span class="num-marker">04</span><span class="point-text"><span class="i18n-ja"><strong>20ftコンテナのデッドスペース</strong>が積載効率を圧迫。1便あたりの輸送量が頭打ちに。</span><span class="i18n-en"><strong>Dead space in the 20ft container</strong> squeezes efficiency, capping how much each shipment can carry.</span></span></li>
+            <li><span class="num-marker">01</span><span class="point-text"><strong>転倒・荷崩れリスクが高い</strong>。丸型ゆえに固定が難しく、輸送中の事故リスクが常に隣り合わせ。</span></li>
+            <li><span class="num-marker">02</span><span class="point-text"><strong>PC3段パレットは積載量が減少</strong>。さらに使用後の回収が必要で、回送便コストが発生し続ける。</span></li>
+            <li><span class="num-marker">03</span><span class="point-text"><strong>7名×2時間以上の手積み作業</strong>が常態化。人件費と作業員の身体負担が深刻化。</span></li>
+            <li><span class="num-marker">04</span><span class="point-text"><strong>20ftコンテナのデッドスペース</strong>が積載効率を圧迫。1便あたりの輸送量が頭打ちに。</span></li>
         
         </ul>
       </div>
@@ -1188,11 +1197,13 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Solution</span>
-        <span class="jp"><span class="i18n-ja">グロパレの解決策</span><span class="i18n-en">The GPC Solution</span></span>
+        <span class="jp">グロパレの解決策</span>
       </div>
       <div>
-        <h2 class="section-title"><span class="i18n-ja"><em>三つ葉</em>の幾何学が、<br>タイヤ物流を変える。</span><span class="i18n-en">The geometry of the <em>Trefoil</em><br>transforms tire logistics.</span></h2>
-        <p class="section-lead"><span class="i18n-ja">丸型物体に最適化された三つ葉型デザインが、デッドスペースを排除し、転倒を構造的に防止します。</span><span class="i18n-en">Optimized for round objects, the trefoil design eliminates dead space and structurally prevents tipping.</span></p>
+        <h2 class="section-title">
+          <em>三つ葉</em>の幾何学が、<br>タイヤ物流を変える。
+        </h2>
+        <p class="section-lead">丸型物体に最適化された三つ葉型デザインが、デッドスペースを排除し、転倒を構造的に防止します。</p>
       </div>
     </div>
 
@@ -1201,20 +1212,20 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
             <div class="solution-card reveal">
                 <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></div>
                 <div class="feat-num">SOLUTION 01</div>
-                <h3><span class="i18n-ja">千鳥配置で150%積載UP</span><span class="i18n-en">150% More Load via Staggered Layout</span></h3>
-                <p><span class="i18n-ja">タイヤ専用設計の三つ葉パレットなら、コンテナのデッドスペースを排除。PC3段パレット比で1.5倍の積載量を実現。</span><span class="i18n-en">The tire-specific Trefoil pallet eliminates container dead space, delivering 1.5&times; the load of three-tier plastic pallets.</span></p>
+                <h3>千鳥配置で150%積載UP</h3>
+                <p>タイヤ専用設計の三つ葉パレットなら、コンテナのデッドスペースを排除。PC3段パレット比で1.5倍の積載量を実現。</p>
             </div>
             <div class="solution-card reveal reveal-delay-1">
                 <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 3v18M3 5h4M3 21h4M19 3v18M17 5h4M17 21h4M9 12h6"/></svg></div>
                 <div class="feat-num">SOLUTION 02</div>
-                <h3><span class="i18n-ja">フォーク作業への置き換え</span><span class="i18n-en">Switch to Forklift Operation</span></h3>
-                <p><span class="i18n-ja">7名×2時間の手積みを、フォークリフト1名×30分へ。作業員の腰痛・身体負担を解消し、省人化を実現。</span><span class="i18n-en">Replace 7 workers &times; 2 hours of hand-loading with 1 forklift operator &times; 30 minutes—ending back strain and cutting headcount.</span></p>
+                <h3>フォーク作業への置き換え</h3>
+                <p>7名×2時間の手積みを、フォークリフト1名×30分へ。作業員の腰痛・身体負担を解消し、省人化を実現。</p>
             </div>
             <div class="solution-card reveal reveal-delay-2">
                 <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/><path d="M9 12l2 2 4-4"/></svg></div>
                 <div class="feat-num">SOLUTION 03</div>
-                <h3><span class="i18n-ja">転倒・荷崩れの構造的防止</span><span class="i18n-en">Structural Tip &amp; Collapse Prevention</span></h3>
-                <p><span class="i18n-ja">専用プラットフォーム＋ロック機構でタイヤを物理的に固定。ラップ・鎖・クリップなどの固定材は一切不要。</span><span class="i18n-en">A dedicated platform plus locking mechanism physically secures the tires—no wrap, chains, or clips needed.</span></p>
+                <h3>転倒・荷崩れの構造的防止</h3>
+                <p>専用プラットフォーム＋ロック機構でタイヤを物理的に固定。ラップ・鎖・クリップなどの固定材は一切不要。</p>
             </div>
         
     </div>
@@ -1227,20 +1238,22 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Impact</span>
-        <span class="jp"><span class="i18n-ja">導入効果</span><span class="i18n-en">Measurable Results</span></span>
+        <span class="jp">導入効果</span>
       </div>
       <div>
-        <h2 class="section-title"><span class="i18n-ja">数字で見る、<em>導入のインパクト</em>。</span><span class="i18n-en">The impact, <em>in numbers.</em></span></h2>
-        <p class="section-lead"><span class="i18n-ja">タイヤ業界に特化した三つ葉パレット導入で、輸送・労務・安全性のすべてが変わります。</span><span class="i18n-en">A Trefoil pallet built for the tire industry changes everything—transport, labor, and safety.</span></p>
+        <h2 class="section-title">
+          数字で見る、<em>導入のインパクト</em>。
+        </h2>
+        <p class="section-lead">タイヤ業界に特化した三つ葉パレット導入で、輸送・労務・安全性のすべてが変わります。</p>
       </div>
     </div>
 
     <div class="impact-grid reveal">
       
-            <div class="impact-item"><div class="num">150<span class="u">%</span></div><div class="label-en">LOAD UP</div><div class="label-jp"><span class="i18n-ja">積載効率</span><span class="i18n-en">Load Efficiency</span></div></div>
-            <div class="impact-item"><div class="num">80<span class="u">%</span></div><div class="label-en">TIME CUT</div><div class="label-jp"><span class="i18n-ja">作業時間削減</span><span class="i18n-en">Time Saved</span></div></div>
-            <div class="impact-item"><div class="num">×1.5</div><div class="label-en">VS PC-3</div><div class="label-jp"><span class="i18n-ja">従来比積載数</span><span class="i18n-en">Load vs Conventional</span></div></div>
-            <div class="impact-item"><div class="num">100<span class="u">%</span></div><div class="label-en">SAFETY</div><div class="label-jp"><span class="i18n-ja">転倒防止</span><span class="i18n-en">Tip Prevention</span></div></div>
+            <div class="impact-item"><div class="num">150<span class="u">%</span></div><div class="label-en">LOAD UP</div><div class="label-jp">積載効率</div></div>
+            <div class="impact-item"><div class="num">80<span class="u">%</span></div><div class="label-en">TIME CUT</div><div class="label-jp">作業時間削減</div></div>
+            <div class="impact-item"><div class="num">×1.5</div><div class="label-en">VS PC-3</div><div class="label-jp">従来比積載数</div></div>
+            <div class="impact-item"><div class="num">100<span class="u">%</span></div><div class="label-en">SAFETY</div><div class="label-jp">転倒防止</div></div>
         
     </div>
   </div>
@@ -1252,39 +1265,41 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Process</span>
-        <span class="jp"><span class="i18n-ja">導入前後の変化</span><span class="i18n-en">Before & After</span></span>
+        <span class="jp">導入前後の変化</span>
       </div>
       <div>
-        <h2 class="section-title"><span class="i18n-ja">現場の<em>"当たり前"</em>が、こう変わる。</span><span class="i18n-en">The shop-floor <em>"normal"</em> changes like this.</span></h2>
-        <p class="section-lead"><span class="i18n-ja">タイヤ物流現場の現実が、三つ葉パレット導入でどう変わるかを比較しました。</span><span class="i18n-en">We compared how the realities of the tire-logistics floor change with the Trefoil pallet.</span></p>
+        <h2 class="section-title">
+          現場の<em>"当たり前"</em>が、こう変わる。
+        </h2>
+        <p class="section-lead">タイヤ物流現場の現実が、三つ葉パレット導入でどう変わるかを比較しました。</p>
       </div>
     </div>
 
     <div class="process-comparison reveal">
       <div class="process-side before">
         <div class="side-label">BEFORE</div>
-        <h3><span class="i18n-ja">従来の運用</span><span class="i18n-en">Conventional Operation</span></h3>
+        <h3>従来の運用</h3>
         <ul>
           
-            <li><span class="i18n-ja">7名×2時間40分のバラ積み手積み作業</span><span class="i18n-en">Loose hand-loading by 7 workers over 2h40m</span></li>
-            <li><span class="i18n-ja">20ftコンテナに38缶分しか積載できない</span><span class="i18n-en">Only 38 units fit in a 20ft container</span></li>
-            <li><span class="i18n-ja">転倒・荷崩れリスクが常に隣り合わせ</span><span class="i18n-en">Tipping and collapse risk at every step</span></li>
-            <li><span class="i18n-ja">ラップ・鎖・クリップの固定材コスト</span><span class="i18n-en">Cost of wrap, chains, and clips to secure loads</span></li>
-            <li><span class="i18n-ja">PC3段使用時は回収便コストが発生</span><span class="i18n-en">Three-tier plastic pallets incur return-trip costs</span></li>
+            <li>7名×2時間40分のバラ積み手積み作業</li>
+            <li>20ftコンテナに38缶分しか積載できない</li>
+            <li>転倒・荷崩れリスクが常に隣り合わせ</li>
+            <li>ラップ・鎖・クリップの固定材コスト</li>
+            <li>PC3段使用時は回収便コストが発生</li>
         
         </ul>
       </div>
       <div class="process-arrow">→</div>
       <div class="process-side after">
         <div class="side-label">AFTER</div>
-        <h3><span class="i18n-ja">グロパレ導入後</span><span class="i18n-en">After GPC</span></h3>
+        <h3>グロパレ導入後</h3>
         <ul>
           
-            <li><span class="i18n-ja">フォーク作業で1名×30分に短縮</span><span class="i18n-en">Forklift work cuts it to 1 person &times; 30 minutes</span></li>
-            <li><span class="i18n-ja">20ftコンテナに72缶（1.9倍）積載可能</span><span class="i18n-en">72 units fit in a 20ft container (1.9&times;)</span></li>
-            <li><span class="i18n-ja">専用ロック機構で構造的に転倒防止</span><span class="i18n-en">A dedicated lock structurally prevents tipping</span></li>
-            <li><span class="i18n-ja">追加固定材は一切不要</span><span class="i18n-en">No extra securing materials at all</span></li>
-            <li><span class="i18n-ja">ワンウェイ運用で回収便コストゼロ</span><span class="i18n-en">One-way use brings return-trip costs to zero</span></li>
+            <li>フォーク作業で1名×30分に短縮</li>
+            <li>20ftコンテナに72缶（1.9倍）積載可能</li>
+            <li>専用ロック機構で構造的に転倒防止</li>
+            <li>追加固定材は一切不要</li>
+            <li>ワンウェイ運用で回収便コストゼロ</li>
         
         </ul>
       </div>
@@ -1298,11 +1313,13 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Gallery</span>
-        <span class="jp"><span class="i18n-ja">現場の風景</span><span class="i18n-en">On Site</span></span>
+        <span class="jp">現場の風景</span>
       </div>
       <div>
-        <h2 class="section-title"><span class="i18n-ja">私たちが向き合う、<em>タイヤの現場</em>。</span><span class="i18n-en">The realities we face on the <em>tire floor.</em></span></h2>
-        <p class="section-lead"><span class="i18n-ja">日々の現場では、見えない非効率と隠れたコストが積み重なっています。私たちはその一つひとつに向き合い、解決策を提案しています。</span><span class="i18n-en">Every day on the ground, invisible inefficiencies and hidden costs pile up. We face each one and propose a solution.</span></p>
+        <h2 class="section-title">
+          私たちが向き合う、<em>タイヤの現場</em>。
+        </h2>
+        <p class="section-lead">日々の現場では、見えない非効率と隠れたコストが積み重なっています。私たちはその一つひとつに向き合い、解決策を提案しています。</p>
       </div>
     </div>
 
@@ -1321,11 +1338,13 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
     <div class="section-header reveal">
       <div class="section-label">
         <span class="en">Related</span>
-        <span class="jp"><span class="i18n-ja">他の業界</span><span class="i18n-en">Other Industries</span></span>
+        <span class="jp">他の業界</span>
       </div>
       <div>
-        <h2 class="section-title"><span class="i18n-ja">他の業界の<em>ソリューション</em>。</span><span class="i18n-en">Solutions for <em>other industries.</em></span></h2>
-        <p class="section-lead"><span class="i18n-ja">グロパレは各業界の固有課題に対し、最適なパレットとオペレーションを提供しています。</span><span class="i18n-en">GPC delivers the optimal pallet and operation for each industry's unique challenges.</span></p>
+        <h2 class="section-title">
+          他の業界の<em>ソリューション</em>。
+        </h2>
+        <p class="section-lead">グロパレは各業界の固有課題に対し、最適なパレットとオペレーションを提供しています。</p>
       </div>
     </div>
 
@@ -1335,7 +1354,7 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
                 <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=85" alt="物流業界" loading="lazy">
                 <div class="overlay">
                     <div class="en">LOGISTICS INDUSTRY</div>
-                    <h4><span class="i18n-ja">物流業界</span><span class="i18n-en">Logistics</span></h4>
+                    <h4>物流業界</h4>
                     <span class="arrow">View Detail →</span>
                 </div>
             </a>
@@ -1344,7 +1363,7 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
                 <img src="https://images.unsplash.com/photo-1577416412292-747c6607f055?w=800&q=85" alt="輸出入・商社" loading="lazy">
                 <div class="overlay">
                     <div class="en">TRADING & EXPORT</div>
-                    <h4><span class="i18n-ja">輸出入・商社</span><span class="i18n-en">Trading &amp; Export</span></h4>
+                    <h4>輸出入・商社</h4>
                     <span class="arrow">View Detail →</span>
                 </div>
             </a>
@@ -1353,7 +1372,7 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
                 <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&q=85" alt="化学・石油業界" loading="lazy">
                 <div class="overlay">
                     <div class="en">CHEMICAL & PETROLEUM</div>
-                    <h4><span class="i18n-ja">化学・石油業界</span><span class="i18n-en">Chemical &amp; Petroleum</span></h4>
+                    <h4>化学・石油業界</h4>
                     <span class="arrow">View Detail →</span>
                 </div>
             </a>
@@ -1366,13 +1385,17 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
 <section class="section-cta">
   <div class="cta-inner">
     <div class="cta-eyebrow reveal">CONTACT US</div>
-    <h2 class="cta-title reveal reveal-delay-1"><span class="i18n-ja">タイヤの物流コスト、<br>
-      <em>まだ捨てていますか？</em></span><span class="i18n-en">Your tire logistics costs—<br> <em>still throwing them away?</em></span></h2>
-    <p class="cta-lead reveal reveal-delay-2"><span class="i18n-ja">御社の現場課題に合わせた最適なご提案をいたします。<br>
-      まずはお気軽にご相談ください。</span><span class="i18n-en">We'll propose the best fit for your on-site challenges.<br>Reach out anytime to get started.</span></p>
+    <h2 class="cta-title reveal reveal-delay-1">
+      タイヤの物流コスト、<br>
+      <em>まだ捨てていますか？</em>
+    </h2>
+    <p class="cta-lead reveal reveal-delay-2">
+      御社の現場課題に合わせた最適なご提案をいたします。<br>
+      まずはお気軽にご相談ください。
+    </p>
 
-    <a href="/index.html#contact" class="cta-main reveal reveal-delay-3">
-      <span class="i18n-ja">無料相談・お見積もりはこちら</span><span class="i18n-en">Get a free consultation &amp; quote</span>
+    <a href="/contact.html" class="cta-main reveal reveal-delay-3">
+      無料相談・お見積もりはこちら
       <svg width="22" height="14" viewBox="0 0 22 14" fill="none" stroke="currentColor" stroke-width="1.5">
         <path d="M0 7h19M14 1l6 6-6 6"/>
       </svg>
@@ -1432,7 +1455,7 @@ html[lang="en"] .footer-brand .brand-text .ja{display:none !important;}
             <li><a href="/youtube.html"><span class="i18n-ja">メディア出演</span><span class="i18n-en">Media</span></a></li>
             <li><a href="/about.html"><span class="i18n-ja">会社情報</span><span class="i18n-en">Company</span></a></li>
             <li><a href="#"><span class="i18n-ja">お問い合わせ</span><span class="i18n-en">Contact</span></a></li>
-            <li><a href="#"><span class="i18n-ja">プライバシーポリシー</span><span class="i18n-en">Privacy Policy</span></a></li>
+            <li><a href="/privacy.html"><span class="i18n-ja">プライバシーポリシー</span><span class="i18n-en">Privacy Policy</span></a></li>
           </ul>
         </div>
       </div>
