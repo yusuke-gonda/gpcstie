@@ -885,9 +885,23 @@ body.menu-open { overflow: hidden; }
       <a class="nav-item is-active" href="/about.html">
         <span class="i18n-ja">会社情報<span class="en">About</span></span><span class="i18n-en">About</span>
       </a>
-      <a class="nav-item" href="/industries/logistics.html">
+      <div class="ind-nav">
+      <a class="nav-item" href="/index.html#industries" aria-haspopup="true">
         <span class="i18n-ja">業界別<span class="en">Industries</span></span><span class="i18n-en">Industries</span>
       </a>
+      <div class="ind-menu" role="menu">
+        <div class="ind-menu-grid">
+          <a href="/industries/logistics.html"><span class="i18n-ja">物流業界</span><span class="i18n-en">Logistics</span><small>Logistics</small></a>
+          <a href="/industries/trading.html"><span class="i18n-ja">輸出入・商社</span><span class="i18n-en">Trading</span><small>Trading</small></a>
+          <a href="/industries/tire.html"><span class="i18n-ja">タイヤ業界</span><span class="i18n-en">Tire</span><small>Tire</small></a>
+          <a href="/industries/chemical.html"><span class="i18n-ja">化学・石油</span><span class="i18n-en">Chemical &amp; Petroleum</span><small>Chemical &amp; Petroleum</small></a>
+          <a href="/industries/food.html"><span class="i18n-ja">食品・冷凍物流</span><span class="i18n-en">Food &amp; Cold Chain</span><small>Food &amp; Cold Chain</small></a>
+          <a href="/industries/manufacturing.html"><span class="i18n-ja">製造業</span><span class="i18n-en">Manufacturing</span><small>Manufacturing</small></a>
+          <a href="/industries/automotive.html"><span class="i18n-ja">自動車産業</span><span class="i18n-en">Automotive</span><small>Automotive</small></a>
+          <a href="/industries/construction.html"><span class="i18n-ja">建設業界</span><span class="i18n-en">Construction</span><small>Construction</small></a>
+        </div>
+      </div>
+    </div>
       <a class="nav-item" href="/youtube.html">
         <span class="i18n-ja">メディア<span class="en">Media</span></span><span class="i18n-en">Media</span>
       </a>
@@ -909,7 +923,8 @@ body.menu-open { overflow: hidden; }
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
   <nav class="mobile-menu-nav">
     <a class="mm-item" href="/about.html"><span class="i18n-ja"><span class="ja">会社情報</span><span class="en">About</span></span><span class="i18n-en"><span class="ja">About</span></span></a>
-    <a class="mm-item" href="/industries/logistics.html"><span class="i18n-ja"><span class="ja">業界別</span><span class="en">Industries</span></span><span class="i18n-en"><span class="ja">Industries</span></span></a>
+    <a class="mm-item" href="/index.html#industries"><span class="i18n-ja"><span class="ja">業界別</span><span class="en">Industries</span></span><span class="i18n-en"><span class="ja">Industries</span></span></a>
+    <div class="mm-sub"><a href="/industries/logistics.html"><span class="i18n-ja">物流業界</span><span class="i18n-en">Logistics</span></a><a href="/industries/trading.html"><span class="i18n-ja">輸出入・商社</span><span class="i18n-en">Trading</span></a><a href="/industries/tire.html"><span class="i18n-ja">タイヤ業界</span><span class="i18n-en">Tire</span></a><a href="/industries/chemical.html"><span class="i18n-ja">化学・石油</span><span class="i18n-en">Chemical &amp; Petroleum</span></a><a href="/industries/food.html"><span class="i18n-ja">食品・冷凍物流</span><span class="i18n-en">Food &amp; Cold Chain</span></a><a href="/industries/manufacturing.html"><span class="i18n-ja">製造業</span><span class="i18n-en">Manufacturing</span></a><a href="/industries/automotive.html"><span class="i18n-ja">自動車産業</span><span class="i18n-en">Automotive</span></a><a href="/industries/construction.html"><span class="i18n-ja">建設業界</span><span class="i18n-en">Construction</span></a></div>
     <a class="mm-item" href="/youtube.html"><span class="i18n-ja"><span class="ja">メディア</span><span class="en">Media</span></span><span class="i18n-en"><span class="ja">Media</span></span></a>
     <a class="mm-item" href="/simulator.html"><span class="i18n-ja"><span class="ja">料金シミュレーター</span><span class="en">Simulator</span></span><span class="i18n-en"><span class="ja">Pricing</span></span></a>
     <a class="mm-item mm-contact" href="/contact.html"><span class="i18n-ja"><span class="ja">お問い合わせ</span><span class="en">Contact</span></span><span class="i18n-en"><span class="ja">Contact</span></span></a>
@@ -947,6 +962,31 @@ body.menu-open { overflow: hidden; }
   .nrow{ grid-template-columns: 96px 1fr; gap: 12px; } .nrow .ntag, .nrow .ar{ display:none; }
 }
 
+
+/* ===== Industries dropdown (header) ===== */
+.ind-nav{ position:relative; display:flex; align-items:center; }
+.ind-menu{ position:absolute; top:100%; left:50%; z-index:120; padding-top:14px;
+  transform:translate(-50%,6px); opacity:0; visibility:hidden; pointer-events:none;
+  transition:opacity .28s ease, transform .28s ease, visibility 0s linear .28s; }
+.ind-nav:hover .ind-menu, .ind-nav:focus-within .ind-menu{ opacity:1; visibility:visible; pointer-events:auto;
+  transform:translate(-50%,0); transition:opacity .28s ease, transform .28s ease, visibility 0s; }
+.ind-menu-grid{ display:grid; grid-template-columns:repeat(2, minmax(190px,1fr)); gap:2px 0;
+  background:#fff; border-top:2px solid var(--teal); padding:14px 10px;
+  box-shadow:0 18px 44px rgba(18,40,73,.16); }
+.ind-menu a{ display:block; padding:11px 18px; text-decoration:none; color:var(--navy);
+  font-family:var(--serif-jp); font-size:15px; font-weight:500; line-height:1.4; white-space:nowrap;
+  border-left:2px solid transparent; transition:background .2s ease, color .2s ease, border-color .2s ease; }
+.ind-menu a small{ display:block; font-family:var(--serif-display); font-style:italic; font-size:12px; color:var(--teal-dark); opacity:.75; margin-top:2px; }
+html[lang="en"] .ind-menu a small{ display:none; }
+.ind-menu a:hover, .ind-menu a:focus-visible{ background:var(--cream); color:var(--teal); border-left-color:var(--teal); outline:none; }
+.ind-menu a.is-current{ color:var(--teal); border-left-color:var(--teal); }
+.mm-sub{ display:grid; grid-template-columns:1fr 1fr; gap:0 12px; padding:4px 32px 16px; border-bottom:1px solid rgba(10,30,60,.06); }
+.mm-sub a{ padding:8px 0; font-size:14px; color:var(--navy); text-decoration:none; font-family:var(--serif-jp); }
+.mm-sub a.is-current{ color:var(--teal); }
+.mm-item[href="/index.html#industries"]{ border-bottom:0!important; padding-bottom:8px!important; }
+#industries{ scroll-margin-top:90px; }
+@media (prefers-reduced-motion: reduce){ .ind-menu{ transition:none!important; } }
+/* ===== end Industries dropdown ===== */
 /* ===== v32 review fixes (shared) ===== */
 @media (min-width:1101px){ .site-header .nav-toggle{display:none!important;} .site-header .nav-main{display:flex!important;} }
 @media (max-width:1100px){ .site-header .nav-main{display:none!important;} .site-header .nav-toggle{display:flex!important;} .site-header .header-utility{display:none!important;} }
