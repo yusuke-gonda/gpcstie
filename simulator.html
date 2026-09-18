@@ -770,7 +770,7 @@ a { color: inherit; text-decoration: none; }
   .message-image-caption { width: 200px; }
 }
 </style>
-<title>ベトナム Ho Chi Minh 製造拠点が本格稼働を開始しました | 株式会社グローバルパレットサイクル</title>
+<title>料金シミュレーター | 株式会社グローバルパレットサイクル</title>
 <style id="i18n-style">
 /* ===== language toggle (JA default) ===== */
 html[lang="ja"] .i18n-en{display:none !important;}
@@ -882,7 +882,7 @@ body.menu-open { overflow: hidden; }
       </div>
     </a>
     <nav class="nav-main">
-      <a class="nav-item is-active" href="/about.html">
+      <a class="nav-item" href="/about.html">
         <span class="i18n-ja">会社情報<span class="en">About</span></span><span class="i18n-en">About</span>
       </a>
       <a class="nav-item" href="/industries/logistics.html">
@@ -891,7 +891,7 @@ body.menu-open { overflow: hidden; }
       <a class="nav-item" href="/youtube.html">
         <span class="i18n-ja">メディア<span class="en">Media</span></span><span class="i18n-en">Media</span>
       </a>
-      <a class="nav-item" href="/simulator.html">
+      <a class="nav-item is-active" href="/simulator.html" aria-current="page">
         <span class="i18n-ja">料金シミュレーター<span class="en">Simulator</span></span><span class="i18n-en">Pricing</span>
       </a>
     </nav>
@@ -917,35 +917,96 @@ body.menu-open { overflow: hidden; }
   </nav>
 </div>
 
+
+
+<!-- SIMULATOR HERO -->
+<section class="about-hero sim-hero">
+  <div class="about-hero-inner">
+    <div class="page-eyebrow">SIMULATOR — <span class="i18n-ja">料金シミュレーター</span><span class="i18n-en">Pricing</span></div>
+    <h1 class="page-title">
+      <em><span class="i18n-ja">仕様を選ぶだけで、</span><span class="i18n-en">Choose the specs,</span></em><br>
+      <span class="i18n-ja">料金の目安がその場でわかる。</span><span class="i18n-en">see the estimate instantly.</span>
+    </h1>
+    <p class="page-lead">
+      <span class="i18n-ja">サイズや数量を入力すると、3RDパレット・三つ葉パレットの概算料金を確認できます。表示される金額は目安です。正式なお見積りはお問い合わせください。</span><span class="i18n-en">Enter the size and quantity to see an approximate price for the 3RD Pallet or the Mitsuba Pallet. Figures shown are estimates; please contact us for a formal quotation.</span>
+    </p>
+  </div>
+</section>
+
+<!-- SIMULATOR -->
+<section class="sim-section">
+  <div class="sim-inner">
+    <div class="sim-tabs" role="tablist" aria-label="製品の選択">
+      <button class="sim-tab is-active" role="tab" id="tab-3rd" aria-selected="true" aria-controls="panel-3rd" data-sim="3rd">
+        <span class="sim-tab-name"><span class="i18n-ja">3RDパレット</span><span class="i18n-en">3RD Pallet</span></span>
+        <span class="sim-tab-desc"><span class="i18n-ja">燻蒸不要・カスタムサイズ対応の組立式パレット</span><span class="i18n-en">Knock-down pallet, no fumigation, custom sizes</span></span>
+      </button>
+      <button class="sim-tab" role="tab" id="tab-mitsuba" aria-selected="false" aria-controls="panel-mitsuba" data-sim="mitsuba" tabindex="-1">
+        <span class="sim-tab-name"><span class="i18n-ja">三つ葉パレット</span><span class="i18n-en">Mitsuba Pallet</span></span>
+        <span class="sim-tab-desc"><span class="i18n-ja">ドラム缶・タイヤ専用の特許パレット</span><span class="i18n-en">Patented pallet for drums and tires</span></span>
+      </button>
+    </div>
+
+    <div class="sim-panel is-active" role="tabpanel" id="panel-3rd" aria-labelledby="tab-3rd">
+      <div class="sim-frame">
+        <iframe src="https://fix3-rd-quoation-website.vercel.app/3rd-pallet-designer" title="3RDパレット 料金シミュレーター" loading="lazy" allow="clipboard-write"></iframe>
+      </div>
+      <p class="sim-fallback"><span class="i18n-ja">表示されない場合は</span><span class="i18n-en">If the simulator does not load, </span><a href="https://fix3-rd-quoation-website.vercel.app/3rd-pallet-designer" target="_blank" rel="noopener"><span class="i18n-ja">新しいタブで開く</span><span class="i18n-en">open it in a new tab</span></a></p>
+    </div>
+    <div class="sim-panel" role="tabpanel" id="panel-mitsuba" aria-labelledby="tab-mitsuba" hidden>
+      <div class="sim-frame">
+        <iframe data-src="https://fix3-rd-quoation-website.vercel.app/mitsuba-designer" title="三つ葉パレット 料金シミュレーター" allow="clipboard-write"></iframe>
+      </div>
+      <p class="sim-fallback"><span class="i18n-ja">表示されない場合は</span><span class="i18n-en">If the simulator does not load, </span><a href="https://fix3-rd-quoation-website.vercel.app/mitsuba-designer" target="_blank" rel="noopener"><span class="i18n-ja">新しいタブで開く</span><span class="i18n-en">open it in a new tab</span></a></p>
+    </div>
+
+    <div class="sim-cta">
+      <p><span class="i18n-ja">金額のご確認後、正式なお見積り・サンプルのご依頼はこちらから。</span><span class="i18n-en">For a formal quotation or samples, get in touch with us.</span></p>
+      <a class="sim-cta-btn" href="/contact.html"><span class="i18n-ja">お見積りを依頼する</span><span class="i18n-en">Request a quotation</span></a>
+    </div>
+  </div>
+</section>
+
 <style>
-.article-hero{ padding: 150px 48px 60px; max-width: 900px; margin: 0 auto; }
-.article-meta{ display:flex; align-items:center; gap:16px; margin-bottom:22px; }
-.article-date{ font-family: var(--serif-display); font-style: italic; font-size: 16px; color: var(--ink-soft); }
-.article-tag{ font-family: var(--serif-jp); font-size: 11px; padding: 5px 14px; border-radius: 2px; letter-spacing:.12em; }
-.tag-news{ background: rgba(11,140,140,.1); color: var(--teal-dark); }
-.tag-product{ background: rgba(92,184,92,.12); color: var(--green-dark); }
-.tag-event{ background: rgba(184,153,104,.15); color:#8B6F3F; }
-.tag-media{ background: rgba(26,58,107,.1); color: var(--navy); }
-.article-title{ font-family: var(--serif-jp); font-size: clamp(24px,3vw,34px); line-height:1.5; color: var(--navy); font-weight: 600; letter-spacing:.02em; }
-.article-body{ max-width: 900px; margin: 0 auto; padding: 20px 48px 40px; }
-.article-body p{ font-family: var(--serif-jp); font-size: 17px; line-height: 2.05; color: var(--ink); margin: 0 0 26px; }
-.article-back{ max-width:900px; margin:0 auto; padding: 0 48px 120px; }
-.article-back a{ font-family: var(--serif-display); font-style: italic; font-size: 15px; color: var(--teal); text-decoration:none; }
-.article-back a:hover{ text-decoration: underline; }
-/* news index list */
-.nlist{ max-width: 980px; margin: 0 auto; }
-.nrow{ display:grid; grid-template-columns: 130px 110px 1fr 30px; gap: 24px; align-items:center;
-  padding: 26px 8px; border-bottom: 1px solid var(--line); text-decoration:none; transition: all .3s; }
-.nrow:hover{ padding-left: 16px; }
-.nrow .d{ font-family: var(--serif-display); font-style: italic; font-size: 15px; color: var(--ink-soft); }
-.nrow .t{ font-family: var(--serif-jp); font-size: 15px; color: var(--navy); line-height:1.6; }
-.nrow:hover .t{ color: var(--teal); }
-.nrow .ar{ font-family: var(--serif-display); font-style: italic; color: var(--teal); }
-.ntag{ font-family: var(--serif-jp); font-size: 10px; padding:4px 12px; border-radius:2px; text-align:center; letter-spacing:.1em; }
+.sim-hero::before{ content:'ESTIMATE'; }
+.sim-section{ padding: 24px 48px 120px; background: var(--paper); }
+.sim-inner{ max-width: 1700px; margin: 0 auto; }
+.sim-tabs{ display:grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--line); }
+.sim-tab{ appearance:none; background:none; border:0; cursor:pointer; text-align:left;
+  padding: 22px 28px 20px; position:relative; color: var(--ink-soft);
+  font-family: var(--serif-jp); transition: color .3s ease, background .3s ease; }
+.sim-tab::after{ content:''; position:absolute; left:0; right:0; bottom:-1px; height:3px;
+  background: var(--teal); transform: scaleX(0); transform-origin:left; transition: transform .45s cubic-bezier(.22,.61,.36,1); }
+.sim-tab.is-active{ color: var(--navy); background:#fff; }
+.sim-tab.is-active::after{ transform: scaleX(1); }
+.sim-tab:hover{ color: var(--navy); }
+.sim-tab:focus-visible{ outline: 2px solid var(--teal); outline-offset: -2px; }
+.sim-tab-name{ display:block; font-size: 22px; font-weight: 600; letter-spacing: .04em; }
+.sim-tab-desc{ display:block; font-size: 14px; margin-top: 6px; color: var(--ink-soft); }
+.sim-panel{ background:#fff; border: 1px solid var(--line); border-top: 0; padding: 8px; }
+.sim-panel[hidden]{ display:none; }
+.sim-frame iframe{ display:block; width:100%; height: max(880px, calc(100vh - 140px)); border:0; background:#fff; }
+.sim-fallback{ text-align:right; margin: 10px 8px 4px; font-family: var(--serif-jp); font-size: 14px; color: var(--ink-soft); }
+.sim-fallback a{ color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
+.sim-cta{ margin-top: 64px; display:flex; align-items:center; justify-content:space-between; gap: 24px;
+  padding: 36px 40px; background: var(--navy); color:#fff; }
+.sim-cta p{ font-family: var(--serif-jp); font-size: 17px; line-height: 1.8; margin:0; }
+.sim-cta-btn{ flex-shrink:0; display:inline-block; padding: 16px 36px; background:#fff; color: var(--navy);
+  font-family: var(--serif-jp); font-weight:600; font-size:16px; letter-spacing:.06em; text-decoration:none; transition: background .3s ease, color .3s ease; }
+.sim-cta-btn:hover{ background: var(--green); color:#fff; }
 @media (max-width:768px){
-  .article-hero{ padding: 120px 22px 40px; } .article-body{ padding: 16px 22px 32px; } .article-back{ padding: 0 22px 80px; }
-  .nrow{ grid-template-columns: 96px 1fr; gap: 12px; } .nrow .ntag, .nrow .ar{ display:none; }
+  .sim-hero .page-eyebrow{ white-space: nowrap; font-size: 11px; letter-spacing: .12em; }
+  .sim-hero .page-title{ font-size: clamp(26px, 8.4vw, 36px); }
+  .sim-section{ padding: 8px 12px 80px; }
+  .sim-tab{ padding: 16px 14px 14px; }
+  .sim-tab-name{ font-size: 17px; }
+  .sim-tab-desc{ font-size: 12px; }
+  .sim-panel{ padding: 0; }
+  .sim-frame iframe{ height: max(760px, calc(100vh - 110px)); }
+  .sim-cta{ flex-direction: column; align-items: stretch; text-align:center; padding: 28px 20px; margin-top: 40px; }
+  .sim-fallback{ text-align:center; }
 }
+@media (prefers-reduced-motion: reduce){ .sim-tab::after{ transition:none; } }
 
 /* ===== v32 review fixes (shared) ===== */
 @media (min-width:1101px){ .site-header .nav-toggle{display:none!important;} .site-header .nav-main{display:flex!important;} }
@@ -961,26 +1022,27 @@ body{ font-size:14px; }
 }
 /* ===== end v32 shared ===== */
 </style>
-
-
-<article>
-  <div class="article-hero">
-    <div class="article-meta">
-      <span class="article-date">2026.03.27</span>
-      <span class="article-tag tag-news"><span class="i18n-ja">お知らせ</span><span class="i18n-en">News</span></span>
-    </div>
-    <h1 class="article-title"><span class="i18n-ja">ベトナム Ho Chi Minh 製造拠点が本格稼働を開始しました</span><span class="i18n-en">Our Ho Chi Minh Manufacturing Site in Vietnam Has Commenced Full Operation</span></h1>
-  </div>
-  <div class="article-body">
-        <p><span class="i18n-ja">東南アジア供給体制の強化として、ベトナム・ホーチミンの製造拠点が本格稼働を開始しました。</span><span class="i18n-en">As part of strengthening our Southeast Asian supply network, our manufacturing site in Ho Chi Minh City, Vietnam, has commenced full operation.</span></p>
-        <p><span class="i18n-ja">タイ・バンコク（主力製造）、マレーシア・スレンバン（製造・在庫）に続く3拠点目の本格稼働により、地政学リスクを分散しつつ、燻蒸不要での国際輸送一貫体制をさらに安定させます。</span><span class="i18n-en">As the third site to go fully operational&mdash;after Bangkok, Thailand (main manufacturing) and Seremban, Malaysia (manufacturing and inventory)&mdash;it diversifies geopolitical risk and further stabilizes our integrated, fumigation-free international transport system.</span></p>
-        <p><span class="i18n-ja">日本国内（東京）の販売・回収・再販・リサイクル拠点と合わせ、4拠点による安定供給体制を構築します。</span><span class="i18n-en">Together with our sales, collection, resale and recycling base in Japan (Tokyo), this establishes a stable four-site supply structure.</span></p>
-        
-  </div>
-  <div class="article-back">
-    <a href="/news/index.html">&larr; <span class="i18n-ja">ニュース一覧へ戻る</span><span class="i18n-en">Back to News</span></a>
-  </div>
-</article>
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.sim-tab'));
+  function show(key, push){
+    tabs.forEach(function(b){
+      var on=b.dataset.sim===key, p=document.getElementById(b.getAttribute('aria-controls'));
+      b.classList.toggle('is-active',on); b.setAttribute('aria-selected',on); b.tabIndex=on?0:-1;
+      p.hidden=!on; p.classList.toggle('is-active',on);
+      if(on){ var f=p.querySelector('iframe[data-src]'); if(f){ f.src=f.dataset.src; f.removeAttribute('data-src'); } }
+    });
+    if(push) history.replaceState(null,'','#'+key);
+  }
+  tabs.forEach(function(b,i){
+    b.addEventListener('click',function(){ show(b.dataset.sim,true); });
+    b.addEventListener('keydown',function(e){
+      if(e.key==='ArrowRight'||e.key==='ArrowLeft'){ var n=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length]; n.focus(); show(n.dataset.sim,true); }
+    });
+  });
+  var h=location.hash.replace('#',''); if(h==='mitsuba'||h==='3rd') show(h,false);
+})();
+</script>
 
 <footer class="site-footer">
   <div class="footer-inner">
